@@ -1,1 +1,25 @@
 @import "tailwindcss";
+
+@font-face {
+    font-family: 'Author';
+    src: url('/fonts/Author-Bold.ttf');
+    font-weight: 700;
+
+}
+
+@font-face {
+    font-family: "Author";
+    src: url("/fonts/Author-Semibold.ttf");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Author";
+    src: url("/fonts/Author-Medium.ttf");
+    font-weight: 500;
+}
+
+body {
+    font-family: "Author", sans-serif;
+
+}
