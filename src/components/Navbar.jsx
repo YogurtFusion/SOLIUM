@@ -8,7 +8,7 @@ const Navbar = () => {
         <h1>SOLIUM</h1>
       </div>
 
-      <ul className="flex justify-between items-center gap-2" >
+      <ul className="flex justify-between items-center gap-8" >
         <li className="hover:underline" >
           <Link>Home</Link>
         </li>
@@ -18,8 +18,8 @@ const Navbar = () => {
         <li className="hover:underline" >
           <Link>Genre</Link>
         </li>
-        <div className="profile-svg">
-          <img src={profileIcon} alt="profileIcon" />
+        <div className="profile-svg w-8 ">
+          <img className="w-8" src={profileIcon} alt="profileIcon" />
         </div>
       </ul>
     </nav>

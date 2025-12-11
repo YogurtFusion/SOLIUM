@@ -9,6 +9,7 @@ function App() {
     <>
       <Hero />
       {/* <div className="w-full h-screen "></div> */}
+{/* add fonts author */}
     </>
   );
 }
