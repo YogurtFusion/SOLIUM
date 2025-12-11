@@ -11,7 +11,9 @@ const Hero = () => {
     >
       <div className="gradient bg-[linear-gradient(to_bottom,rgba(0,0,0,1)_0%,rgba(0,0,0,0.6)_45%,rgba(0,0,0,0)_80%)] h-full w-full absolute inset-0"></div>
       <div className="absolute inset-0 flex flex-col justify-end items-start p-10 pb-32 max-w-[35vw] w-full h-[63] gap-8">
-        <img src={Play} alt="play icon" className="w-[89px] h-[84px] " />
+        <button>
+          <img src={Play} alt="play icon" className="w-[89px] h-[84px] " />
+        </button>
         <h1>Alien: Romulus</h1>
         <p>
           Deep in the void, a forgotten station drifts in silence. When
