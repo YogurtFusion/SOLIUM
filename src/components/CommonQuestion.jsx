@@ -11,7 +11,7 @@ const CommonQuestion = () => {
     <section className="max-w-[80vw] mx-auto ">
       <h2 className="text-3xl! mb-8">Common Questions</h2>
       <div className=" flex flex-col gap-8">
-        <div className="common-ques border border-white rounded-lg hover:bg-[#2D2D2D] gap-4 flex flex-col p-2 ">
+        <div onClick={() => setshow1(!show1)} className="common-ques cursor-pointer border border-white rounded-lg hover:bg-[#2D2D2D] gap-4 flex flex-col p-2 ">
           <div className="question flex items-center gap-2 ">
             <button className="" onClick={() => setshow1(!show1)}>
               <Plus
@@ -37,7 +37,7 @@ const CommonQuestion = () => {
           )}
         </div>
 
-        <div className="common-ques border border-white rounded-lg hover:bg-[#2D2D2D] gap-4 flex flex-col p-2 ">
+        <div onClick={() => setshow2(!show2)} className="common-ques cursor-pointer border border-white rounded-lg hover:bg-[#2D2D2D] gap-4 flex flex-col p-2 ">
           <div className="question flex items-center gap-2 ">
             <button className="" onClick={() => setshow2(!show2)}>
               <Plus
@@ -59,7 +59,7 @@ const CommonQuestion = () => {
           )}
         </div>
 
-        <div className="common-ques border border-white rounded-lg hover:bg-[#2D2D2D] gap-4 flex flex-col p-2 ">
+        <div onClick={() => setshow3(!show3)} className="common-ques cursor-pointer border border-white rounded-lg hover:bg-[#2D2D2D] gap-4 flex flex-col p-2 ">
           <div className="question flex items-center gap-2 ">
             <button className="" onClick={() => setshow3(!show3)}>
               <Plus
@@ -70,7 +70,7 @@ const CommonQuestion = () => {
                 height={40}
               />
             </button>
-            <h3>what’s benefit is given to it’s creators </h3>
+            <h3>What’s benefit is given to it’s creators </h3>
           </div>
           {show3 && (
             <div className="answer my-2 mx-8 flex flex-col gap-2 ">
@@ -84,7 +84,7 @@ const CommonQuestion = () => {
           )}
         </div>
 
-        <div className="common-ques border border-white rounded-lg hover:bg-[#2D2D2D] gap-4 flex flex-col p-2 ">
+        <div onClick={() => setshow4(!show4)} className="common-ques cursor-pointer border border-white rounded-lg hover:bg-[#2D2D2D] gap-4 flex flex-col p-2 ">
           <div className="question flex items-center gap-2 ">
             <button className="" onClick={() => setshow4(!show4)}>
               <Plus
