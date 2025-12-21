@@ -4,6 +4,7 @@ import Hero from "./components/Hero.jsx";
 import Trending from "./components/Trending.jsx";
 import Genre from "./components/Genre.jsx";
 import Creators from "./components/Creators.jsx";
+import CommonQuestion from "./components/CommonQuestion.jsx";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -14,6 +15,7 @@ function App() {
       <Trending/>
       <Creators/>
       <Genre/>
+      <CommonQuestion/>
     </>
   );
 }

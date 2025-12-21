@@ -2,7 +2,7 @@ import React from "react";
 
 const Genre = () => {
   return (
-    <section className="mb-36 w-full max-w-[80vw] mx-auto text-center">
+    <section className="w-full max-w-[80vw] mx-auto text-center">
       <h1 className="border-b inline-block">GENRE</h1>
       <div className="cards mt-16 flex gap-6 items-center overflow-x-auto scroll-smooth snap-x snap-mandatory">
 

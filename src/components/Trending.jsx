@@ -3,7 +3,7 @@ import { CircleChevronLeft, CircleChevronRight } from "lucide-react";
 
 const Trending = () => {
   return (
-    <section className="my-36 text-center h-fit max-w-[80vw] w-full mx-auto ">
+    <section className=" text-center h-fit max-w-[80vw] w-full mx-auto ">
       <h1 className="inline text-center border-b">Trending</h1>
 
       <div
