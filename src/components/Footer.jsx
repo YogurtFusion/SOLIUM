@@ -15,19 +15,19 @@ const Footer = () => {
       <div className="social-media">
        <ul className="text-[#FEF3E2] flex flex-col gap-4 justify-center text-center items-center  text-xl " >
             <li className="leading-normal tracking-wider font-semibold" >Social Medias</li>
-        <img className="h-8 w-8" src={Twitter} alt="" />
-        <img className="h-8 w-8" src={Insta} alt="" />
-        <img className="h-8 w-8" src={Mail} alt="" />
-        <img className="h-8 w-8" src={Linkedin} alt="" />
+        <img className="h-8 w-8  hover:opacity-80 focus-visible:outline" src={Twitter} alt="" />
+        <img className="h-8 w-8  hover:opacity-80 focus-visible:outline" src={Insta} alt="" />
+        <img className="h-8 w-8  hover:opacity-80 focus-visible:outline" src={Mail} alt="" />
+        <img className="h-8 w-8  hover:opacity-80 focus-visible:outline" src={Linkedin} alt="" />
         </ul>
       </div>
       <div className="quick-links">
         <ul className="text-[#FEF3E2]  flex flex-col gap-4 justify-center text-center items-center text-xl " >
             <li className=" leading-normal tracking-wider font-semibold" >Quick Links</li>
-            <li className=" leading-normal tracking-wider font-light" ><a href="#">About</a></li>
-            <li className=" leading-normal tracking-wider font-light" ><a href="#">Contact</a></li>
-            <li className=" leading-normal tracking-wider font-light" ><a href="#">Terms</a></li>
-            <li className=" leading-normal tracking-wider font-light" ><a href="#">Submit Film</a></li>
+            <li className=" hover:border-[#FEF3E2] border-b border-transparent leading-normal tracking-wider font-light" ><a href="#">About</a></li>
+            <li className=" hover:border-[#FEF3E2] border-b border-transparent leading-normal tracking-wider font-light" ><a href="#">Contact</a></li>
+            <li className=" hover:border-[#FEF3E2] border-b border-transparent leading-normal tracking-wider font-light" ><a href="#">Terms</a></li>
+            <li className=" hover:border-[#FEF3E2] border-b border-transparent leading-normal tracking-wider font-light" ><a href="#">Submit Film</a></li>
         </ul>
 
       </div>
