@@ -5,7 +5,7 @@ import Trending from "./components/Trending.jsx";
 import Genre from "./components/Genre.jsx";
 import Creators from "./components/Creators.jsx";
 import CommonQuestion from "./components/CommonQuestion.jsx";
-
+import Footer from "./components/Footer.jsx"
 function App() {
   const [count, setCount] = useState(0);
 
@@ -16,6 +16,7 @@ function App() {
       <Creators/>
       <Genre/>
       <CommonQuestion/>
+      <Footer/>
     </>
   );
 }
