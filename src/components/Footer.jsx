@@ -10,7 +10,7 @@ const Footer = () => {
     <footer className="  mt-36 pt-12 pb-16 border-t border-[0.5]  border-[#FEF3E2]">
       <div className=" max-w-6xl mx-auto flex justify-between">
         <div className="logo">
-          <h1 className="text-2xl font-bold">SOLIUM</h1>
+          <h2 className="text-2xl font-bold">SOLIUM</h2>
         </div>
         <div className="social-media">
           <ul className="text-[#FEF3E2] flex flex-col gap-4 justify-center text-center items-center  text-xl ">
@@ -25,7 +25,7 @@ const Footer = () => {
                 aria-label="Twitter"
               >
                 <img
-                  className=" social-links-icons h-8 w-8  hover:opacity-80 focus-visible:outline"
+                  className=" social-links-icons h-8 w-8  hover:opacity-80 focus-visible:outline  focus-visible:outline-white"
                   src={Twitter}
                   alt="twitter icon"
                 />
@@ -39,7 +39,7 @@ const Footer = () => {
                 aria-label="Insta"
               >
                 <img
-                  className=" social-links-icons h-8 w-8  hover:opacity-80 focus-visible:outline"
+                  className=" social-links-icons h-8 w-8  hover:opacity-80 focus-visible:outline  focus-visible:outline-white"
                   src={Insta}
                   alt="Insta icon"
                 />
@@ -54,7 +54,7 @@ const Footer = () => {
                 aria-label="Mail"
               >
                 <img
-                  className=" social-links-icons h-8 w-8  hover:opacity-80 focus-visible:outline"
+                  className=" social-links-icons h-8 w-8  hover:opacity-80 focus-visible:outline  focus-visible:outline-white"
                   src={Mail}
                   alt="Mail icon"
                 />
@@ -68,7 +68,7 @@ const Footer = () => {
                 aria-label="Linkedin"
               >
                 <img
-                  className=" social-links-icons h-8 w-8  hover:opacity-80 focus-visible:outline"
+                  className=" social-links-icons h-8 w-8  hover:opacity-80 focus-visible:outline  focus-visible:outline-white"
                   src={Linkedin}
                   alt="Linkedin incon"
                 />
