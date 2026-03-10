@@ -16,4 +16,4 @@ const TopNavbar = () => {
   );
 };
 
-export default TopNavbar    ;
+export default TopNavbar;
