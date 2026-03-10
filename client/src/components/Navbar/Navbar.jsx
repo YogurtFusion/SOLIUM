@@ -8,7 +8,7 @@ const Navbar=()=>{
         <div className="hidden md:block">
         <TopNavbar/> 
         </div>
-        <div className="md:hidde ">
+        <div className="md:hidden ">
         <BottomNavbar/>
         </div>
         </>
