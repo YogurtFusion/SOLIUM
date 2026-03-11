@@ -1,18 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 import Background from "../assets/hero-bg.png";
 import MainButton from "./UI/Button";
 const Hero = () => {
+  const [mouse, SetMouse] = useState({ x: 50, y: 50 });
+
+  // e is the name of the  report browser gave me
+  // .clientX: Is a built-in label the browser uses to store the horizontal pixel number.
+
+  const handleMouseMove = (e) => {
+    const xPercent = (e.clientX / window.innerWidth) * 100;
+    const yPercent = (e.clientY / window.innerHeight) * 100;
+    SetMouse({ x: xPercent, y: yPercent });
+  };
+
   return (
-    <section className="relative h-screen w-full overflow-hidden  bg-gray-500">
+    <section
+      onMouseMove={handleMouseMove}
+      className="relative h-screen w-full overflow-hidden  bg-gray-500"
+    >
       <img
         src={Background}
         className="absolute h-full w-full object-cover inset-0 "
         alt="Cinematic piano background"
         loading="eager"
         fetchPriority="high"
+        />
+      
+      
+      <div className="absolute inset-0 radial-vintage pointer-events-none z-10 lg:hidden " />
+      <div
+        className=" hidden lg:block absolute inset-0 pointer-events-none z-10 "
+        style={{
+          background: `radial-gradient(circle at ${mouse.x}% ${mouse.y}%, transparent 20%, rgba(0,0,0,0.9) 40%`,
+        }}
       />
-      <div className="absolute inset-0 radial-vintage pointer-events-none z-10 p-6" />
-
       {/*  body */}
       <div className=" relative z-10 flex flex-col justify-center items-center gap-6 md:gap-8 lg:gap-12 h-full ">
         {/* text */}
