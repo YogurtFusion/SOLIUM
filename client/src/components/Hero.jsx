@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Background from "../assets/hero-bg.png";
 import MainButton from "./UI/Button";
 const Hero = () => {
-  const [mouse, SetMouse] = useState({ x: 50, y: 50 });
+  const [mouse, setMouse] = useState({ x: 50, y: 50 });
 
   // e is the name of the  report browser gave me
   // .clientX: Is a built-in label the browser uses to store the horizontal pixel number.
@@ -10,7 +10,7 @@ const Hero = () => {
   const handleMouseMove = (e) => {
     const xPercent = (e.clientX / window.innerWidth) * 100;
     const yPercent = (e.clientY / window.innerHeight) * 100;
-    SetMouse({ x: xPercent, y: yPercent });
+    setMouse({ x: xPercent, y: yPercent });
   };
 
   return (
@@ -29,9 +29,9 @@ const Hero = () => {
       
       <div className="absolute inset-0 radial-vintage pointer-events-none z-10 lg:hidden " />
       <div
-        className=" hidden lg:block absolute inset-0 pointer-events-none z-10 "
+        className=" hidden lg:block absolute inset-0 pointer-events-none z-10 transition-[background] duration-75 ease-out "
         style={{
-          background: `radial-gradient(circle at ${mouse.x}% ${mouse.y}%, transparent 20%, rgba(0,0,0,0.9) 40%`,
+          background: `radial-gradient(circle at ${mouse.x}% ${mouse.y}%, transparent 20%, rgba(0,0,0,0.95) 40%)`,
         }}
       />
       {/*  body */}
