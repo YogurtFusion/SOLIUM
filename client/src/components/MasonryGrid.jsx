@@ -95,7 +95,7 @@ const MasonryGrid = () => {
               className="w-full h-auto rounded-sm border border-white/5 shadow-xl object-cover transition-all duration-700 ease-out group-hover:scale-105 group-active:scale-105"
               decoding="async"
             />
-            <div className={`absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent opacity-0   transition-all duration-500 flex flex-col justify-end p-4 md:p-6 z-10 ${activeId===item.id?"opacity-100":"opacity-0 md:group-hover:opacity-100"} `}>
+            <div className={`absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent opacity-0   transition-all duration-500 flex flex-col justify-end p-4 md:p-6 z-10 md:group-hover:opacity-100 ${activeId===item.id ? "opacity-100!":"opacity-0 "} `}>
               <p className=" hidden md:block text-xs uppercase tracking-[0.3em] text-white/50 mb-1 ">
                 Atmosphere
               </p>
