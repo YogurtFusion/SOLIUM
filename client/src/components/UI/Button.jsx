@@ -1,14 +1,20 @@
 import React from "react";
 import { Icon } from "@iconify/react";
 
-const MainButton = ({ px, py, title }) => {
+const MainButton = ({ px, py, title, hide }) => {
   return (
     <button
-      className={`${px}  ${py} bg-white/5 hover:bg-white/10 active:bg-white/10 border border-white/60 text-white flex justify-between items-center gap-3 text-base  `}
+      className={`${px}  ${py} relative bg-white/5  active:bg-white/10 border border-neutral-500 hover:border-neutral-100 text-white/90 flex justify-between items-center gap-3 text-base group  `}
     >
-        <Icon icon="mdi-light:play" width="28" height="28" />
+      <div className="absolute bg-white/10 origin-left  inset-0 scale-x-0 group-hover:opacity-100 group-hover:scale-x-100 opacity-0 transition-all duration-700 ease-in-out  "></div>
+      <Icon
+        icon="mdi-light:play"
+        className={`${hide} group-hover:text-white `}
+        width="28"
+        height="28"
+      />
 
-<span className="tracking-wide">{title}</span>      
+      <span className="tracking-wide group-hover:text-white ">{title}</span>
     </button>
   );
 };
