@@ -2,7 +2,11 @@
 @import "tailwindcss";
 
 @theme{
-      --font-roboto: "Roboto", sans-serif;
+    --font-Playfair: "Playfair Display", serif;
+  --font-poppins: "Poppins", sans-serif;
+  
+  /* Keep your existing ones if needed, but these are redundant now */
+  --font-roboto: "Roboto", sans-serif;
   --font-roboto-serif: "Roboto Serif", serif;
 }
 

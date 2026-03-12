@@ -25,25 +25,28 @@ const words = [
 
 const Voices = () => {
   return (
-    <section className="bg-neutral-100 ">
+    <section className="bg-neutral-100 min-h-screen py-20 px-6 md:px-24  ">
       {/* wrap */}
-      <div className=" max-w-7xl h-screen flex flex-col px-4 py-6 md:p-12  ">
+      <div className=" max-w-5xl mx-auto   ">
         {/* head */}
-        <div className=" flex flex-col justify-end h-auto w-full  ">
-          <p className=" font-roboto text-sm text-black/50 uppercase my-6 max-w-xs ">
+        <header className=" mb-20 border-b border-neutral-300 pb-8  ">
+          <h2 className=" text-6xl font-Playfair tracking-tighter uppercase  text-neutral-950 ">Voices</h2>
+          <p className=" font-poppins text-xs text-neutral-500 uppercase tracking-[0.2em] mt-4 ">
             WORDS FROM THE visionaries who shaped cinema
           </p>
-          <h2 className="hidden md:block uppercase  ">Voices</h2>
-        </div>
+        </header>
 
         {/* voices */}
-        <div className=" flex flex-col gap-4  h-full ">
+        <div className="space-y-16">
           {words.map((item) => (
-            <div className="flex flex-col border-l border-neutral-900 pl-2 " key={item.id}>
-              <h2 className="capitalize text-xl font-roboto-serif mb-4 text-neutral-800 tracking-tight max-w-xs mx-0  "> {item.des} </h2>
-              <span className="font-roboto text-neutral-600 uppercase text-sm" >{item.title} </span>
-            </div>
-          ))}
+            <figure className=" group flex flex-col border-l-2  border-neutral-400 pl-8 transition-colors duration-500 hover:border-neutral-950 md:pl-6 " key={item.id}>
+              <blockquote className="capitalize text-2xl md:text-4xl  md:tracking-wide font-Playfair  text-neutral-800 tracking-tight max-w-3xl italic   "> {item.des} </blockquote>
+              <figcaption className="mt-6 flex items-center gap-4 text-neutral-500 text-xs uppercase tracking-widest font-poppins" >
+
+              <span className="w-8 h-px bg-neutral-400  " ></span>{item.title}
+              </figcaption>
+            </figure>
+         ))}
         </div>
       </div>
     </section>

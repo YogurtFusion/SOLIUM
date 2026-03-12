@@ -75,9 +75,9 @@ const MasonryGrid = () => {
   };
 
   return (
-    <section className=" bg-neutral-950 p-8 mx-auto ">
+    <section className=" bg-neutral-950 p-8 mx-auto  ">
       {/* wrap */}
-      <div className="columns-2  md:columns-3 lg:columns-4 gap-6 space-y-6 max-w-360">
+      <div className="columns-2  md:columns-3 lg:columns-4 gap-6 space-y-6 max-w-360 ">
         {images.map((item, index) => (
           /*  card*/
           <div
