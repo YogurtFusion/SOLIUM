@@ -39,11 +39,11 @@ const Voices = () => {
         {/* voices */}
         <div className="space-y-16">
           {words.map((item) => (
-            <figure className=" group flex flex-col border-l-2  border-neutral-400 pl-8 transition-colors duration-500 hover:border-neutral-950 md:pl-6 " key={item.id}>
-              <blockquote className="capitalize text-2xl md:text-4xl  md:tracking-wide font-Playfair  text-neutral-800 tracking-tight max-w-3xl italic   "> {item.des} </blockquote>
-              <figcaption className="mt-6 flex items-center gap-4 text-neutral-500 text-xs uppercase tracking-widest font-poppins" >
+            <figure className=" group flex flex-col border-l-2  border-neutral-400 pl-4 md:pl-10 transition-colors duration-500 hover:border-neutral-950 " key={item.id}>
+              <blockquote className=" text-lg  md:text-5xl  md:tracking-tight font-Playfair  text-neutral-800 tracking-tight leading-tight max-w-3xl italic   "> {item.des} </blockquote>
+              <figcaption className="mt-6 flex items-center gap-4 text-neutral-500 text-[10px] md:text-xs uppercase tracking-[0.2em] font-poppins" >
 
-              <span className="w-8 h-px bg-neutral-400  " ></span>{item.title}
+              <span className="w-8 h-px bg-neutral-400 group-hover:bg-neutral-950 transition-colors  " ></span>{item.title}
               </figcaption>
             </figure>
          ))}
