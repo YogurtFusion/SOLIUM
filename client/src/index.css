@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com');
 @import "tailwindcss";
 
+
 @theme{
     --font-Playfair: "Playfair Display", serif;
   --font-poppins: "Poppins", sans-serif;
