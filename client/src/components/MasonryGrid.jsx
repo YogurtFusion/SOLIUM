@@ -69,23 +69,22 @@ const images = [
   },
 ];
 const MasonryGrid = () => {
-    const [activeId, setActiveId] = useState(null);
-    const toggleMobileOverlay  = (id)=>{
-        setActiveId(activeId===id?null:id)
-    }
+  const [activeId, setActiveId] = useState(null);
+  const toggleMobileOverlay = (id) => {
+    setActiveId(activeId === id ? null : id);
+  };
 
-
-    return (
+  return (
     <section className=" bg-neutral-950 p-8 mx-auto ">
       {/* wrap */}
-      <div className="columns-2  md:columns-3 lg:columns-4 gap-6 space-y-6 max-w-[1440px]">
+      <div className="columns-2  md:columns-3 lg:columns-4 gap-6 space-y-6 max-w-360">
         {images.map((item, index) => (
           /*  card*/
           <div
-          onClick={()=>toggleMobileOverlay(item.id)}
+            onClick={() => toggleMobileOverlay(item.id)}
             className=" relative break-inside-avoid group  overflow-hidden  bg-stone-900 mb-6 cursor-pointer"
             key={item.id}
-            style={{animationDelay: `${index*100}ms`}}
+            style={{ animationDelay: `${index * 100}ms` }}
           >
             <img
               src={item.src}
@@ -95,7 +94,9 @@ const MasonryGrid = () => {
               className="w-full h-auto rounded-sm border border-white/5 shadow-xl object-cover transition-all duration-700 ease-out group-hover:scale-105 group-active:scale-105"
               decoding="async"
             />
-            <div className={`absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent opacity-0   transition-all duration-500 flex flex-col justify-end p-4 md:p-6 z-10 md:group-hover:opacity-100 ${activeId===item.id ? "opacity-100!":"opacity-0 "} `}>
+            <div
+              className={`absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent opacity-0   transition-all duration-500 flex flex-col justify-end p-4 md:p-6 z-10 md:group-hover:opacity-100 ${activeId === item.id ? "opacity-100!" : "opacity-0 "} `}
+            >
               <p className=" hidden md:block text-xs uppercase tracking-[0.3em] text-white/50 mb-1 ">
                 Atmosphere
               </p>
@@ -107,7 +108,9 @@ const MasonryGrid = () => {
                   
                   <span className="hidden md:block">Explore</span> more
                 </span> */}
-                <p className="relative z-10" >Explore <span className="hidden md:inline" >More</span> </p>
+                <p className="relative z-10">
+                  Explore <span className="hidden md:inline">More</span>{" "}
+                </p>
                 <div className="absolute inset-0 bg-white scale-x-0  group-active/btn:scale-x-100 group-hover/btn:scale-x-100 origin-left transition-transform duration-500 opacity-10"></div>
               </button>
             </div>

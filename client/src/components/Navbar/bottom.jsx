@@ -28,7 +28,7 @@ const BottomNavbar = () => {
   ];
 
   return (
-    <nav className="fixed bottom-0 inset-x-0 z-50  w-full  px-8 py-4 bg-stone-500 text-amber-50 border-t border-white/10 ">
+    <nav className="fixed bottom-0 inset-x-0 z-50  w-full  px-8 py-4 bg-stone-900 text-amber-50 border-t border-white/10 ">
       <div className=" flex justify-between items-center  mx-auto w-[90%]">
         {links.map((item) => (
           <Link key={item.id} to={item.link} className="">
