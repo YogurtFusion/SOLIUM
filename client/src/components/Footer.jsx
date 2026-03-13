@@ -36,10 +36,10 @@ const Footer = () => {
         {foooterLinks.map((item) => (
             <Link 
             key={item.id} 
-            className=" font-poppins text-[11px] uppercase text-neutral-500 hover:text-white transition-all duration-500 ease-in-out "
+            className=" font-poppins text-[11px] uppercase text-neutral-500 active:text-white hover:text-white transition-all duration-500 ease-in-out "
             to={item.link}
             >
-            {item.title}{" "}
+            {item.title}
           </Link>
         ))}
       </div>
