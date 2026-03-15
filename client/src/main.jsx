@@ -8,10 +8,12 @@ import Footer from './components/Footer.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    {/* <ReactLenis root> */}
     <BrowserRouter>
     <Navbar/>
     <App />
     <Footer/>
     </BrowserRouter>
+    {/* </ReactLenis> */}
   </StrictMode>,
 )

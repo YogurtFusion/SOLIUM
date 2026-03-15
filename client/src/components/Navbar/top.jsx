@@ -31,7 +31,7 @@ const TopNavbar = () => {
     <header className="sticky top-0 z-50  bg-[#0A0A0A] text-white border-b border-white/10 ">
       {/* wrap */}
 
-      <div className="flex justify-between items-center w-full max-w-[1440px]  mx-auto px-8 py-4  ">
+      <div className="flex justify-between items-center w-full max-w-360 mx-auto px-8 py-4  ">
         {/* logo */}
         <Link
           to={"/"}
