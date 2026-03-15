@@ -51,7 +51,7 @@ const Form = () => {
         {/* FORM */}
         <div className=" bg-neutral-900  h-fit py-6 md:p-12 w-fit mx-auto text-white  ">
           <h2 className="text-center my-4 text-4xl font-Playfair tracking-tight leading-tight  ">
-            Have a film in mind ?
+            Got a film to share?
           </h2>
           <form className="flex flex-col items-start justify-start gap-4 py-8 px-16 ">
             <div className="flex flex-col gap-4 w-full">
