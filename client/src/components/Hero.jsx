@@ -24,9 +24,8 @@ const Hero = () => {
         alt="Cinematic piano background"
         loading="eager"
         fetchPriority="high"
-        />
-      
-      
+      />
+
       <div className="absolute inset-0 radial-vintage pointer-events-none z-10 lg:hidden " />
       <div
         className=" hidden lg:block absolute inset-0 pointer-events-none z-10 transition-[background] duration-75 ease-out "
@@ -42,8 +41,7 @@ const Hero = () => {
             Solium
           </h1>
           <p className=" text-white/75 md:text-white/70 max-w-[336px] leading-normal tracking-wider font-roboto md:max-w-xl  md:text-xl  ">
-            Where cinema becomes art. A curated collection of independent films
-            that challenge, inspire, and transform.
+           A platform to watch films by independent and emerging filmmakers. Discover new voices and support them   
           </p>
         </div>
 
