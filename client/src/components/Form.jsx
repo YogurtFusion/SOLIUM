@@ -9,7 +9,7 @@ const formData = [
 ];
 const Form = () => {
   return (
-    <section className="min-h-screen bg-neutral-950">
+    <section className="min-h-screen bg-neutral-950 selection:bg-white selection:text-black">
       {/* wrap */}
       <div className=" grid grid-cols-1  lg:grid-cols-2 justify-center items-center min-h-screen  ">
         <div className="lg:flex justify-center items-center hidden  ">

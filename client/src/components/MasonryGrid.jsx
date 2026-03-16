@@ -75,9 +75,17 @@ const MasonryGrid = () => {
   };
 
   return (
-    <section className=" bg-neutral-950 p-8 mx-auto  ">
+    <section className=" bg-neutral-950 w-full  selection:bg-white selection:text-black">
       {/* wrap */}
-      <div className="columns-2  md:columns-3 lg:columns-4 gap-6 space-y-6 max-w-360 ">
+      <header className="px-6 md:px-24 py-10 md:py-16 pb-12 md:pb-20   max-w-screen-2xl mx-auto">
+        <h1 className="font-Playfair font-medium text-5xl tracking-tight leading-normal text-white md:text-7xl  md:tracking-tighter ">
+          BROWSE BY MOOD
+        </h1>
+        <p className="text-neutral-400 font-poppins leading-relaxed tracking-[0.2em] mt-3 uppercase text-sm  md:text-base max-w-md">
+          Browse films by look and feel. Find your vibe.
+        </p>
+      </header>
+      <div className="columns-2  md:columns-3 lg:columns-4 gap-4 md:gap-6 space-y-6 px-4 pb-24 max-w-[1600px] mx-auto ">
         {images.map((item, index) => (
           /*  card*/
           <div

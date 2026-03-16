@@ -26,7 +26,7 @@ const foooterLinks = [
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white ">
+    <footer className="bg-black text-white selection:bg-white selection:text-black">
         <div className=" flex flex-col justify-center gap-12 items-center overflow-hidden p-16 md:p-24">
 
       <h2 className="tracking-[0.2em] border-b border-neutral-800 pb-2 text-2xl font-Playfair font-semibold text-center uppercase ">

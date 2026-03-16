@@ -25,7 +25,7 @@ const words = [
 
 const Voices = () => {
   return (
-    <section className="bg-neutral-100 min-h-screen py-20 px-6 md:px-24  ">
+    <section className="bg-neutral-100 min-h-screen py-20 px-6 md:px-24 selection:bg-black selection:text-white ">
       {/* wrap */}
       <div className=" max-w-5xl mx-auto   ">
         {/* head */}
