@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Hero from "./components/Hero";
-import MasonryGrid from "./components/MasonryGrid";
+import MasonryGridOld from "./components/MasonryGrid-old"
+import MasonryGrid from "./components/MasonryGrid";;
 import Voices from "./components/Voices";
 import Form from "./components/Form";
 
@@ -9,6 +10,7 @@ function App() {
     <>
       <Hero />
       <MasonryGrid/>
+      {/* <MasonryGridOld/> */}
       <Voices/>
       <Form/>
     </>

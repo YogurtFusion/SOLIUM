@@ -16,7 +16,7 @@ const Hero = () => {
   return (
     <section
       onMouseMove={handleMouseMove}
-      className="relative h-screen w-full overflow-hidden  bg-gray-500"
+      className="relative h-screen w-full overflow-hidden  bg-gray-500 min-h-screen"
     >
       <img
         src={Background}
