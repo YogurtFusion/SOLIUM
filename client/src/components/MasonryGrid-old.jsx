@@ -82,7 +82,7 @@ const MasonryGrid = () => {
           BROWSE BY MOOD
         </h1>
         <p className="text-neutral-400  font-poppins leading-relaxed tracking-[0.2em] mt-3 uppercase text md:text-sm  lg:text-base max-w-md">
-          Browse films by look and feel. Find your vibe.
+          Browse film's Category according to your mood.
         </p>
       </header>
       <div className="columns-2  md:columns-3 lg:columns-4 gap-4 md:gap-6 space-y-6 px-4 pb-24 max-w-[1600px] mx-auto ">
@@ -97,8 +97,7 @@ const MasonryGrid = () => {
             <img
               src={item.src}
               alt={item.title}
-              fetchPriority={index < 3 ? "high" : "low"}
-              loading={index < 3 ? "eager" : "lazy"}
+              // fetchPriority={index < 3 ? "high" : "low"}
               className="w-full h-auto rounded-sm border border-white/5 shadow-xl object-cover transition-all duration-700 ease-out group-hover:scale-105 group-active:scale-105"
               decoding="async"
             />

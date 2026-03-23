@@ -3,6 +3,7 @@ import Background from "../assets/hero-bg.png";
 import MainButton from "./UI/Button";
 const Hero = () => {
   const [mouse, setMouse] = useState({ x: 50, y: 50 });
+  const [isLoad, setIsLoad] = useState(false)
 
   // e is the name of the  report browser gave me
   // .clientX: Is a built-in label the browser uses to store the horizontal pixel number.
@@ -15,12 +16,17 @@ const Hero = () => {
 
   return (
     <section
+    
       onMouseMove={handleMouseMove}
       className="relative h-screen w-full overflow-hidden  bg-gray-500 min-h-screen"
     >
+      {isLoad&& <div className="bg-stone-950 absolute h-full w-full object-cover inset-0 " >
+        
+        </div>}
       <img
         src={Background}
-        className="absolute h-full w-full object-cover inset-0 "
+        className={`absolute h-full w-full object-cover inset-0 ${isLoad ? "opacity-100": "opacity-0"} `} 
+        onLoad={()=> setIsLoad(true)}
         alt="Cinematic piano background"
         loading="eager"
         fetchPriority="high"
