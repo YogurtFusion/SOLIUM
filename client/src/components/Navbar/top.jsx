@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { CircleUserRoundIcon, Search, SearchIcon } from "lucide-react";
 import { Icon } from "@iconify/react";
+import { NavLink } from "react-router-dom";
 
 const links = [
   {
@@ -12,17 +13,17 @@ const links = [
   {
     id: "id2",
     title: "Catalog",
-    target: "/",
+    target: "/Catalog",
   },
   {
     id: "id3",
     title: "Library",
-    target: "/",
+    target: "/Library",
   },
   {
     id: "id4",
     title: "Directors",
-    target: "/",
+    target: "/Directors",
   },
 ];
 const TopNavbar = () => {
@@ -45,10 +46,10 @@ const TopNavbar = () => {
           <ul className="flex items-center gap-8">
             {links.map((item) => (
               <li
-                className=" font-roboto text-xs uppercase tracking-[0.2em] text-white/40 hover:text-stone-50 transition-all duration-300 ease-out "
+                className=" font-roboto text-xs uppercase tracking-[0.2em]  transition-all duration-300 ease-out "  
                 key={item.id}
               >
-                <Link to={item.target}> {item.title} </Link>
+                <NavLink className={(e)=>{return e.isActive? "text-stone-50 transition-all duration-300 ease-out ": "text-neutral-500 hover:text-stone-50 transition-all duration-300 ease-out "}} to={item.target}> {item.title} </NavLink>
               </li>
             ))}
           </ul>

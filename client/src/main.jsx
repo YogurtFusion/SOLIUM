@@ -5,7 +5,6 @@ import { BrowserRouter } from 'react-router-dom'
 import App from './App.jsx'
 import Navbar from './components/Navbar/Navbar.jsx'
 import Footer from './components/Footer.jsx'
-
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     {/* <ReactLenis root> */}
