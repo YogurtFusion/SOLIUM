@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import { CircleUserRoundIcon, Search, SearchIcon } from "lucide-react";
 import { Icon } from "@iconify/react";
-import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router";
 
 const links = [
   {
