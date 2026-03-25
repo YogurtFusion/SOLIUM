@@ -21,7 +21,7 @@ const Hero = () => {
     >
       <img
         src={Background}
-        className={`absolute h-full w-full object-cover inset-0 ${isLoad ? "opacity-100 duration-700 transition-all ease-out " : "opacity-0 "} `}
+        className={`absolute h-full w-full object-cover inset-0 duration-1000 transition-all ease-out  ${isLoad ? "opacity-100 " : "opacity-0 "} `}
         onLoad={() => setIsLoad(true)}
         alt="Cinematic piano background"
         loading="eager"
@@ -30,7 +30,7 @@ const Hero = () => {
 
       {/* Load screen */}
       {!isLoad && (
-        <div className="flex flex-col gap-3 md:gap-5 justify-center items-center text-center h-full w-full   bg-black fixed h-full w-full object-cover inset-0  ">
+        <div className="flex flex-col gap-3 md:gap-5 justify-center items-center text-center h-full w-full   bg-black fixedobject-cover inset-0  ">
           <h1 className="uppercase text-white text-5xl md:text-7xl lg:text-8xl font-semibold font-roboto-serif ">
             Solium
           </h1>

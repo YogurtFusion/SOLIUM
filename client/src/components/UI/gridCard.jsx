@@ -1,25 +1,36 @@
 import React, { useState } from "react";
 
 const GridCard = ({ id, title, img, subtitle, aspectRatio, activeId , toggleMobileOverlay }) => {
-
+const [isLoad, SetIsLoad] = useState(false)
   return (
-    <div className="">
+    <div className="w-full h-full">
       <div
         onClick={() => toggleMobileOverlay(id)}
         className={`relative break-inside-avoid group  overflow-hidden  bg-stone-900 mb-6 cursor-pointer`}
         key={id}
         style={{
-          // animationDelay: `${index * 100}ms`,
-          aspectRatio: aspectRatio,
+          aspectRatio: aspectRatio|| "16/9",
         }}
       >
         <img
           src={img}
           alt={title}
-          className={`w-full h-auto rounded-sm border border-white/5 shadow-xl object-cover transition-all duration-700 ease-out group-hover:scale-105 group-active:scale-105 `}
+          className={`w-full h-full rounded-sm border border-white/5 shadow-xl object-cover transition-all duration-700 ease-out group-hover:scale-105 group-active:scale-105  ${isLoad? "opacity-100": "opacity-0"} `}
           decoding="async"
+          onLoad={()=> SetIsLoad(true)}
         />
-        <div
+        {!isLoad && (
+          <div className="absolute inset-0 flex flex-col justify-center items-center  w-full h-full bg-stone-950/50">
+              <h3 className="text-center text-sm md:text-base   font-roboto-serif  capitalize text-neutral-500 animate-pulse tracking-widest   ">
+           Image Loading...
+          </h3>
+          <div className="w-1/2 h-px bg-neutral-700 mt-2 overflow-hidden relative">
+          <div className="absolute inset-0 bg-neutral-400 -translate-x-full animate-[shimmer_2s_infinite] w-full"></div>
+          </div>
+          </div>
+        )}
+        {isLoad && (
+         <div
           className={`absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent opacity-0   transition-all duration-500 flex flex-col justify-end p-4 lg:p-6 z-10 md:group-hover:opacity-100 ${activeId  ? "opacity-100!" : "opacity-0 "} `}
         >
           <h3 className=" text-base md:text-xl   font-roboto-serif  capitalize text-white mb-2 lg:mb-4 ">
@@ -38,7 +49,9 @@ const GridCard = ({ id, title, img, subtitle, aspectRatio, activeId , toggleMobi
             </p>
             <div className="absolute inset-0 bg-white scale-x-0  group-active/btn:scale-x-100 group-hover/btn:scale-x-100 origin-left transition-transform duration-500 opacity-10"></div>
           </button>
-        </div>
+        </div>   
+        )}
+      
       </div>
     </div>
   );
