@@ -16,7 +16,7 @@ const GridCard = ({ id, title, img, subtitle, aspectRatio, activeId , toggleMobi
         <img
           src={img}
           alt={title}
-          className={`w-full h-auto rounded-sm border border-white/5 shadow-xl object-cover transition-all duration-700 ease-out group-hover:scale-105 group-active:scale-105 w-full`}
+          className={`w-full h-auto rounded-sm border border-white/5 shadow-xl object-cover transition-all duration-700 ease-out group-hover:scale-105 group-active:scale-105 `}
           decoding="async"
         />
         <div

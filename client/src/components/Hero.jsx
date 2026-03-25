@@ -3,7 +3,7 @@ import Background from "../assets/hero-bg.png";
 import MainButton from "./UI/Button";
 const Hero = () => {
   const [mouse, setMouse] = useState({ x: 50, y: 50 });
-  const [isLoad, setIsLoad] = useState(false)
+  const [isLoad, setIsLoad] = useState(false);
 
   // e is the name of the  report browser gave me
   // .clientX: Is a built-in label the browser uses to store the horizontal pixel number.
@@ -16,48 +16,62 @@ const Hero = () => {
 
   return (
     <section
-    
       onMouseMove={handleMouseMove}
-      className="relative h-screen w-full overflow-hidden  bg-gray-500 min-h-screen"
+      className="relative h-screen w-full overflow-hidden  bg-black min-h-screen"
     >
-      {isLoad&& <div className="bg-stone-950 absolute h-full w-full object-cover inset-0 " >
-        
-        </div>}
       <img
         src={Background}
-        className={`absolute h-full w-full object-cover inset-0 ${isLoad ? "opacity-100": "opacity-0"} `} 
-        onLoad={()=> setIsLoad(true)}
+        className={`absolute h-full w-full object-cover inset-0 ${isLoad ? "opacity-100" : "opacity-0"} `}
+        onLoad={() => setIsLoad(true)}
         alt="Cinematic piano background"
         loading="eager"
         fetchPriority="high"
       />
 
-      <div className="absolute inset-0 radial-vintage pointer-events-none z-10 lg:hidden " />
-      <div
-        className=" hidden lg:block absolute inset-0 pointer-events-none z-10 transition-[background] duration-75 ease-out "
-        style={{
-          background: `radial-gradient(circle at ${mouse.x}% ${mouse.y}%, transparent 20%, rgba(0,0,0,0.95) 40%)`,
-        }}
-      />
-      {/*  body */}
-      <div className=" relative z-10 flex flex-col justify-center items-center gap-6 md:gap-8 lg:gap-12 h-full ">
-        {/* text */}
-        <div className="flex flex-col gap-3 md:gap-5 justify-center items-center text-center  ">
+      {/* Load screen */}
+      {!isLoad && (
+        <div className="flex flex-col gap-3 md:gap-5 justify-center items-center text-center h-full w-full   bg-black fixed h-full w-full object-cover inset-0  ">
           <h1 className="uppercase text-white text-5xl md:text-7xl lg:text-8xl font-semibold font-roboto-serif ">
             Solium
           </h1>
           <p className=" text-white/75 md:text-white/70 max-w-[336px] leading-normal tracking-wider font-roboto md:max-w-xl  md:text-xl  ">
-           A platform to watch films by independent and emerging filmmakers. Discover new voices and support them   
+            A platform to watch films by independent and emerging filmmakers.
+            Discover new voices and support them
           </p>
         </div>
+      )}
 
-        {/* button */}
-        <MainButton
-          title={"Begin Experience"}
-          px={"px-6 md:px-14"}
-          py={"py-3 md:py-4"}
-        />
-      </div>
+      {isLoad && (
+        <div className="h-full w-full">
+          <div className="absolute inset-0 radial-vintage pointer-events-none z-10 lg:hidden " />
+          <div
+            className=" hidden lg:block absolute inset-0 pointer-events-none z-10 transition-[background] duration-75 ease-out "
+            style={{
+              background: `radial-gradient(circle at ${mouse.x}% ${mouse.y}%, transparent 20%, rgba(0,0,0,0.95) 40%)`,
+            }}
+          />
+          {/*  body */}
+          <div className=" relative z-10 flex flex-col justify-center items-center gap-6 md:gap-8 lg:gap-12 h-full ">
+            {/* text */}
+            <div className="flex flex-col gap-3 md:gap-5 justify-center items-center text-center  ">
+              <h1 className="uppercase text-white text-5xl md:text-7xl lg:text-8xl font-semibold font-roboto-serif ">
+                Solium
+              </h1>
+              <p className=" text-white/75 md:text-white/70 max-w-[336px] leading-normal tracking-wider font-roboto md:max-w-xl  md:text-xl  ">
+                A platform to watch films by independent and emerging
+                filmmakers. Discover new voices and support them
+              </p>
+            </div>
+
+            {/* button */}
+            <MainButton
+              title={"Begin Experience"}
+              px={"px-6 md:px-14"}
+              py={"py-3 md:py-4"}
+            />
+          </div>
+        </div>
+      )}
     </section>
   );
 };
