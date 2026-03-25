@@ -20,12 +20,12 @@ const GridCard = ({ id, title, img, subtitle, aspectRatio, activeId , toggleMobi
           decoding="async"
         />
         <div
-          className={`absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent opacity-0   transition-all duration-500 flex flex-col justify-end p-4 md:p-6 z-10 md:group-hover:opacity-100 ${activeId  ? "opacity-100!" : "opacity-0 "} `}
+          className={`absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent opacity-0   transition-all duration-500 flex flex-col justify-end p-4 lg:p-6 z-10 md:group-hover:opacity-100 ${activeId  ? "opacity-100!" : "opacity-0 "} `}
         >
-          <h3 className=" text-base md:text-xl   font-roboto-serif  capitalize text-white mb-2 md:mb-4 ">
+          <h3 className=" text-base md:text-xl   font-roboto-serif  capitalize text-white mb-2 lg:mb-4 ">
             {title}
           </h3>
-          <p className=" hidden md:block text-xs uppercase tracking-[0.3em] text-white/50 mb-1 ">
+          <p className=" hidden lg:block text-xs uppercase tracking-[0.3em] text-white/50 mb-1 ">
             {subtitle}
           </p>
           <button className=" group/btn relative  border border-white/20 hover:border-white active:border-white w-fit py-1 px-3 md:px-4 md:py-2 text-[10px] md:text-xs uppercase tracking-widest text-white transition-colors duration-300 ">

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { act, useState } from "react";
 import noir from "../assets/img/mood/noir.png";
 import dusk from "../assets/img/mood/dusk.png";
 import vivid from "../assets/img/mood/vivid.png";
@@ -129,12 +129,17 @@ const Posters = [
 ];
 
 const MasonryGrid = () => {
-  const [activeId, setActiveId] = useState(null)
+  const [activeId, setActiveId] = useState(null);
 
-  const toggleMobileOverlay =(id)=>{
-  setActiveId(activeId === id ? null :id  )  
-  }
-  
+  const toggleMobileOverlay = (id) => {
+    console.log("before: ", activeId)
+    if (activeId === id) {
+      setActiveId(null);
+    } else {
+      setActiveId(id);
+    }
+    console.log("after: ", activeId ===id?null: id)
+  };
 
   return (
     <section className=" bg-neutral-950 w-full  selection:bg-white selection:text-black min-h-screen">
