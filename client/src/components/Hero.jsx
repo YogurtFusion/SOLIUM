@@ -21,7 +21,7 @@ const Hero = () => {
     >
       <img
         src={Background}
-        className={`absolute h-full w-full object-cover inset-0 ${isLoad ? "opacity-100" : "opacity-0"} `}
+        className={`absolute h-full w-full object-cover inset-0 ${isLoad ? "opacity-100 duration-700 transition-all ease-out " : "opacity-0 "} `}
         onLoad={() => setIsLoad(true)}
         alt="Cinematic piano background"
         loading="eager"
@@ -35,8 +35,7 @@ const Hero = () => {
             Solium
           </h1>
           <p className=" text-white/75 md:text-white/70 max-w-[336px] leading-normal tracking-wider font-roboto md:max-w-xl  md:text-xl  ">
-            A platform to watch films by independent and emerging filmmakers.
-            Discover new voices and support them
+          Loading Cinematic Experience...
           </p>
         </div>
       )}
