@@ -9,9 +9,7 @@ ReactDOM.createRoot(root).render(
   <StrictMode>
     {/* <ReactLenis root> */}
     <BrowserRouter>
-    <Navbar/>
     <App />
-    <Footer/>
     </BrowserRouter>
     {/* </ReactLenis> */}
   </StrictMode>,

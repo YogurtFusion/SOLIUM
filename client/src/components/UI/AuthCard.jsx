@@ -37,7 +37,7 @@ const AuthCard = () => {
           </p>
         </div>
 
-        <form  className=" flex flex-col gap-10 w-full ">
+        <form onSubmit={handleSubmit} className=" flex flex-col gap-10 w-full ">
           {Credentials.map((item) => (
             <div className="flex flex-col gap-6 w-full" key={item.id}>
               {/* <label className="text-xs uppercase tracking-tighter text-neutral-500 ml-1" htmlFor={item.placeholder}>{item.label}</label> */}
