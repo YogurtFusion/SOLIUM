@@ -1,19 +1,14 @@
 import React, { useState } from "react";
-import Hero from "./components/Hero";
-import MasonryGridOld from "./components/MasonryGrid-old"
-import MasonryGrid from "./components/MasonryGrid";;
-import Voices from "./components/Voices";
-import Form from "./components/Form";
+import Home from "./pages/Home";
+import { Routes, Route } from "react-router";
+import Auth from "./pages/Auth";
 
 function App() {
   return (
-    <>
-      <Hero />
-      <MasonryGrid/>
-      {/* <MasonryGridOld/> */}
-      <Voices/>
-      <Form/>
-    </>
+    <Routes>
+      <Route path="/" element={<Home/>} />
+      <Route path="/auth" element={<Auth/>} /> 
+    </Routes>
   );
 }
 
