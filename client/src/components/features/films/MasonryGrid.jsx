@@ -1,17 +1,17 @@
 import React, { act, useState } from "react";
-import noir from "../assets/img/mood/noir.png";
-import dusk from "../assets/img/mood/dusk.png";
-import vivid from "../assets/img/mood/vivid.png";
-import grain from "../assets/img/mood/grain.png";
-import silence from "../assets/img/mood/silence.png";
-import chaos from "../assets/img/mood/chaos.png";
-import symmetry from "../assets/img/mood/symmetry.png";
-import echoes from "../assets/img/mood/echoes.png";
-import humidity from "../assets/img/mood/humidity.png";
-import melancholy from "../assets/img/mood/melancholy.png";
-import rhythm from "../assets/img/mood/rhythm.png";
-import surreal from "../assets/img/mood/surreal.png";
-import GridCard from "./UI/gridCard";
+import noir from "../../../assets/img/mood/noir.png";
+import dusk from "../../../assets/img/mood/dusk.png";
+import vivid from "../../../assets/img/mood/vivid.png";
+import grain from "../../../assets/img/mood/grain.png";
+import silence from "../../../assets/img/mood/silence.png";
+import chaos from "../../../assets/img/mood/chaos.png";
+import symmetry from "../../../assets/img/mood/symmetry.png";
+import echoes from "../../../assets/img/mood/echoes.png";
+import humidity from "../../../assets/img/mood/humidity.png";
+import melancholy from "../../../assets/img/mood/melancholy.png";
+import rhythm from "../../../assets/img/mood/rhythm.png";
+import surreal from "../../../assets/img/mood/surreal.png";
+import GridCard from "../../../components/UI/gridCard";
 
 const Posters = [
   //   { title: "NOIR", subtitle: "Dark and moody" },

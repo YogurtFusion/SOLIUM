@@ -1,5 +1,5 @@
 import React from "react";
-import AuthCard from "../UI/AuthCard";
+import AuthCard from "../../UI/AuthCard";
 
 const Login = () => {
   return (

@@ -1,6 +1,6 @@
 import React from "react";
-import Login from "../components/features/Login";
-import SignUp from "../components/features/Signup";
+import Login from "../components/features/auth/Login";
+import SignUp from "../components/features/auth/Signup";
 
 const Auth =()=>{
     return(

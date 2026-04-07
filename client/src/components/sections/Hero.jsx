@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Background from "../assets/hero-bg.png";
-import MainButton from "./UI/Button";
+import Background from "../../assets/hero-bg.png";
+import MainButton from "../UI/Button";
 const Hero = () => {
   const [mouse, setMouse] = useState({ x: 50, y: 50 });
   const [isLoad, setIsLoad] = useState(false);

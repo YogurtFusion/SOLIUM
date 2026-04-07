@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import MainButton from "./UI/Button";
+import MainButton from "../UI/Button";
 const formData = [
   { id: "film-name", title: "Film Name", type: "text" },
 //   { id: "release-date", title: "Release Date", type: "date", hidden: "hidden " },

@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import Home from "./pages/Home";
 import { Routes, Route , useLocation} from "react-router";
 import Auth from "./pages/Auth";
-import Navbar from "./components/Navbar/Navbar";
-import Footer from "./components/Footer";
+import Navbar from "./components/layout/Navbar/Navbar";
+import Footer from "./components/layout/Footer";
 
 function App() {
   const location = useLocation()

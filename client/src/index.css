@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com');
 @import "tailwindcss";
 
+@layer base{
+  ::selection{
+    @apply bg-white text-black
+  }
+}
 
 @theme{
     --font-Playfair: "Playfair Display", serif;
