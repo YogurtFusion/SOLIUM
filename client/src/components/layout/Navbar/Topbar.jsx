@@ -12,8 +12,8 @@ const links = [
   },
   {
     id: "id2",
-    title: "Browse",
-    target: "/Browse",
+    title: "Collections",
+    target: "/Collections",
   },
   {
     id: "id3",
@@ -71,7 +71,7 @@ const TopNavbar = () => {
             <input
               type="text"
               placeholder="Search films...."
-              className={`bg-transparent outline-none text-sm transition-all duration-500 ease-in-out ${isOpen ? "w-40 opacity-100 px-2" : "w-0 opacity-0"}`}
+              className={`bg-transparent outline-none text-sm transition-all duration-500 ease-in-out ${isOpen ? "w-60 opacity-100 px-2" : "w-0 opacity-0"}`}
             />
             <button
               onClick={() => setIsOpen(!isOpen)}

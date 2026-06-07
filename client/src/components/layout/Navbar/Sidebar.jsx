@@ -1,4 +1,4 @@
-import { Search } from "lucide-react";
+import { Search, X } from "lucide-react";
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router";
 
@@ -11,9 +11,9 @@ const links = [
   },
   {
     id: "id2",
-    icon: "search",
-    title: "Browse",
-    target: "/Browse",
+    icon: "grid_view",
+    title: "Collections",
+    target: "/Collections",
   },
   {
     id: "id3",
@@ -37,6 +37,7 @@ const links = [
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
   return (
     <div className=" fixed top-0 z-50 w-full border-b border-foreground/40 ">
       <div className="bg-black/80 backdrop-blur-lg py-5 px-6 grid grid-cols-2 w-full max-w-7xl mx-auto items-center">
@@ -47,12 +48,20 @@ const Sidebar = () => {
         >
           Solium
         </Link>
-        <button
-          onClick={() => setIsOpen(true)}
-          className={`justify-self-end  text-foreground text-3xl cursor-pointer  ${isOpen ? "invisible" : "visible"} `}
+        <div
+          className="justify-self-end  "
+          
         >
-          <span className="material-symbols-outlined">menu</span>
-        </button>
+          <button className="text-foreground pr-6 cursor-pointer"onClick={() => setIsSearchOpen(true)}>
+            <span className="material-symbols-outlined">search</span>
+          </button>
+          <button
+            onClick={() => setIsOpen(true)}
+            className={`  text-foreground text-3xl cursor-pointer  ${isOpen ? "invisible" : "visible"} `}
+          >
+            <span className="material-symbols-outlined">menu</span>
+          </button>
+        </div>
       </div>
       <nav
         className={`${isOpen ? "translate-x-0" : "translate-x-full"} fixed top-0 right-0 z-50 h-full w-[75vw] max-w-sm  bg-black/85  backdrop-blur-md border-l border-border/30 transform transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] flex flex-col  items-end  px-8 pt-6 shadow-2xl text-foreground `}
@@ -71,20 +80,45 @@ const Sidebar = () => {
               className={({ isActive }) =>
                 `flex items-center gap-4 py-4 w-full border-b border-border transition-all duration-300 ${isActive ? "text-foreground font-medium pl-2 border-foreground" : "text-foreground/60 active:text-foreground/80 "}`
               }
-            ><span className="material-symbols-outlined text-base">
+            >
+              <span className="material-symbols-outlined text-base">
                 {item.icon}
               </span>
-              <span className="font-poppins uppercase tracking-widest text-lg">{item.title}</span>
+              <span className="font-poppins uppercase tracking-widest text-lg">
+                {item.title}
+              </span>
             </NavLink>
           ))}
         </div>
       </nav>
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black/60 z-40 backdrop-blur-sm transition-opacity "
+          className="fixed inset-0 bg-black/60 z-40 backdrop-blur-sm transform-gpu transition-opacity"
           onClick={() => setIsOpen(false)}
         ></div>
       )}
+      <div
+        className={`absolute top-0 bg-black w-full h-full flex justify-between items-center  px-8 duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] z-50 transition-all ${isSearchOpen ? "translate-x-0 pointer-events-auto" : "translate-x-full pointer-events-none"} `}
+      >
+        <div className="w-full flex items-center text-foreground gap-3 ">
+          <Search size={20} strokeWidth={1.5} className="text-foreground/80" />
+          <input
+            type="text"
+            className=" w-full border-b border-border text-foreground outline-none focus:border-foreground pl-1 text-lg font-poppins tracking-wide "
+            placeholder="Search films, directors, moods..."
+            autoFocus={isSearchOpen}
+          />
+        </div>
+       <button
+          onClick={() => {
+            setIsSearchOpen(false);
+          }}
+          className="text-foreground/80 hover:text-foreground transition-colors ml-4 cursor-pointer"
+        >
+          
+          <X size={26} strokeWidth={1.5} />
+        </button>
+      </div>
     </div>
   );
 };
