@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import { Link } from "react-router";
-import { CircleUserRoundIcon, Search, SearchIcon } from "lucide-react";
-import { Icon } from "@iconify/react";
-import { NavLink } from "react-router";
+import { Link, NavLink } from "react-router";
+import { CircleUserRoundIcon, Search } from "lucide-react"; 
 
 const links = [
   {
@@ -26,12 +24,12 @@ const links = [
     target: "/Directors",
   },
 ];
+
 const TopNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <header className="fixed w-full left-0 top-0 z-50  bg-[#0A0A0A] text-white border-b border-white/10 ">
       {/* wrap */}
-
       <div className="grid grid-cols-3 items-center w-full max-w-360 mx-auto px-8 py-4  ">
         {/* logo */}
         <Link
@@ -77,11 +75,11 @@ const TopNavbar = () => {
               onClick={() => setIsOpen(!isOpen)}
               className="text-white/60 hover:text-white transition-colors cursor-pointer p-2"
             >
-              <Search size={18} />
+              <Search size={18} strokeWidth={1.5} />
             </button>
           </div>
           <div className="text-white hover:scale-110 transition-all">
-            <span className="material-symbols-outlined">account_circle</span>
+            <CircleUserRoundIcon size={26} strokeWidth={1.5} />
           </div>
         </div>
       </div>
