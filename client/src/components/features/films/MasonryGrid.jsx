@@ -1,18 +1,18 @@
 import React, { act, useState } from "react";
-import GridCard from "@/components/UI/GridCard";
 import Posters from "@/data/posters";
+import GridCard from "../../UI/gridCard";
 
 const MasonryGrid = () => {
   const [activeId, setActiveId] = useState(null);
 
   const toggleMobileOverlay = (id) => {
-    console.log("before: ", activeId)
+    console.log("before: ", activeId);
     if (activeId === id) {
       setActiveId(null);
     } else {
       setActiveId(id);
     }
-    console.log("after: ", activeId ===id?null: id)
+    console.log("after: ", activeId === id ? null : id);
   };
 
   return (

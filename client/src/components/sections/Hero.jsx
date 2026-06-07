@@ -34,7 +34,7 @@ const Hero = () => {
           <h1 className="uppercase text-white text-5xl md:text-7xl lg:text-8xl font-semibold font-roboto-serif ">
             Solium
           </h1>
-          <p className=" text-white/75 md:text-white/70 max-w-[336px] leading-normal tracking-wider font-roboto md:max-w-xl  md:text-xl  ">
+          <p className=" text-white/75 md:text-white/70 max-w-84 leading-normal tracking-wider font-roboto md:max-w-xl  md:text-xl  ">
           Loading Cinematic Experience...
           </p>
         </div>
@@ -53,10 +53,10 @@ const Hero = () => {
           <div className=" relative z-10 flex flex-col justify-center items-center gap-6 md:gap-8 lg:gap-12 h-full ">
             {/* text */}
             <div className="flex flex-col gap-3 md:gap-5 justify-center items-center text-center  ">
-              <h1 className="uppercase text-white text-5xl md:text-7xl lg:text-8xl font-semibold font-roboto-serif ">
+              <h1 className="uppercase text-white text-5xl md:text-7xl lg:text-8xl font-semibold font-Playfair ">
                 Solium
               </h1>
-              <p className=" text-white/75 md:text-white/70 max-w-[336px] leading-normal tracking-wider font-roboto md:max-w-xl  md:text-xl  ">
+              <p className=" text-white/75 md:text-white/70 max-w-xs leading-normal tracking-wider font-poppins md:max-w-xl  md:text-xl  ">
                 A platform to watch films by independent and emerging
                 filmmakers. Discover new voices and support them
               </p>

@@ -1,24 +1,58 @@
-@import url('https://fonts.googleapis.com');
+@import url("https://fonts.googleapis.com");
 @import "tailwindcss";
 
-@layer base{
-  ::selection{
-    @apply bg-white text-black
+:root {
+  /* === BACKGROUNDS === */
+  --background: #0c0b09; /* replaces #000000 — warm black, not cold */
+  --background-subtle: #141210; /* replaces #0a0a0a — cards, sidebar */
+  --background-raised: #1c1a16; /* replaces all those oklab grays — hover states */
+
+  /* === TEXT === */
+  --foreground: #ede8df; /* replaces #ffffff — warm cream */
+  --foreground-muted: #6b6259; /* replaces all mid grays — captions, labels */
+  --foreground-faint: #2e2b26; /* replaces dark grays — placeholders */
+
+  /* === ACCENT === */
+  --accent: #c4a882; /* warm amber — ONLY pop of color */
+  --accent-foreground: #0c0b09;
+
+  /* === BORDERS === */
+  --border: #232018; /* replaces all 8 border colors with ONE */
+}
+
+@layer base {
+  ::selection {
+    @apply bg-white text-black;
   }
 }
 
-@theme{
-    --font-Playfair: "Playfair Display", serif;
+@theme {
+  --font-Playfair: "Playfair Display", serif;
   --font-poppins: "Poppins", sans-serif;
-  
-  /* Keep your existing ones if needed, but these are redundant now */
-  --font-roboto: "Roboto", sans-serif;
-  --font-roboto-serif: "Roboto Serif", serif;
+  --color-background: var(--background);
+  --color-subtle: var(--background-subtle);
+  --color-raised: var(--background-raised);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--foreground-muted);
+  --color-faint: var(--foreground-faint);
+  --color-accent: var(--accent);
+  --color-border: var(--border);
 }
 
-@utility radial-vintage{
-    /* background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.50) 100%); */
-    background: radial-gradient(closest-side, #0000, #0000, #000);
-    /* background: radial-gradient(, #000); */
+@utility radial-vintage {
+  /* background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.50) 100%); */
+  background: radial-gradient(closest-side, #0000, #0000, #000);
+  /* background: radial-gradient(, #000); */
 }
 
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 128px;
+}

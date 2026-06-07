@@ -45,11 +45,11 @@ const Voices = () => {
               className=" group flex flex-col border-l-2  border-neutral-400 pl-4 md:pl-10 transition-colors duration-500 hover:border-neutral-950 "
               key={item.id}
             >
-              <blockquote className=" text-lg  md:text-5xl  md:tracking-tight font-Playfair  text-neutral-800 tracking-tight leading-tight max-w-3xl italic   ">
+              <blockquote className=" text-lg  md:text-5xl  md:tracking-tight font-Playfair  text-neutral-800 tracking-tight leading-tight max-w-3xl    ">
                 {" "}
                 {item.des}{" "}
               </blockquote>
-              <figcaption className="mt-6 flex items-center gap-4 text-neutral-500 text-[10px] md:text-xs uppercase tracking-[0.2em] font-poppins">
+              <figcaption className="mt-6 flex items-center gap-4 text-neutral-500 text-[10px] md:text-xs uppercase tracking-[0.2em] font-bold font-Playfair ">
                 <span className="w-8 h-px bg-neutral-400 group-hover:bg-neutral-950 transition-colors  "></span>
                 {item.title}
               </figcaption>

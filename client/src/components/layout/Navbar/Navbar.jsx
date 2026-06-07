@@ -1,6 +1,6 @@
 import React from "react";
-import BottomNavbar from "./bottom";
-import TopNavbar from "./top";
+import TopNavbar from "./Topbar";
+import Sidebar from "./Sidebar";
 
 const Navbar=()=>{
     return(
@@ -9,7 +9,7 @@ const Navbar=()=>{
         <TopNavbar/> 
         </div>
         <div className="md:hidden ">
-        <BottomNavbar/>
+       <Sidebar/>
         </div>
         </>
     )

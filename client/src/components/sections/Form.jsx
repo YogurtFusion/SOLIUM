@@ -18,7 +18,7 @@ const Form = () => {
           <h2 className=" my-4 text-5xl md:text-6xl lg:text-7xl font-Playfair tracking-tight leading-tight ">
             Got a film to share?
           </h2>
-          <p className="text-neutral-600 md:text-base text-sm leading-relaxed text-pretty ">
+          <p className="text-neutral-600 md:text-base text-sm leading-relaxed text-pretty font-poppins ">
             Submit your work for consideration in our curated catalog. We are
             always looking for unique voices, striking visuals, and deeply human
             stories.
