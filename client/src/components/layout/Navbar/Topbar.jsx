@@ -12,13 +12,13 @@ const links = [
   },
   {
     id: "id2",
-    title: "Catalog",
-    target: "/Catalog",
+    title: "Browse",
+    target: "/Browse",
   },
   {
     id: "id3",
-    title: "Library",
-    target: "/Library",
+    title: "My List",
+    target: "/Watchlist",
   },
   {
     id: "id4",
