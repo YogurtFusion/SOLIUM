@@ -16,7 +16,7 @@ const MasonryGrid = () => {
   };
 
   return (
-    <section className=" bg-neutral-950 w-full  selection:bg-white selection:text-black min-h-screen">
+    <section className=" bg-neutral-950 w-full  selection:bg-white selection:text-black min-h-screen" id="collections">
       {/* wrap */}
       <header className="px-6 lg:pt-24 pb-20 md:px-12  max-w-7xl mx-auto text-left">
         <h1 className="font-heading font-medium text-5xl tracking-[-0.04em] leading-tight text-white md:text-7xl  md:tracking-tighter ">

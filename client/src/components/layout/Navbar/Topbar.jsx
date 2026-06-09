@@ -11,7 +11,7 @@ const links = [
   {
     id: "id2",
     title: "Collections",
-    target: "/Collections",
+    target: "/#collections",
   },
   {
     id: "id3",

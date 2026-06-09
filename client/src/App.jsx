@@ -6,13 +6,18 @@ import Navbar from "./components/layout/Navbar/Navbar";
 import Footer from "./components/layout/Footer";
 import FilmDetail from "./components/features/films/FilmDetail";
 import MoodCollection from "./components/features/films/MoodCollection";
+import { ScrollToTop } from "./components/layout/ScrollToTop";
 
 function App() {
   const location = useLocation();
   const hideLayout = location.pathname === "/auth";
   return (
     <>
+
       {!hideLayout && <Navbar />}
+    
+    <ScrollToTop/>
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/auth" element={<Auth />} />

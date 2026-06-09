@@ -9,8 +9,8 @@ const foooterLinks = [
   },
   {
     id: "id2",
-    title: "Catalog",
-    link: "/",
+    title: "Collections",
+    link: "/#collections",
   },
   {
     id: "id3",
