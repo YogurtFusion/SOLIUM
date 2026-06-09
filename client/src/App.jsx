@@ -5,6 +5,7 @@ import Auth from "./pages/Auth";
 import Navbar from "./components/layout/Navbar/Navbar";
 import Footer from "./components/layout/Footer";
 import FilmDetail from "./components/features/films/FilmDetail";
+import MoodCollection from "./components/features/films/MoodCollection";
 
 function App() {
   const location = useLocation();
@@ -15,7 +16,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/auth" element={<Auth />} />
+        <Route path="/mood/:moodid" element={<MoodCollection/>} />
         <Route path="/film/:id" element={<FilmDetail/>} />
+        
       </Routes>
 
       {!hideLayout && <Footer />}

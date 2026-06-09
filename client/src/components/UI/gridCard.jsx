@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const GridCard = ({
   id,
@@ -10,6 +11,9 @@ const GridCard = ({
   toggleMobileOverlay,
 }) => {
   const [isLoad, SetIsLoad] = useState(false);
+
+  const formattedName = title.toLowerCase().replace(/\s+/g,'-')
+
   return (
     <div className="w-full h-full">
       <div
@@ -47,7 +51,9 @@ const GridCard = ({
             <p className=" hidden lg:block text-xs uppercase font-poppins tracking-[0.3em] text-white/50 mb-1 ">
               {subtitle}
             </p>
-            <button className=" group/btn relative  border border-white/20 hover:border-white active:border-white w-fit py-1 px-3 md:px-4 md:py-2 text-[10px] md:text-xs uppercase tracking-widest text-white transition-colors duration-300 ">
+            <Link className=" group/btn relative  border border-white/20 hover:border-white active:border-white w-fit py-1 px-3 md:px-4 md:py-2 text-[10px] md:text-xs uppercase tracking-widest text-white transition-colors duration-300 "
+            to={`/mood/${formattedName}`}
+            >
               {/* <span className="relative z-10">
                   
                   <span className="hidden md:block">Explore</span> more
@@ -56,7 +62,7 @@ const GridCard = ({
                 Explore <span className="hidden md:inline">More</span>
               </p>
               <div className="absolute inset-0 bg-white scale-x-0  group-active/btn:scale-x-100 group-hover/btn:scale-x-100 origin-left transition-transform duration-500 opacity-10"></div>
-            </button>
+            </Link>
           </div>
         )}
       </div>

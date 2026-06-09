@@ -27,7 +27,7 @@ const MasonryGrid = () => {
           Browse films by visuals and feel. Find your vibe.
         </p>
       </header>
-      <div className="columns-2  md:columns-3 lg:columns-4 gap-4 md:gap-6 space-y-6 px-4 pb-24 max-w-[1600px] mx-auto ">
+      <div className="columns-2  md:columns-3 lg:columns-4 gap-4 md:gap-6 space-y-6 px-4 pb-24 max-w-400 mx-auto ">
         {Posters.map((item, index) => (
           /*  card*/
           <div key={item.id} className="">
