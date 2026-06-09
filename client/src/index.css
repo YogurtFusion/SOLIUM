@@ -2,41 +2,172 @@
 @import "tailwindcss";
 
 :root {
-  /* === BACKGROUNDS === */
-  --background: #0c0b09; /* replaces #000000 — warm black, not cold */
-  --background-subtle: #141210; /* replaces #0a0a0a — cards, sidebar */
-  --background-raised: #1c1a16; /* replaces all those oklab grays — hover states */
 
-  /* === TEXT === */
-  --foreground: #ede8df; /* replaces #ffffff — warm cream */
-  --foreground-muted: #6b6259; /* replaces all mid grays — captions, labels */
-  --foreground-faint: #2e2b26; /* replaces dark grays — placeholders */
+  /* ============================================================
+     SOLIUM — DESIGN TOKEN SYSTEM
+     4 scales · semantic tokens · Tailwind bridge in @theme
+     
+     Neutral   #0A0A0A  →  page floor, html canvas, shadows
+     Tertiary  #1F1F1F  →  cards, panels, raised surfaces
+     Secondary #A1A1AA  →  metadata, tags, supporting text
+     Primary   #FFFFFF  →  titles, CTAs, maximum contrast
+  ============================================================ */
 
-  /* === ACCENT === */
-  --accent: #c4a882; /* warm amber — ONLY pop of color */
-  --accent-foreground: #0c0b09;
 
-  /* === BORDERS === */
-  --border: #232018; /* replaces all 8 border colors with ONE */
+  /* ── RAW SCALES ─────────────────────────────────────────── */
+
+  /* Neutral — warm near-black. The floor everything stands on. */
+  --neutral-0:   #000000;
+  --neutral-10:  #1c1b1b;
+  --neutral-20:  #313030;
+  --neutral-30:  #474646;
+  --neutral-40:  #5f5e5e;
+  --neutral-50:  #787776;
+  --neutral-60:  #929090;
+  --neutral-70:  #adabaa;
+  --neutral-80:  #c9c6c5;
+  --neutral-90:  #e5e2e1;
+  --neutral-95:  #f3f0ef;
+  --neutral-100: #ffffff;
+
+  /* Tertiary — slightly cooler dark. Cards lift above the floor. */
+  --tertiary-0:   #000000;
+  --tertiary-10:  #1b1b1c;
+  --tertiary-20:  #303030;
+  --tertiary-30:  #474746;
+  --tertiary-40:  #5f5e5e;
+  --tertiary-50:  #787776;
+  --tertiary-60:  #929090;
+  --tertiary-70:  #adabaa;
+  --tertiary-80:  #c8c6c5;
+  --tertiary-90:  #e5e2e1;
+  --tertiary-95:  #f3f0ef;
+  --tertiary-100: #ffffff;
+
+  /* Secondary — cool zinc with violet tint. Metadata's voice. */
+  --secondary-0:   #000000;
+  --secondary-10:  #1a1b22;
+  --secondary-20:  #2f3037;
+  --secondary-30:  #45464e;
+  --secondary-40:  #5d5e66;
+  --secondary-50:  #76767f;
+  --secondary-60:  #909099;
+  --secondary-70:  #aaaab3;
+  --secondary-80:  #c6c6cf;
+  --secondary-90:  #e2e1eb;
+  --secondary-95:  #f1f0f9;
+  --secondary-100: #ffffff;
+
+  /* Primary — clean neutral white scale. Titles and CTAs. */
+  --primary-0:   #000000;
+  --primary-10:  #1a1c1c;
+  --primary-20:  #2f3131;
+  --primary-30:  #454747;
+  --primary-40:  #5d5f5f;
+  --primary-50:  #767777;
+  --primary-60:  #909191;
+  --primary-70:  #aaabab;
+  --primary-80:  #c6c6c7;
+  --primary-90:  #e2e2e2;
+  --primary-95:  #f0f1f1;
+  --primary-100: #ffffff;
+
+
+  /* ── SEMANTIC TOKENS ─────────────────────────────────────── */
+  /* Use these in components. Never hardcode hex values.        */
+
+  /* --- Backgrounds (depth ladder: canvas → body → layer1 → card → elevated) --- */
+  --background-canvas:   var(--neutral-0);      /* #000000 — <html>, shadows, deepest overlay       */
+  --background:          #0a0a0a;               /* Neutral base — <body>, what the user stares at   */
+  --background-subtle:   var(--neutral-10);     /* #1c1b1b — nav, sidebar, section fills, layer 1   */
+  --background-raised:   #1f1f1f;               /* Tertiary base — film cards, panels, drawers       */
+  --background-elevated: var(--neutral-20);     /* #313030 — modals, dropdowns, search overlay      */
+  --background-hover:    var(--tertiary-20);    /* #303030 — card hover, any interactive lift        */
+  --background-active:   var(--tertiary-30);    /* #474746 — card pressed, selected filter chip      */
+
+  /* --- Foreground / Text (contrast ladder: title → body → meta → ghost) --- */
+  --foreground:          var(--primary-100);    /* #ffffff — film titles, hero headings, Playfair    */
+  --foreground-muted:    var(--secondary-60);   /* #909099 — director name, runtime, year metadata   */
+  --foreground-subtle:   var(--secondary-40);   /* #5d5e66 — genre tags, timestamps, light labels    */
+  --foreground-faint:    var(--secondary-30);   /* #45464e — placeholders, disabled states           */
+
+  /* --- Accent (one stark-white CTA per screen — use sparingly) --- */
+  --accent:              var(--primary-100);    /* #ffffff — "Where to Watch" button background      */
+  --accent-foreground:   var(--primary-0);      /* #000000 — text inside white CTA button            */
+
+  /* --- Borders (use the lightest level that still separates) --- */
+  --border:              var(--neutral-20);     /* #313030 — card edges, section dividers            */
+  --border-subtle:       var(--neutral-10);     /* #1c1b1b — intra-card row hairlines                */
+  --border-focus:        var(--secondary-60);   /* #909099 — input focus ring, keyboard nav outline  */
+
+  /* --- Typography --- */
+ 
+  /* ── 1. FONTS (The new functional system) ────────────────── */
+ 
+  /* Use Manrope for everything. It's clean, modern, and matches your specs. */
+  --font-heading: "Manrope", system-ui, sans-serif; 
+  --font-body:    "Manrope", system-ui, sans-serif;
+  --font-label:   "Manrope", system-ui, sans-serif;
+
+  /* Keep legacy variables so your old code doesn't break */
+  --font-Playfair: var(--font-heading);
+  --font-playfair: var(--font-heading);
+  --font-poppins:  var(--font-body);
+
+  /* ... rest of your colors remain exactly as they were ... */
+
+}
+
+
+@theme {
+
+  /* ============================================================
+     TAILWIND BRIDGE
+     Maps :root semantic tokens → Tailwind utility classes.
+     bg-bg, text-foreground, border-border etc.
+     Never use raw hex in JSX — always go through these.
+  ============================================================ */
+
+  /* ── FONTS ─────────────────────────────────────────────── */
+--font-heading: var(--font-heading); 
+  --font-body:    var(--font-body);
+  --font-label:   var(--font-label);
+
+  /* ── LEGACY FONTS (Mapping old utilities to new logic) ───── */
+  /* This ensures if you have 'font-poppins' in your code, it still works */
+  --font-poppins:  var(--font-body);
+  --font-playfair: var(--font-heading);
+  
+  /* ── BACKGROUNDS ──────────────────────────────────────── */
+  --color-canvas:   var(--background-canvas);   /* bg-canvas   — html root, shadows, overlays   */
+  --color-bg:       var(--background);          /* bg-bg       — body background, page fill      */
+  --color-subtle:   var(--background-subtle);   /* bg-subtle   — nav, sidebar, section fills     */
+  --color-raised:   var(--background-raised);   /* bg-raised   — film cards, panels, drawers     */
+  --color-elevated: var(--background-elevated); /* bg-elevated — modals, dropdowns, tooltips     */
+  --color-hover:    var(--background-hover);    /* bg-hover    — card hover, list hover state    */
+  --color-active:   var(--background-active);   /* bg-active   — pressed, selected filter state  */
+
+  /* ── TEXT ─────────────────────────────────────────────── */
+  --color-foreground: var(--foreground);        /* text-foreground — titles, headings             */
+  --color-muted:      var(--foreground-muted);  /* text-muted      — director, runtime, year      */
+  --color-subtle-txt: var(--foreground-subtle); /* text-subtle     — genre tags, timestamps       */
+  --color-faint:      var(--foreground-faint);  /* text-faint      — placeholders, disabled text  */
+
+  /* ── ACCENT ───────────────────────────────────────────── */
+  --color-accent:    var(--accent);             /* bg-accent     — primary CTA button fill        */
+  --color-on-accent: var(--accent-foreground);  /* text-on-accent — text inside CTA button        */
+
+  /* ── BORDERS ──────────────────────────────────────────── */
+  --color-border:        var(--border);         /* border-border        — card edges, dividers    */
+  --color-border-subtle: var(--border-subtle);  /* border-border-subtle — hairlines, row splits   */
+  --color-border-focus:  var(--border-focus);   /* border-border-focus  — input rings, focus      */
+
 }
 
 @layer base {
   ::selection {
     @apply bg-white text-black;
   }
-}
-
-@theme {
-  --font-Playfair: "Playfair Display", serif;
-  --font-poppins: "Poppins", sans-serif;
-  --color-background: var(--background);
-  --color-subtle: var(--background-subtle);
-  --color-raised: var(--background-raised);
-  --color-foreground: var(--foreground);
-  --color-muted: var(--foreground-muted);
-  --color-faint: var(--foreground-faint);
-  --color-accent: var(--accent);
-  --color-border: var(--border);
 }
 
 @utility radial-vintage {

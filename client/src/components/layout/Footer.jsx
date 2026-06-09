@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 
 const foooterLinks = [
   {
@@ -45,7 +45,7 @@ const Footer = () => {
       </div>
       <div className="w-full  max-w-2xl border-t border-neutral-900 pt-8 mt-4">
 
-      <p  className="text-[9px] text-center tracking-tight text-neutral-600 uppercase">© 2026 Solium Media. All rights reserved.</p>
+      <p  className="text-[9px] text-center tracking-tight text-neutral-100 uppercase">© 2026 Solium Media. All rights reserved.</p>
       </div>
         </div>
     </footer>

@@ -54,7 +54,7 @@ const AuthCard = () => {
           
           <div className=" mt-4 flex flex-col justify-between items-center gap-6 ">
           
-          <a href="#" className="text-sm uppercase text-neutral-600 hover:text-white transition-colors">Forgot Password?</a>
+          <a href="#" className="text-sm uppercase text-white transition-colors">Forgot Password?</a>
             <MainButton
               hide={"hidden"}
               title={"Login"}

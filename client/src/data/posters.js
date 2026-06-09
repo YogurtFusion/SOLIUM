@@ -128,5 +128,4 @@ const Posters = [
   },
 ];
 
-
-export default Posters
+export default Posters;

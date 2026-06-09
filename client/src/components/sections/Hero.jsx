@@ -35,7 +35,7 @@ const Hero = () => {
             Solium
           </h1>
           <p className=" text-white/75 md:text-white/70 max-w-84 leading-normal tracking-wider font-roboto md:max-w-xl  md:text-xl  ">
-          Loading Cinematic Experience...
+            Loading Cinematic Experience...
           </p>
         </div>
       )}
@@ -57,7 +57,7 @@ const Hero = () => {
                 Solium
               </h1>
               <p className=" text-white/75 md:text-white/70 max-w-xs leading-normal tracking-wider font-poppins md:max-w-xl  md:text-xl  ">
-                A platform to watch films by independent and emerging
+                A platform to discover films by independent and emerging
                 filmmakers. Discover new voices and support them
               </p>
             </div>

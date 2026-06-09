@@ -1,35 +1,46 @@
-import { Search, X, MonitorPlay, Ticket, Compass, LayoutGrid, Bookmark, Clapperboard, UserCircle2, Menu } from "lucide-react";
+import {
+  Search,
+  X,
+  MonitorPlay,
+  Ticket,
+  Compass,
+  LayoutGrid,
+  Bookmark,
+  Clapperboard,            
+  UserCircle2,
+  Menu,
+} from "lucide-react";
 import React, { useState } from "react";
-import { Link, NavLink } from "react-router"; 
+import { Link, NavLink } from "react-router-dom";
 
 const links = [
   {
     id: "id1",
-    icon: MonitorPlay, 
+    icon: MonitorPlay,
     title: "Home",
     target: "/",
   },
   {
     id: "id2",
-    icon: LayoutGrid, 
+    icon: LayoutGrid,
     title: "Collections",
     target: "/Collections",
   },
   {
     id: "id3",
-    icon: Bookmark, 
+    icon: Bookmark,
     title: "My List",
     target: "/Watchlist",
   },
   {
     id: "id4",
-    icon: Clapperboard, 
+    icon: Clapperboard,
     title: "Directors",
     target: "/Directors",
   },
   {
     id: "id5",
-    icon: UserCircle2, 
+    icon: UserCircle2,
     title: "Profile",
     target: "/Profile",
   },
@@ -39,7 +50,7 @@ const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   return (
-    <div className=" fixed top-0 z-50 w-full border-b border-foreground/40 ">
+    <div className=" fixed top-0 z-50 w-full border-b border-border ">
       <div className="bg-black/80 backdrop-blur-lg py-5 px-6 grid grid-cols-2 w-full max-w-7xl mx-auto items-center">
         {/* logo */}
         <Link
@@ -49,15 +60,16 @@ const Sidebar = () => {
           Solium
         </Link>
         <div className="justify-self-end">
-          <button className="text-foreground pr-6 cursor-pointer" onClick={() => setIsSearchOpen(true)}>
-            
+          <button
+            className="text-foreground pr-6 cursor-pointer"
+            onClick={() => setIsSearchOpen(true)}
+          >
             <Search size={24} strokeWidth={1.5} />
           </button>
           <button
             onClick={() => setIsOpen(true)}
             className={`text-foreground cursor-pointer ${isOpen ? "invisible" : "visible"}`}
           >
-            
             <Menu size={28} strokeWidth={1.5} />
           </button>
         </div>
@@ -67,14 +79,16 @@ const Sidebar = () => {
       >
         <div className="flex justify-end w-full mb-12">
           <button onClick={() => setIsOpen(false)} className="cursor-pointer">
-            
-            <X size={28} strokeWidth={1.5} className="text-foreground/80 hover:text-foreground transition-colors" />
+            <X
+              size={28}
+              strokeWidth={1.5}
+              className="text-foreground/80 hover:text-foreground transition-colors"
+            />
           </button>
         </div>
         <div className="flex flex-col items-start w-full gap-6">
           {links.map((item) => {
-            
-            const IconComponent = item.icon; 
+            const IconComponent = item.icon;
             return (
               <NavLink
                 key={item.id}

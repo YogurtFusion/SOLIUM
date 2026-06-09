@@ -15,7 +15,7 @@ const Form = () => {
     <section className="min-h-screen bg-neutral-950 selection:bg-white selection:text-black text-white">
       <div className="h-fit p-12 md:p-24 w-full max-w-7xl mx-auto flex flex-col md:flex-row gap-16 lg:gap-24">
         <div className=" max-w-sm text-left">
-          <h2 className=" my-4 text-5xl md:text-6xl lg:text-7xl font-Playfair tracking-tight leading-tight ">
+          <h2 className=" my-4 text-5xl md:text-6xl lg:text-7xl font-heading tracking-tight leading-tight ">
             Got a film to share?
           </h2>
           <p className="text-neutral-600 md:text-base text-sm leading-relaxed text-pretty font-poppins ">

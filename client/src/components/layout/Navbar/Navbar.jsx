@@ -2,17 +2,17 @@ import React from "react";
 import TopNavbar from "./Topbar";
 import Sidebar from "./Sidebar";
 
-const Navbar=()=>{
-    return(
-        <>
-        <div className="hidden md:block">
-        <TopNavbar/> 
-        </div>
-        <div className="md:hidden ">
-       <Sidebar/>
-        </div>
-        </>
-    )
-}
+const Navbar = () => {
+  return (
+    <>
+      <div className="hidden lg:block">
+        <TopNavbar />
+      </div>
+      <div className="block lg:hidden ">
+        <Sidebar />
+      </div>
+    </>
+  );
+};
 
-export default Navbar
+export default Navbar;
