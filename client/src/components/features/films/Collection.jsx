@@ -2,7 +2,7 @@ import React, { act, useState } from "react";
 import Posters from "@/data/posters.js";
 import GridCard from "../../UI/gridCard";
 
-const MasonryGrid = () => {
+const Collection = () => {
   const [activeId, setActiveId] = useState(null);
 
   const toggleMobileOverlay = (id) => {
@@ -18,7 +18,7 @@ const MasonryGrid = () => {
   return (
     <section className=" bg-neutral-950 w-full  selection:bg-white selection:text-black min-h-screen" id="collections">
       {/* wrap */}
-      <div className="max-w-screen-2xl pt-24 md:pt-32 lg:py-12">
+      <div className="max-w-screen-2xl pt-32 md:pt-36 lg:pt-24">
 
       <header className="px-6 lg:pt-24 pb-20 md:px-12  max-w-7xl mx-auto text-left">
         <h1 className="font-heading font-medium text-5xl tracking-[-0.04em] leading-tight text-white md:text-7xl  md:tracking-tighter ">
@@ -51,4 +51,4 @@ const MasonryGrid = () => {
   );
 };
 
-export default MasonryGrid;
+export default Collection;

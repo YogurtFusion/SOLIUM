@@ -10,7 +10,7 @@ const foooterLinks = [
   {
     id: "id2",
     title: "Collections",
-    link: "/#collections",
+    link: "/collection",
   },
   {
     id: "id3",

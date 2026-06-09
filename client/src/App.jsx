@@ -7,6 +7,7 @@ import Footer from "./components/layout/Footer";
 import FilmDetail from "./components/features/films/FilmDetail";
 import MoodCollection from "./components/features/films/MoodCollection";
 import { ScrollToTop } from "./components/layout/ScrollToTop";
+import Collection from "./components/features/films/Collection";
 
 function App() {
   const location = useLocation();
@@ -23,7 +24,7 @@ function App() {
         <Route path="/auth" element={<Auth />} />
         <Route path="/mood/:moodid" element={<MoodCollection/>} />
         <Route path="/film/:id" element={<FilmDetail/>} />
-        
+        <Route path="/collection" element={<Collection/>} />
       </Routes>
 
       {!hideLayout && <Footer />}

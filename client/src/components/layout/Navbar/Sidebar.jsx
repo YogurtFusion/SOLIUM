@@ -24,7 +24,7 @@ const links = [
     id: "id2",
     icon: LayoutGrid,
     title: "Collections",
-    target: "/#collections",
+    target: "/collection",
   },
   {
     id: "id3",
