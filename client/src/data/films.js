@@ -1,4 +1,4 @@
-export const films = [
+export const filmsData = [
   {
     id: "pebbles",
     title: "Pebbles",

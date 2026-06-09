@@ -1,10 +1,27 @@
 import React from "react";
 import MainButton from "../../UI/Button";
+import { useParams } from "react-router-dom";
+import { filmsData } from "../../../data/films";
 
 
 
 const FilmDetail = () => {
-  return (
+
+    const params = useParams()
+    const filmId = params.id
+    
+    const currentFilm = filmsData.find((film)=>{
+                return film.id === filmId
+    })
+    if(!currentFilm){
+        return(
+            <div>
+                <h2>Film not found in the archives</h2>
+            </div>
+        )
+    }
+
+    return (
     <main className="min-h-screen bg-bg text-foreground font-body">
       {/* wrap */}
       <div className=" max-w-7xl mx-auto pt-20 md:pt-24">
@@ -21,14 +38,14 @@ const FilmDetail = () => {
         <div className="flex flex-col gap-8 p-6 md:p-12 max-w-7xl mx-auto">
           <div className="flex flex-col gap-1">
             <h1 className="capitalize text-4xl font-heading font-bold tracking-tight">
-              solium
+              {currentFilm.title}
             </h1>
             <div className="flex items-center gap-2 text-sm">
-              <span className=" text-muted">2024</span>
+              <span className=" text-muted"> {currentFilm.year} </span>
               <span className="text-faint">•</span>
-              <span className="uppercase text-muted">114 MIN </span>
+              <span className="uppercase text-muted">{currentFilm.runtime} </span>
               <span className="text-faint">•</span>
-              <span className="uppercase text-foreground"> Director name</span>
+              <span className="uppercase text-foreground">{currentFilm.director} </span>
             </div>
           </div>
           {/* <div className=""> */}
