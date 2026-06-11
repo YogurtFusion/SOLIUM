@@ -13,11 +13,11 @@ const links = [
     title: "Collections",
     target: "/collection",
   },
-  {
-    id: "id3",
-    title: "My List",
-    target: "/Watchlist",
-  },
+  // {
+  //   id: "id3",
+  //   title: "My List",
+  //   target: "/Watchlist",
+  // },
   {
     id: "id4",
     title: "Directors",

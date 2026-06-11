@@ -29,9 +29,8 @@ const Form = () => {
             {formData.map((item) => (
               <div
                 key={item.id}
-                className={`relative border-b text-base border-neutral-800 hover:border-neutral-600  active:border-neutral-400 focus-within:border-white   bg-transparent transition-colors ${item.hidden||""} flex flex-col items-start`}
+                className={`relative border-b text-base border-neutral-800 hover:border-neutral-600  active:border-neutral-400 focus-within:border-white   bg-transparent transition-colors ${item.hidden || ""} flex flex-col items-start`}
               >
-               
                 {item.type === "textarea" ? (
                   <textarea
                     id={item.id}
@@ -45,11 +44,11 @@ const Form = () => {
                     name={item.id}
                     autoComplete="off"
                     type={item.type}
-                    className={`peer outline-none bg-transparent w-full pt-6 pb-2 text-neutral-300 transition-colors ${item.hidden||""}`}
+                    className={`peer outline-none bg-transparent w-full pt-6 pb-2 text-neutral-300 transition-colors ${item.hidden || ""}`}
                     placeholder=""
                   />
                 )}
-                 <label
+                <label
                   htmlFor={item.id}
                   className="absolute left-0 top-6 text-neutral-500  pointer-events-none transition-all duration-300 ease-out origin-left peer-focus:top-0 peer-focus:scale-75 peer-focus:text-white peer-[:not(:placeholder-shown)]:top-0 peer-[:not(:placeholder-shown)]:scale-75 peer-[:not(:placeholder-shown)]:text-neutral-400 "
                 >

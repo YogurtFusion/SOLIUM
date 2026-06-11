@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Background from "../../assets/hero-bg.png";
 import MainButton from "../UI/Button";
+import { Link } from "react-router-dom";
 const Hero = () => {
   const [mouse, setMouse] = useState({ x: 50, y: 50 });
   const [isLoad, setIsLoad] = useState(false);
@@ -63,11 +64,15 @@ const Hero = () => {
             </div>
 
             {/* button */}
+            <Link to={"/collection"}>
+
             <MainButton
               title={"Begin Experience"}
               px={"px-6 md:px-14"}
               py={"py-3 md:py-4"}
-            />
+              
+              />
+              </Link>
           </div>
         </div>
       )}

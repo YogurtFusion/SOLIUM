@@ -8,6 +8,7 @@ import FilmDetail from "./components/features/films/FilmDetail";
 import MoodCollection from "./components/features/films/MoodCollection";
 import { ScrollToTop } from "./components/layout/ScrollToTop";
 import Collection from "./components/features/films/Collection";
+import ApiTest from "./components/test/ApiTest";
 
 function App() {
   const location = useLocation();
@@ -25,6 +26,7 @@ function App() {
         <Route path="/mood/:moodid" element={<MoodCollection/>} />
         <Route path="/film/:id" element={<FilmDetail/>} />
         <Route path="/collection" element={<Collection/>} />
+        <Route path="/test" element={<ApiTest/>} />
       </Routes>
 
       {!hideLayout && <Footer />}

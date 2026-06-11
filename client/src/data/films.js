@@ -1,4 +1,103 @@
 export const filmsData = [
+  // NOIR
+  { id: "only-god-forgives", tmdb_id: 77987, moods: ["noir", "surreal"], one_liner: "Neon-soaked Bangkok hallways bleed red while a man stands still as a statue in his own guilt." },
+  { id: "a-most-violent-year", tmdb_id: 241239, moods: ["noir", "dusk"], one_liner: "The last amber light of an honest man's empire fades over a frozen Hudson River." },
+  { id: "i-saw-the-devil", tmdb_id: 49797, moods: ["noir", "chaos"], one_liner: "A man chases a monster through snow and black highways until he cannot find himself in the mirror." },
+  { id: "burning", tmdb_id: 491584, moods: ["noir", "melancholy", "echoes"], one_liner: "Greenhouses disappear in the Korean countryside while a young man watches smoke curl into a sky that offers no answers." },
+  { id: "the-salesman", tmdb_id: 375315, moods: ["noir", "echoes"], one_liner: "A cracked apartment wall becomes the fault line running through two lives that can never be exactly repaired." },
+  { id: "leviathan", tmdb_id: 265180, moods: ["noir", "grain"], one_liner: "A rusted house on a Russian cliff surrenders slowly to a state that has always been larger than the law." },
+
+  // DUSK
+  { id: "paterson", tmdb_id: 370755, moods: ["dusk", "silence"], one_liner: "A bus driver moves through the same Tuesday light, carrying poems the world will never ask to read." },
+  { id: "a-ghost-story", tmdb_id: 428449, moods: ["dusk", "echoes", "noir"], one_liner: "A white sheet stands motionless at a window watching decades pass in a house that forgets every name." },
+  { id: "columbus", tmdb_id: 417283, moods: ["dusk", "symmetry"], one_liner: "Two people stand before modernist buildings and talk about everything except what is actually keeping them there." },
+  { id: "shoplifters", tmdb_id: 505192, moods: ["dusk", "rhythm"], one_liner: "A makeshift family moves through Tokyo's margin in perfect low-tide rhythm before the tide finally turns." },
+  { id: "aftersun", tmdb_id: 815245, moods: ["dusk"], one_liner: "Grainy camcorder footage of a summer holiday holds a daughter's last clear images of a father she could not yet read." },
+  { id: "minari", tmdb_id: 635302, moods: ["dusk"], one_liner: "Korean immigrants plant seeds in Arkansas clay while an old woman brings the smell of home to red-dirt twilight." },
+
+  // VIVID
+  { id: "tangerine", tmdb_id: 318399, moods: ["vivid", "chaos"], one_liner: "Los Angeles burns tangerine on an iPhone screen as two women sprint through Christmas Eve on fire." },
+  { id: "beasts-of-the-southern-wild", tmdb_id: 96721, moods: ["vivid", "humidity"], one_liner: "A small girl holds the flooding world together with the pure electric force of her unbroken imagination." },
+  { id: "the-grand-budapest-hotel", tmdb_id: 120467, moods: ["vivid", "symmetry"], one_liner: "Every frame is a jewel box of perfectly centered pink pastry and impeccably timed catastrophe." },
+  { id: "american-honey", tmdb_id: 371972, moods: ["vivid", "grain"], one_liner: "A teenage girl tumbles through the American interior in a van that smells like cheap perfume and open highway." },
+  { id: "rocks", tmdb_id: 593005, moods: ["vivid", "rhythm"], one_liner: "A teenage girl holds her brother's hand and the whole loud colour of East London against the silence of abandonment." },
+  { id: "capernaum", tmdb_id: 517814, moods: ["vivid", "humidity"], one_liner: "Beirut breathes hot and chaotic around a twelve-year-old who has decided to sue his parents for giving him life." },
+
+  // GRAIN
+  { id: "fish-tank", tmdb_id: 20694, moods: ["grain", "melancholy"], one_liner: "A girl dances alone in an empty flat on an Essex estate, reaching toward something that has no name yet." },
+  { id: "embrace-of-the-serpent", tmdb_id: 325133, moods: ["grain", "humidity"], one_liner: "Black-and-white Amazon river mist swallows two expeditions fifty years apart into the same green dream." },
+  { id: "mustang", tmdb_id: 332212, moods: ["grain", "silence"], one_liner: "Five sisters move through a Turkish summer in a house that grows smaller and quieter with every locked door." },
+  { id: "winters-bone", tmdb_id: 35125, moods: ["grain", "echoes"], one_liner: "Frozen Ozark trees hold their breath as a girl searches for a father who seems to have dissolved into the cold." },
+  { id: "take-shelter", tmdb_id: 73194, moods: ["grain"], one_liner: "Yellow storm clouds claw through a man's waking mind while Ohio fields sweat with the texture of impending collapse." },
+  { id: "blue-valentine", tmdb_id: 41733, moods: ["grain"], one_liner: "A marriage's collapse and its beginning intercut in grainy Super 8 and cold HD, splitting one love into two incompatible films." },
+
+  // SILENCE
+  { id: "uncle-boonmee", tmdb_id: 45269, moods: ["silence", "surreal"], one_liner: "A dying man sits at a jungle dinner table visited by ghost monkeys and the soft weight of every life he has lived." },
+  { id: "ida", tmdb_id: 205422, moods: ["silence", "melancholy"], one_liner: "A novice nun and a wreckage of a woman drive through Polish winter searching for a grave that changes everything." },
+  { id: "son-of-saul", tmdb_id: 326659, moods: ["silence", "chaos"], one_liner: "A man moves through the blurred roar of a death camp in furious tunnel vision, carrying a small impossible task." },
+  { id: "45-years", tmdb_id: 300671, moods: ["silence", "echoes"], one_liner: "A letter arrives in a Norfolk kitchen and slowly unmakes forty-five years of a marriage one quiet meal at a time." },
+  { id: "portrait-of-a-lady-on-fire", tmdb_id: 601666, moods: ["silence"], one_liner: "Two women on a Breton cliff exchange gaze for gaze, each brushstroke a word neither the 18th century nor decorum will allow." },
+  { id: "after-yang", tmdb_id: 741218, moods: ["silence"], one_liner: "A father pores through a broken android's memory archive for fragments of a life lived quietly beside his family." },
+
+  // CHAOS
+  { id: "the-wailing", tmdb_id: 293670, moods: ["chaos", "surreal"], one_liner: "A Korean village comes apart in rain and ritual and no one can tell anymore where the evil actually began." },
+  { id: "toni-erdmann", tmdb_id: 375382, moods: ["chaos", "melancholy"], one_liner: "A father in a fake moustache wanders into his daughter's Bucharest business life and refuses to leave quietly." },
+  { id: "climax", tmdb_id: 507076, moods: ["chaos", "rhythm"], one_liner: "A dance company's sangria is poisoned and the film spirals down with them into a strobe-lit collective dissolution." },
+  { id: "good-time", tmdb_id: 427388, moods: ["chaos"], one_liner: "One sleepless Queens night turns into a neon-drenched cascade of bad decisions, each worse than the scheme that preceded it." },
+  { id: "uncut-gems", tmdb_id: 473033, moods: ["chaos"], one_liner: "A jeweler's every waking moment is a seven-way simultaneous bet against a fate that tightens like a fist around his neck." },
+  { id: "titane", tmdb_id: 654148, moods: ["chaos"], one_liner: "A dancer with a titanium plate in her skull commits acts of violence and tenderness in equal measure before dissolving into chrome." },
+  
+  // SYMMETRY
+  { id: "the-favourite", tmdb_id: 375262, moods: ["symmetry", "echoes"], one_liner: "Fish-eye lenses warp a Queen's perfect court as two women orbit her like competing moons in period velvet." },
+  { id: "ex-machina", tmdb_id: 264660, moods: ["symmetry", "surreal"], one_liner: "A glass house in an empty forest holds perfectly composed rooms where a man cannot tell if he is the test." },
+  { id: "force-majeure", tmdb_id: 247543, moods: ["symmetry", "melancholy"], one_liner: "An avalanche passes in seconds and leaves a Swedish family staring at the geometry of their own cowardice." },
+  { id: "certified-copy", tmdb_id: 42806, moods: ["symmetry", "echoes"], one_liner: "A man and woman walk through a Tuscan village trying on an old marriage like a coat that almost fits." },
+  { id: "the-lobster", tmdb_id: 254128, moods: ["symmetry"], one_liner: "A dystopian hotel demands that singles pair off or become animals, rendered in flat compositions as dry as the rule book they live by." },
+  { id: "the-zone-of-interest", tmdb_id: 1166073, moods: ["symmetry"], one_liner: "A commandant's family tends a lush garden with ruthless domestic order while the sounds from next door never stop." },
+// ECHOES
+  { id: "inside-llewyn-davis", tmdb_id: 176981, moods: ["echoes"], one_liner: "A folk singer loops through a grey Greenwich Village winter, each couch-surf a verse of a song that refuses to resolve." },
+  { id: "past-lives", tmdb_id: 1016084, moods: ["echoes"], one_liner: "Childhood sweethearts separated by immigration reunite twice across twenty years, each goodbye rerouting a life already in motion." },
+  { id: "call-me-by-your-name", tmdb_id: 432413, moods: ["echoes"], one_liner: "A summer in Northern Italy of peaches and Satie leaves a boy marked by a love too large for the season that contained it." },
+  { id: "burning-echoes", tmdb_id: 497034, moods: ["echoes"], one_liner: "A South Korean delivery man watches greenhouses burn and disappear, following a mystery that may be grief wearing a stranger's face." },
+  { id: "all-of-us-strangers", tmdb_id: 972382, moods: ["echoes"], one_liner: "A screenwriter visits his dead parents as if they simply never aged, each childhood kitchen conversation a séance held in daylight." },
+  { id: "the-worst-person-in-the-world", tmdb_id: 670739, moods: ["echoes"], one_liner: "A Norwegian woman pivots through identities and men in twelve chapters that each end before they can promise anything permanent." },
+
+  // HUMIDITY
+  { id: "moonlight", tmdb_id: 376867, moods: ["humidity"], one_liner: "A Black boy from Liberty City moves through three phases of life under Florida light that holds heat long after the sun leaves." },
+  { id: "atlantics", tmdb_id: 582606, moods: ["humidity"], one_liner: "Dakar's Atlantic shore breathes ghost fire into the bodies of young men lost at sea, returning through women who loved them." },
+  { id: "bacurau", tmdb_id: 446159, moods: ["humidity"], one_liner: "A drought-stricken Brazilian village vanishes from satellite maps before strangers with guns arrive to play a different kind of game." },
+  { id: "zola", tmdb_id: 635930, moods: ["humidity"], one_liner: "A Tampa strip-club odyssey unspools over 48 sweaty hours in Twitter-post fragments, thong heels, and motel-room dread." },
+  { id: "saint-maud", tmdb_id: 575776, moods: ["humidity"], one_liner: "A devout nurse in a grey seaside town feels God in her skin until she can no longer tell ecstasy from psychosis." },
+  { id: "never-rarely-sometimes-always", tmdb_id: 581655, moods: ["humidity"], one_liner: "A Pennsylvania teenager rides a bus to New York in silence, the fluorescent lights of bus terminals replacing every door that closed on her." },
+
+  // MELANCHOLY
+  { id: "short-term-12", tmdb_id: 211672, moods: ["melancholy"], one_liner: "A young supervisor at a foster care facility carries other people's damage with the careful hands of someone who survived her own." },
+  { id: "manchester-by-the-sea", tmdb_id: 334533, moods: ["melancholy"], one_liner: "A janitor returns to a Massachusetts town where the cold harbor holds an unforgivable memory he has no plan to survive." },
+  { id: "james-white", tmdb_id: 315031, moods: ["melancholy"], one_liner: "A young New Yorker parties against a wall of grief as his mother's illness slowly removes the last floor beneath him." },
+  { id: "nomadland", tmdb_id: 591274, moods: ["melancholy"], one_liner: "A widow loads a van with everything she owns and drives the American West, living in parking lots that double as cathedrals." },
+  { id: "the-banshees-of-inisherin", tmdb_id: 674324, moods: ["melancholy"], one_liner: "A friendship ends without reason on a small Irish island, and the grief of that severing spreads like a weather pattern." },
+  { id: "weekend", tmdb_id: 89751, moods: ["melancholy"], one_liner: "Two men meet at a Nottingham bar and fill a single weekend with conversations so honest they make the Monday inevitable." },
+
+  // RHYTHM
+  { id: "moonrise-kingdom", tmdb_id: 83666, moods: ["rhythm"], one_liner: "Two twelve-year-olds flee to a cove on a New England island while every adult on the map follows a different percussion." },
+  { id: "hunt-for-the-wilderpeople", tmdb_id: 385118, moods: ["rhythm"], one_liner: "A delinquent boy and a gruff bushman tramp through New Zealand wilderness in a buddy comedy that moves like a perfect country song." },
+  { id: "lady-bird", tmdb_id: 404368, moods: ["rhythm"], one_liner: "A Sacramento teenager renames herself and hurtles through senior year in a tempo only she and her mother share and misread." },
+  { id: "eighth-grade", tmdb_id: 508965, moods: ["rhythm"], one_liner: "A thirteen-year-old's YouTube self-improvement videos play against the acoustic dread of a cafeteria she can barely cross." },
+  { id: "frances-ha", tmdb_id: 145481, moods: ["rhythm"], one_liner: "A broke dancer sprints through New York apartments in black-and-white to music that refuses to match her stalled momentum." },
+  { id: "obvious-child", tmdb_id: 239563, moods: ["rhythm"], one_liner: "A stand-up comedian turns an unexpected pregnancy into material while Brooklyn winter light holds her accountable in real time." },
+
+  // SURREAL
+  { id: "midsommar", tmdb_id: 530385, moods: ["surreal"], one_liner: "A grieving American follows her detached boyfriend to a Swedish midsummer cult where the midnight sun never lets anyone hide." },
+  { id: "coherence", tmdb_id: 220299, moods: ["surreal"], one_liner: "Eight friends at a dinner party discover the passing comet has fractured reality into parallel versions of the same awkward evening." },
+  { id: "border", tmdb_id: 508442, moods: ["surreal"], one_liner: "A Swedish border guard who can smell human shame meets a stranger who carries secrets that rewrite everything she thought she was." },
+  { id: "im-thinking-of-ending-things", tmdb_id: 748783, moods: ["surreal"], one_liner: "A woman rehearses a breakup on a snowy drive to her boyfriend's childhood farm while the house rearranges itself around her doubt." },
+  { id: "annette", tmdb_id: 698280, moods: ["surreal"], one_liner: "A stand-up comedian and an opera singer raise a puppet child in a Leos Carax fever-opera where applause curdles into cruelty." },
+  { id: "crimes-of-the-future", tmdb_id: 771373, moods: ["surreal"], one_liner: "In a near-future where surgery is performance art, a man grows new organs on stage while bureaucracy files the paperwork." }
+];
+
+
+
+export const oldfilmsData = [
   {
     id: "pebbles",
     title: "Pebbles",
