@@ -16,34 +16,46 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 const links = [
   {
     id: "id1",
-    icon: MonitorPlay,
     title: "Home",
     target: "/",
+    icon: MonitorPlay, // CHANGED: Added icon component reference
   },
   {
     id: "id2",
-    icon: LayoutGrid,
     title: "Collections",
     target: "/collection",
+    icon: LayoutGrid, // CHANGED: Added icon component reference
   },
+
   // {
   //   id: "id3",
-  //   icon: Bookmark,
+  //   title: "Collections",
+  //   target: "/collection",
+  // },
+  // {
+  //   id: "id4",
   //   title: "My List",
   //   target: "/Watchlist",
   // },
+  // {
+  //   id: "id5",
+  //   title: "Directors",
+  //   target: "/Directors",
+  // },
+ 
   {
-    id: "id4",
-    icon: Clapperboard,
-    title: "Directors",
-    target: "/Directors",
+    id: "id6",
+    title: "About",
+    target: "/about",
+    icon: Compass, // CHANGED: Added icon component reference
   },
   {
-    id: "id5",
-    icon: UserCircle2,
-    title: "Profile",
-    target: "/Profile",
+    id: "id7",
+    title: "Contact Us",
+    target: "/contact",
+    icon: UserCircle2, // CHANGED: Added icon component reference
   },
+
 ];
 
 const Sidebar = () => {

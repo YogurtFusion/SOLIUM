@@ -15,14 +15,31 @@ const links = [
   },
   // {
   //   id: "id3",
+  //   title: "Collections",
+  //   target: "/collection",
+  // },
+  // {
+  //   id: "id4",
   //   title: "My List",
   //   target: "/Watchlist",
   // },
+  // {
+  //   id: "id5",
+  //   title: "Directors",
+  //   target: "/Directors",
+  // },
   {
-    id: "id4",
-    title: "Directors",
-    target: "/Directors",
+    id: "id6",
+    title: "About",
+    target: "/about",
   },
+  {
+    id: "id7",
+    title: "Contact Us",
+    target: "/contact",
+  }
+
+
 ];
 
 const TopNavbar = () => {

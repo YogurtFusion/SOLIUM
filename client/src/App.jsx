@@ -11,6 +11,8 @@
   import ApiTest from "./components/test/ApiTest";
   import SearchResults from "./components/features/search/Search";
   import SearchDetails from "./components/features/search/SearchDetails";
+import Contact from "./pages/Contact";
+import About from "./pages/About";
 
   function App() {
     const location = useLocation();
@@ -31,6 +33,8 @@
           <Route path="/test" element={<ApiTest/>} />
           <Route path="/search" element={<SearchResults/>} />
           <Route path="/search/:id" element={<SearchDetails/>} />
+          <Route path="/contact" element={<Contact/>} />
+          <Route path="/about" element={<About/>} />
         </Routes>
 
         {!hideLayout && <Footer />}

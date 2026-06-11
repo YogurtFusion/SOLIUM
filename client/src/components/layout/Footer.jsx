@@ -17,11 +17,33 @@ const foooterLinks = [
     title: "Form",
     link: "/",
   },
-  //   {
-  //     id: "id4",
-  //     title: "",
-  //     link: "/",
-  //   },
+  // {
+  //   id: "id4",
+  //   title: "Collections",
+  //   target: "/collection",
+  // },
+  // {
+  //   id: "id5",
+  //   title: "My List",
+  //   target: "/Watchlist",
+  // },
+  // {
+  //   id: "id6",
+  //   title: "Directors",
+  //   target: "/Directors",
+  // },
+  {
+    id: "id7",
+    title: "About",
+    target: "/about",
+  },
+  {
+    id: "id8",
+    title: "Contact Us",
+    target: "/contact",
+  }
+
+
 ];
 
 const Footer = () => {
