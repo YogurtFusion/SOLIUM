@@ -29,7 +29,7 @@ const Contact = () => {
               <div className="text-[10px] tracking-[0.2em] uppercase text-gray-400 font-sans mb-3">
                 GENERAL
               </div>
-              <a href="mailto:hello@solium.com" className="font-serif text-xl md:text-2xl hover:text-gray-300 transition-colors">
+              <a href="mailto:aniket.dev.me@gmail.com" className="font-serif text-xl md:text-2xl hover:text-gray-300 transition-colors">
                 hello@solium.com
               </a>
             </div>
@@ -37,7 +37,7 @@ const Contact = () => {
               <div className="text-[10px] tracking-[0.2em] uppercase text-gray-400 font-sans mb-3">
                 PRESS
               </div>
-              <a href="mailto:press@solium.com" className="font-serif text-xl md:text-2xl hover:text-gray-300 transition-colors">
+              <a href="mailto:aniket.dev.me@gmail.com" className="font-serif text-xl md:text-2xl hover:text-gray-300 transition-colors">
                 press@solium.com
               </a>
             </div>
@@ -87,8 +87,8 @@ const Contact = () => {
               <div className="text-[10px] tracking-[0.2em] uppercase text-gray-400 font-sans mb-3">
                 PHONE
               </div>
-              <a href="tel:+13105550199" className="font-serif text-xl md:text-2xl hover:text-gray-300 transition-colors">
-                +1 (310) 555-0199
+              <a href="tel:+919386183875" className="font-serif text-xl md:text-2xl hover:text-gray-300 transition-colors">
+                +919386183875
               </a>
             </div>
           </div>
