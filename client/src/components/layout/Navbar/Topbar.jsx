@@ -104,9 +104,9 @@ const TopNavbar = () => {
               <Search size={18} strokeWidth={1.5} />
             </button>
           </div>
-          <div className="text-white hover:scale-110 transition-all">
+          {/* <div className="text-white hover:scale-110 transition-all">
             <CircleUserRoundIcon size={26} strokeWidth={1.5} />
-          </div>
+          </div> */}
         </div>
       </div>
     </header>
