@@ -72,7 +72,7 @@ const Hero = () => {
               py={"py-3 md:py-4"}
               
               />
-              </Link>
+        </Link>
           </div>
         </div>
       )}
