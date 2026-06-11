@@ -6,12 +6,12 @@ import {
   Compass,
   LayoutGrid,
   Bookmark,
-  Clapperboard,            
+  Clapperboard,
   UserCircle2,
   Menu,
 } from "lucide-react";
 import React, { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 
 const links = [
   {
@@ -49,6 +49,8 @@ const links = [
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const navigate = useNavigate();
+
   return (
     <div className=" fixed top-0 z-50 w-full border-b border-border ">
       <div className="bg-black/80 backdrop-blur-lg py-5 px-6 grid grid-cols-2 w-full max-w-7xl mx-auto items-center">
@@ -118,15 +120,33 @@ const Sidebar = () => {
       <div
         className={`absolute top-0 bg-black w-full h-full flex justify-between items-center px-8 duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] z-50 transition-all ${isSearchOpen ? "translate-x-0 pointer-events-auto" : "translate-x-full pointer-events-none"}`}
       >
-        <div className="w-full flex items-center text-foreground gap-3">
-          <Search size={20} strokeWidth={1.5} className="text-foreground/80" />
+        <form 
+        onSubmit={(e)=>{
+          e.preventDefault()
+          const query = e.target.searchQuery.value.trim()
+          if(query){
+            navigate(`/search?q=${query}`)
+            setIsSearchOpen(false)
+            e.target.reset()
+          }
+        }}
+        className="w-full flex items-center text-foreground gap-3">
+          <button type="submit" className="cursor-pointer">
+            <Search
+              size={20}
+              strokeWidth={1.5}
+              className="text-foreground/80"
+            />
+          </button>
           <input
+          name="searchQuery"
             type="text"
             className="w-full border-b border-border text-foreground outline-none bg-transparent focus:border-foreground pl-1 text-lg font-poppins tracking-wide"
             placeholder="Search films, directors, moods..."
             autoFocus={isSearchOpen}
+           
           />
-        </div>
+        </form>
         <button
           onClick={() => {
             setIsSearchOpen(false);

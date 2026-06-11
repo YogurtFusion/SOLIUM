@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import MainButton from "../../UI/Button";
 import { useParams } from "react-router-dom";
 import { filmsData } from "../../../data/films";
+import { object } from "framer-motion/client";
 
 const FilmDetail = () => {
   const params = useParams();
@@ -10,7 +11,6 @@ const FilmDetail = () => {
   const [mergedFilm, setMergedFilm] = useState(null);
   const [isFetching, setIsFetching] = useState(true);
   const [imageLoaded, setImageLoaded] = useState(false);
-
   const currentFilm = filmsData.find((film) => {
     return film.id === filmId;
   });
@@ -31,25 +31,25 @@ const FilmDetail = () => {
       };
 
       try {
-        const [movieResponse, creditsResponse, providerResponse] = await Promise.all([
-          fetch(
-            `https://api.themoviedb.org/3/movie/${currentFilm.tmdb_id}?language=en-US`,
-            options,
-          ),
-          fetch(
-            `https://api.themoviedb.org/3/movie/${currentFilm.tmdb_id}/credits?language=en-US`,
-            options,
-          ),
-          fetch(
-            `https://api.themoviedb.org/3/movie/${currentFilm.tmdb_id}/watch/providers`,
-            options,
-          ),
-
-        ]);
+        const [movieResponse, creditsResponse, providerResponse] =
+          await Promise.all([
+            fetch(
+              `https://api.themoviedb.org/3/movie/${currentFilm.tmdb_id}?language=en-US`,
+              options,
+            ),
+            fetch(
+              `https://api.themoviedb.org/3/movie/${currentFilm.tmdb_id}/credits?language=en-US`,
+              options,
+            ),
+            fetch(
+              `https://api.themoviedb.org/3/movie/${currentFilm.tmdb_id}/watch/providers`,
+              options,
+            ),
+          ]);
 
         const tmdbData = await movieResponse.json();
         const creditsData = await creditsResponse.json();
-        const providersData = await providerResponse.json()
+        const providersData = await providerResponse.json();
 
         const directorData = creditsData.crew.find(
           (person) => person.job === "Director",
@@ -58,13 +58,21 @@ const FilmDetail = () => {
           ? directorData.name
           : "Unknown Director";
 
-          const watchLink = providersData.results?.IN?.link ||  providerResponse.results?.US?.link || null;
+        let watchLink = null;
+        if (providersData && providersData.results) {
+          watchLink =
+            providersData.results.IN?.link || providersData.results.US?.link;
+          if (!watchLink && Object.keys(providersData.results).length > 0) {
+            const firstCountry = Object.keys(providersData.results)[0];
+            watchLink = providersData.results[firstCountry].link;
+          }
+        }
 
         setMergedFilm({
           ...currentFilm,
           tmdb: tmdbData,
           director: directorName,
-          watchLink:watchLink,
+          watchLink: watchLink,
         });
       } catch (e) {
         console.error(
@@ -109,7 +117,7 @@ const FilmDetail = () => {
               srcSet={`https://image.tmdb.org/t/p/w1280${mergedFilm.tmdb.backdrop_path}`}
             />
             <img
-            src={`https://image.tmdb.org/t/p/w780${mergedFilm.tmdb.poster_path}`}
+              src={`https://image.tmdb.org/t/p/w780${mergedFilm.tmdb.poster_path}`}
               className={`object-cover object-top w-full h-full transition-opacity duration-1000 ease-out ${imageLoaded ? "opacity-100" : "opacity-0"}`}
               alt={`${mergedFilm.tmdb.title} Cinematic Backdrop`}
               onLoad={() => setImageLoaded(true)}
@@ -189,19 +197,21 @@ const FilmDetail = () => {
           </div>
           {/* </div> */}
           <div className="mt-4 mx-auto w-full ">
-            {mergedFilm.watchLink?(
-              <a href={mergedFilm.watchLink}
-              target="_blank"
-              rel="noopener noreferrer"
+            {mergedFilm.watchLink ? (
+              <a
+                href={mergedFilm.watchLink}
+                target="_blank"
+                rel="noopener noreferrer"
               >
-
-              <MainButton title={"Where to watch "} px={"px-8"} py={"py-4"} />
+                <MainButton title={"Where to watch "} px={"px-8"} py={"py-4"} />
               </a>
-              
-            ):(
-              
+            ) : (
               <div className="opacity-50 cursor-not-allowed">
-                <MainButton title={"Unavailable to stream"} px={"px-8"} py={"py-4"} />
+                <MainButton
+                  title={"Unavailable to stream"}
+                  px={"px-8"}
+                  py={"py-4"}
+                />
               </div>
             )}
           </div>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
-import { CircleUserRoundIcon, Search } from "lucide-react"; 
+import { Link, NavLink, useNavigate } from "react-router-dom";
+import { CircleUserRoundIcon, Search } from "lucide-react";
 
 const links = [
   {
@@ -27,6 +27,8 @@ const links = [
 
 const TopNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
+
   return (
     <header className="fixed w-full left-0 top-0 z-50  bg-[#0A0A0A] text-white border-b border-white/10 ">
       {/* wrap */}
@@ -70,6 +72,13 @@ const TopNavbar = () => {
               type="text"
               placeholder="Search films...."
               className={`bg-transparent outline-none text-sm transition-all duration-500 ease-in-out ${isOpen ? "w-60 opacity-100 px-2" : "w-0 opacity-0"}`}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" && e.target.value.trim()) {
+                  navigate(`/search?q=${e.target.value}`);
+                  setIsOpen(false);
+                  e.target.value = "";
+                }
+              }}
             />
             <button
               onClick={() => setIsOpen(!isOpen)}
