@@ -11,6 +11,7 @@ const FilmDetail = () => {
   const [mergedFilm, setMergedFilm] = useState(null);
   const [isFetching, setIsFetching] = useState(true);
   const [imageLoaded, setImageLoaded] = useState(false);
+
   const currentFilm = filmsData.find((film) => {
     return film.id === filmId;
   });
