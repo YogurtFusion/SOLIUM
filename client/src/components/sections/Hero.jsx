@@ -1,81 +1,119 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Background from "../../assets/hero-bg.png";
 import MainButton from "../UI/Button";
 import { Link } from "react-router-dom";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 const Hero = () => {
-  const [mouse, setMouse] = useState({ x: 50, y: 50 });
+  // const [mouse, setMouse] = useState({ x: 50, y: 50 });
   const [isLoad, setIsLoad] = useState(false);
 
-  // e is the name of the  report browser gave me
-  // .clientX: Is a built-in label the browser uses to store the horizontal pixel number.
+  const containerRef = useRef();
+  const spotlightRef = useRef();
 
-  const handleMouseMove = (e) => {
-    const xPercent = (e.clientX / window.innerWidth) * 100;
-    const yPercent = (e.clientY / window.innerHeight) * 100;
-    setMouse({ x: xPercent, y: yPercent });
-  };
+  useGSAP(
+    () => {
+      if (isLoad) {
+        const tl = gsap.timeline();
+
+        tl.from(".animate-up", {
+          y: 40,
+          opacity: 0,
+          duration: 1,
+          stagger: 0.2,
+          ease: "power3.out",
+        });
+        const handleMouseMove = (e) => {
+          const xPercent = (e.clientX / window.innerWidth) * 100;
+          const yPercent = (e.clientY / window.innerHeight) * 100;
+          if (spotlightRef.current) {
+            gsap.to(spotlightRef.current, {
+              background: `radial-gradient(circle at ${xPercent}% ${yPercent}%, transparent 20%, rgba(0,0,0,0.95) 40%)`,
+              duration: 0.4,
+              ease: "power2.out",
+            });
+          }
+        };
+        window.addEventListener("mousemove", handleMouseMove);
+
+        return () => {
+          window.removeEventListener("mousemove", handleMouseMove);
+        };
+      }
+    },
+    { dependencies: [isLoad], scope: containerRef },
+  );
+
+  // const handleMouseMove = (e) => {
+  //   const xPercent = (e.clientX / window.innerWidth) * 100;
+  //   const yPercent = (e.clientY / window.innerHeight) * 100;
+  //   setMouse({ x: xPercent, y: yPercent });
+  // };
 
   return (
     <section
-      onMouseMove={handleMouseMove}
-      className="relative h-screen w-full overflow-hidden  bg-black min-h-screen"
+      ref={containerRef}
+      // onMouseMove={handleMouseMove}
+      className="relative h-screen w-full overflow-hidden  bg-black min-h-screen  "
     >
-      <img
-        src={Background}
-        className={`absolute h-full w-full object-cover inset-0 duration-1000 transition-all ease-out  ${isLoad ? "opacity-100 " : "opacity-0 "} `}
-        onLoad={() => setIsLoad(true)}
-        alt="Cinematic piano background"
-        loading="eager"
-        fetchPriority="high"
-      />
+     <div className="max-w-screen-2xl mx-auto h-full flex flex-col items-center justify-center">
+        <img
+          src={Background}
+          className={`absolute h-full w-full object-cover inset-0 duration-1000 transition-all ease-out  ${isLoad ? "opacity-100 " : "opacity-0 "}  pt-12`}
+          onLoad={() => setIsLoad(true)}
+          alt="Cinematic piano background"
+          loading="eager"
+          fetchPriority="high"
+        />
 
-      {/* Load screen */}
-      {!isLoad && (
-        <div className="flex flex-col gap-3 md:gap-5 justify-center items-center text-center h-full w-full   bg-black fixedobject-cover inset-0  ">
-          <h1 className="uppercase text-white text-5xl md:text-7xl lg:text-8xl font-semibold font-roboto-serif ">
-            Solium
-          </h1>
-          <p className=" text-white/75 md:text-white/70 max-w-84 leading-normal tracking-wider font-roboto md:max-w-xl  md:text-xl  ">
-            Loading Cinematic Experience...
-          </p>
-        </div>
-      )}
-
-      {isLoad && (
-        <div className="h-full w-full">
-          <div className="absolute inset-0 radial-vintage pointer-events-none z-10 lg:hidden " />
-          <div
-            className=" hidden lg:block absolute inset-0 pointer-events-none z-10 transition-[background] duration-75 ease-out "
-            style={{
-              background: `radial-gradient(circle at ${mouse.x}% ${mouse.y}%, transparent 20%, rgba(0,0,0,0.95) 40%)`,
-            }}
-          />
-          {/*  body */}
-          <div className=" relative z-10 flex flex-col justify-center items-center gap-6 md:gap-8 lg:gap-12 h-full ">
-            {/* text */}
-            <div className="flex flex-col gap-3 md:gap-5 justify-center items-center text-center  ">
-              <h1 className="uppercase text-white text-5xl md:text-7xl lg:text-8xl font-semibold font-Playfair ">
-                Solium
-              </h1>
-              <p className=" text-white/75 md:text-white/70 max-w-xs leading-normal tracking-wider font-poppins md:max-w-xl  md:text-xl  ">
-                A platform to discover films by independent and emerging
-                filmmakers. Discover new voices and support them
-              </p>
-            </div>
-
-            {/* button */}
-            <Link to={"/collection"}>
-
-            <MainButton
-              title={"Begin Experience"}
-              px={"px-6 md:px-14"}
-              py={"py-3 md:py-4"}
-              
-              />
-        </Link>
+        {/* Load screen */}
+        {!isLoad && (
+          <div className="flex flex-col gap-3 md:gap-5 justify-center items-center text-center h-full w-full   bg-black fixedobject-cover inset-0  ">
+            <h1 className="uppercase text-white text-5xl md:text-7xl lg:text-8xl font-semibold font-roboto-serif ">
+              Solium
+            </h1>
+            <p className=" text-white/75 md:text-white/70 max-w-84 leading-normal tracking-wider font-roboto md:max-w-xl  md:text-xl  ">
+              Loading Cinematic Experience...
+            </p>
           </div>
-        </div>
-      )}
+        )}
+
+        {isLoad && (
+          <div className="h-full w-full">
+            <div className="absolute inset-0 radial-vintage pointer-events-none z-10 lg:hidden " />
+            <div
+              ref={spotlightRef}
+              className="  absolute inset-0 pointer-events-none z-10 h-full w-full "
+              style={{
+                // background: `radial-gradient(circle at ${mouse.x}% ${mouse.y}%, transparent 20%, rgba(0,0,0,0.95) 40%)`,
+                background: `radial-gradient(circle at 50% 50%, transparent 20%, rgba(0,0,0,0.95) 40%)`,
+              }}
+            />
+            {/*  body */}
+            <div className=" relative z-10 flex flex-col justify-center items-center gap-6 md:gap-8 lg:gap-12 w-full h-full ">
+              {/* text */}
+              <div className="  flex flex-col gap-3 md:gap-5 justify-center items-center text-center  ">
+                <h1 className="animate-up uppercase text-white text-5xl md:text-7xl lg:text-8xl font-semibold font-Playfair ">
+                  Solium
+                </h1>
+                <p className="animate-up text-white/75 md:text-white/70 max-w-xs leading-normal tracking-wider font-poppins md:max-w-xl  md:text-xl  ">
+                  A platform to discover films by independent and emerging
+                  filmmakers. Discover new voices and support them
+                </p>
+              </div>
+
+              {/* button */}
+              <Link to={"/collection"} className="animate-up">
+                <MainButton
+                  title={"Begin Experience"}
+                  px={"px-6 md:px-14"}
+                  py={"py-3 md:py-4"}
+                />
+              </Link>
+            </div>
+          </div>
+        )}
+</div>
     </section>
   );
 };
