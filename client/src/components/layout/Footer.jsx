@@ -5,17 +5,17 @@ const foooterLinks = [
   {
     id: "id1",
     title: "Home",
-    link: "/",
+    target: "/",
   },
   {
     id: "id2",
     title: "Collections",
-    link: "/collection",
+    target: "/collection",
   },
   {
     id: "id3",
     title: "Form",
-    link: "/",
+    target: "/#form",
   },
   // {
   //   id: "id4",
@@ -59,7 +59,7 @@ const Footer = () => {
             <Link 
             key={item.id} 
             className=" font-poppins text-[11px] uppercase text-neutral-500 active:text-white hover:text-white transition-all duration-500 ease-in-out "
-            to={item.link}
+            to={item.target}
             >
             {item.title}
           </Link>
