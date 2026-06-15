@@ -11,9 +11,10 @@ import {
   Menu,
 } from "lucide-react";
 import React, { useState } from "react";
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
+import TransitionLink from "../../UI/TransitionLink";
 
-const links = [
+const TransitionLinks = [
   {
     id: "id1",
     title: "Home",
@@ -67,12 +68,12 @@ const Sidebar = () => {
     <div className=" fixed top-0 z-50 w-full border-b border-border ">
       <div className="bg-black/80 backdrop-blur-lg py-5 px-6 grid grid-cols-2 w-full max-w-7xl mx-auto items-center">
         {/* logo */}
-        <Link
+        <TransitionLink
           to={"/"}
           className=" justify-self-start font-poppins font-bold text-xl tracking-widest uppercase text-foreground"
         >
           Solium
-        </Link>
+        </TransitionLink>
         <div className="justify-self-end">
           <button
             className="text-foreground pr-6 cursor-pointer"
@@ -101,10 +102,10 @@ const Sidebar = () => {
           </button>
         </div>
         <div className="flex flex-col items-start w-full gap-6">
-          {links.map((item) => {
+          {TransitionLinks.map((item) => {
             const IconComponent = item.icon;
             return (
-              <NavLink
+              <TransitionLink
                 key={item.id}
                 to={item.target}
                 onClick={() => setIsOpen(false)}
@@ -118,7 +119,7 @@ const Sidebar = () => {
                 <span className="font-poppins uppercase tracking-widest text-lg">
                   {item.title}
                 </span>
-              </NavLink>
+              </TransitionLink>
             );
           })}
         </div>
