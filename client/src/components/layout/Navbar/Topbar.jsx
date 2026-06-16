@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import {  useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { CircleUserRoundIcon, Search } from "lucide-react";
-import TransitionLink from "../../UI/TransitionLink";
 
-const TransitionLinks = [
+const links = [
   {
     id: "id1",
     title: "Home",
@@ -52,22 +51,22 @@ const TopNavbar = () => {
       {/* wrap */}
       <div className="grid grid-cols-3 items-center w-full max-w-360 mx-auto px-8 py-4  ">
         {/* logo */}
-        <TransitionLink
+        <Link
           to={"/"}
           className=" justify-self-start font-poppins font-bold text-2xl tracking-tight uppercase"
         >
           Solium
-        </TransitionLink>
+        </Link>
 
-        {/* TransitionLinks */}
+        {/* links */}
         <nav className="justify-self-center">
           <ul className="flex items-center justify-center gap-8  ">
-            {TransitionLinks.map((item) => (
+            {links.map((item) => (
               <li
                 className=" font-poppins text-xs uppercase tracking-[0.2em]  transition-all duration-300 ease-out "
                 key={item.id}
               >
-                <TransitionLink
+                <NavLink
                   className={(e) => {
                     return e.isActive
                       ? "text-stone-50 transition-all duration-300 ease-out "
@@ -77,7 +76,7 @@ const TopNavbar = () => {
                 >
                   {" "}
                   {item.title}{" "}
-                </TransitionLink>
+                </NavLink>
               </li>
             ))}
           </ul>

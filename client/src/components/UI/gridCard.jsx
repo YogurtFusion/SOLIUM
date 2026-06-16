@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import TransitionLink from "./TransitionLink";
+import { Link } from "react-router-dom";
 
 const GridCard = ({
   id,
@@ -51,7 +51,7 @@ const GridCard = ({
             <p className=" hidden lg:block text-xs uppercase font-poppins tracking-[0.3em] text-white/50 mb-1 ">
               {subtitle}
             </p>
-            <TransitionLink className=" group/btn relative  border border-white/20 hover:border-white active:border-white w-fit py-1 px-3 md:px-4 md:py-2 text-[10px] md:text-xs uppercase tracking-widest text-white transition-colors duration-300 "
+            <Link className=" group/btn relative  border border-white/20 hover:border-white active:border-white w-fit py-1 px-3 md:px-4 md:py-2 text-[10px] md:text-xs uppercase tracking-widest text-white transition-colors duration-300 "
             to={`/mood/${formattedName}`}
             >
               {/* <span className="relative z-10">
@@ -62,7 +62,7 @@ const GridCard = ({
                 Explore <span className="hidden md:inline">More</span>
               </p>
               <div className="absolute inset-0 bg-white scale-x-0  group-active/btn:scale-x-100 group-hover/btn:scale-x-100 origin-left transition-transform duration-500 opacity-10"></div>
-            </TransitionLink>
+            </Link>
           </div>
         )}
       </div>

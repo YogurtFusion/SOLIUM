@@ -1,15 +1,15 @@
 import React from "react";
 import MainButton from "./Button";
-import TransitionLink from "./TransitionLink";
-
 const Credentials = [
+
+  
   {
     id: "id1",
     title: "Email",
     placeholder: "Enter your email",
     type: "email",
     label: "Email",
-    name: "email",
+    name: "email"
   },
   {
     id: "id2",
@@ -17,14 +17,14 @@ const Credentials = [
     placeholder: "Enter your password",
     type: "password",
     label: "Password",
-    name: "password",
+    name: "password"
   },
 ];
-const AuthCard = () => {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form Submitted");
-  };
+const AuthCard = () => { 
+     const handleSubmit = (e)=>{
+        e.preventDefault()
+        console.log("Form Submitted")
+    }
   return (
     <>
       <div className=" flex flex-col gap-6 w-full p-8 lg:p-12  md:max-w-md max-w-[80%] mx-auto  border-[0.5px] border-neutral-800 bg-neutral-950/50 backdrop-blur-md shadow-2xl   ">
@@ -51,22 +51,18 @@ const AuthCard = () => {
             </div>
           ))}
 
+          
           <div className=" mt-4 flex flex-col justify-between items-center gap-6 ">
-            <TransitionLink>
-              <a
-                href="#"
-                className="text-sm uppercase text-white transition-colors"
-              >
-                Forgot Password?
-              </a>
-              <MainButton
-                hide={"hidden"}
-                title={"Login"}
-                px={"px-8"}
-                py={"py-3"}
-                other={"w-full justify-center"}
-              />
-            </TransitionLink>
+          
+          <a href="#" className="text-sm uppercase text-white transition-colors">Forgot Password?</a>
+            <MainButton
+              hide={"hidden"}
+              title={"Login"}
+              px={"px-8"}
+              py={"py-3"}
+              other={"w-full justify-center"}
+              
+            />
           </div>
         </form>
       </div>
