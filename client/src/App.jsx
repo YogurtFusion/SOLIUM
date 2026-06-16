@@ -13,10 +13,12 @@
   import SearchDetails from "./components/features/search/SearchDetails";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
+import useIntroLoaders from "./hooks/useIntroLoaders";
 
   function App() {
     const location = useLocation();
     const hideLayout = location.pathname === "/auth";
+    useIntroLoaders(()=>console.log("cinamatic load complete 🐰🐰"))
     return (
       <>
 
