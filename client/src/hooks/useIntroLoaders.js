@@ -65,7 +65,7 @@ const useIntroLoaders = (onComplete) => {
       line,
       {
         width: "100vw",
-        duration: 1,
+        duration: 0.5,
         ease: "power4.inOut",
       },
       "<0.2",
@@ -74,7 +74,7 @@ const useIntroLoaders = (onComplete) => {
 
     timeline.to(overlay, {
       opacity: 0,
-      duration: 0.5,
+      duration: 0.4,
       ease: "power2.in",
     });
 
