@@ -1,57 +1,60 @@
-import React, { use, useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
-import { filmsData } from '../../../data/films'
-import MainButton from '../../UI/Button'
-
+import React, { use, useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { filmsData } from "../../../data/films";
+import MainButton from "../../UI/Button";
 
 const SearchDetails = () => {
-    const params = useParams()
-    const tmdbId = params.id
+  const params = useParams();
+  const tmdbId = params.id;
 
-    const [mergedFilm, setMergedFilm] = useState(null)
-    const [isFetching, setIsFetching] = useState(true)
-    const [imageLoaded, setImageLoaded] = useState(false)
-    const [hasError, setHasError] = useState(false)
+  const [mergedFilm, setMergedFilm] = useState(null);
+  const [isFetching, setIsFetching] = useState(true);
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const [hasError, setHasError] = useState(false);
 
-    useEffect(()=>{
-        const fetchFilmDetails = async()=>{
-            if (!tmdbId) return;
-            setIsFetching(true) // what are those 
-            setHasError(false) // what are those 
-            
-            const token = import.meta.env.VITE_TMDB_ACCESS_TOKEN
+  useEffect(() => {
+    const fetchFilmDetails = async () => {
+      if (!tmdbId) return;
+      setIsFetching(true); // what are those
+      setHasError(false); // what are those
 
-            const options = {
-                method:"GET",
-                headers:{
-                    accept:"application/json",
-                    authorization:`Bearer ${token}`
-                }
-            }
-            try {
-                const [movieResponse, creditsResponse, providerResponse]  = await Promise.all([ // why we've to improt in the array ? 
-                    fetch(
-                        `https://api.themoviedb.org/3/movie/${tmdbId}?language=en-US`,
-                        options,
-                    ),
-                    fetch(
-                        `https://api.themoviedb.org/3/movie/${tmdbId}/credits?language=en-US`,
-                        options,
-                    ),
-                    fetch(
-                            `https://api.themoviedb.org/3/movie/${tmdbId}/watch/providers`,options,
-                    ),
-                ])
-                if(!movieResponse.ok) throw new Error("Film not found")
-                    const  tmdbData  = await movieResponse.json()
-                    const creditsData = await creditsResponse.json()
-                    const providersData = await providerResponse.json()
-                    const directorData = creditsData.crew.find(
-                        (person)=>person.job ==="Director",
-                    )
-                    const directorName = directorData ?directorData.name:"UNKNOWN DIRECTOR"
+      const token = import.meta.env.VITE_TMDB_ACCESS_TOKEN;
 
-                   
+      const options = {
+        method: "GET",
+        headers: {
+          accept: "application/json",
+          authorization: `Bearer ${token}`,
+        },
+      };
+      try {
+        const [movieResponse, creditsResponse, providerResponse] =
+          await Promise.all([
+            // why we've to improt in the array ?
+            fetch(
+              `https://api.themoviedb.org/3/movie/${tmdbId}?language=en-US`,
+              options,
+            ),
+            fetch(
+              `https://api.themoviedb.org/3/movie/${tmdbId}/credits?language=en-US`,
+              options,
+            ),
+            fetch(
+              `https://api.themoviedb.org/3/movie/${tmdbId}/watch/providers`,
+              options,
+            ),
+          ]);
+        if (!movieResponse.ok) throw new Error("Film not found");
+        const tmdbData = await movieResponse.json();
+        const creditsData = await creditsResponse.json();
+        const providersData = await providerResponse.json();
+        const directorData = creditsData.crew.find(
+          (person) => person.job === "Director",
+        );
+        const directorName = directorData
+          ? directorData.name
+          : "UNKNOWN DIRECTOR";
+
         let watchLink = null;
         if (providersData && providersData.results) {
           watchLink =
@@ -61,51 +64,51 @@ const SearchDetails = () => {
             watchLink = providersData.results[firstCountry].link;
           }
         }
-                    const localSoliumData = filmsData.find(
-                        (film)=>String(film.tmdb_id) ===String(tmdbId)
-                    )
+        const localSoliumData = filmsData.find(
+          (film) => String(film.tmdb_id) === String(tmdbId),
+        );
 
-                    setMergedFilm({
-                        ...localSoliumData,
-                        tmdb:tmdbData,
-                        director:directorName,
-                        watchLink:watchLink,
-                    })
-            } catch (e) {
-                console.error(`Failed to fetch TMDB data for ${tmdbId}`,e);
-                setHasError(true)
-                
-            } finally{
-                setIsFetching(false)
-            }
-        }
-        fetchFilmDetails()
-    },[tmdbId])
+        setMergedFilm({
+          ...localSoliumData,
+          tmdb: tmdbData,
+          director: directorName,
+          watchLink: watchLink,
+        });
+      } catch (e) {
+        console.error(`Failed to fetch TMDB data for ${tmdbId}`, e);
+        setHasError(true);
+      } finally {
+        setIsFetching(false);
+      }
+    };
+    fetchFilmDetails();
+  }, [tmdbId]);
 
-    const formatRuntime = (min)=>{ // how it works 
-        if(!min) return"";
-        const h = Math.floor(min/60)
-        const m = min% 60
-        return `${h}h ${m}m`
-    }
+  const formatRuntime = (min) => {
+    // how it works
+    if (!min) return "";
+    const h = Math.floor(min / 60);
+    const m = min % 60;
+    return `${h}h ${m}m`;
+  };
 
-    if(hasError){
-        return(
-            <div>
-                <h2>Film not found in the archives</h2>
-            </div>
-        )
-    }
-    if(isFetching||!mergedFilm){
-        return(
-            <div className="min-h-screen bg-bg flex items-center justify-center text-neutral-500 font-poppins tracking-widest uppercase animate-pulse">
+  if (hasError) {
+    return (
+      <div>
+        <h2>Film not found in the archives</h2>
+      </div>
+    );
+  }
+  if (isFetching || !mergedFilm) {
+    return (
+      <div className="min-h-screen bg-bg flex items-center justify-center text-neutral-500 font-poppins tracking-widest uppercase animate-pulse">
         Accessing Film Archive...
       </div>
-        )
-    }
+    );
+  }
 
   return (
-      <main className="min-h-screen bg-bg text-foreground font-body">
+    <main className="min-h-screen bg-bg text-foreground font-body">
       {/* wrap */}
       <div className=" max-w-7xl mx-auto pt-32 lg:pt-20 md:pt-24">
         {/* img */}
@@ -116,7 +119,7 @@ const SearchDetails = () => {
               srcSet={`https://image.tmdb.org/t/p/w1280${mergedFilm.tmdb.backdrop_path}`}
             />
             <img
-            src={`https://image.tmdb.org/t/p/w780${mergedFilm.tmdb.poster_path}`}
+              src={`https://image.tmdb.org/t/p/w780${mergedFilm.tmdb.poster_path}`}
               className={`object-cover object-top w-full h-full transition-opacity duration-1000 ease-out ${imageLoaded ? "opacity-100" : "opacity-0"}`}
               alt={`${mergedFilm.tmdb.title} Cinematic Backdrop`}
               onLoad={() => setImageLoaded(true)}
@@ -135,12 +138,11 @@ const SearchDetails = () => {
         {/* img body */}
         <div className="flex flex-col gap-8 p-6 md:p-12 max-w-7xl mx-auto">
           <div className="flex flex-col gap-1">
-            <h1 className="capitalize text-4xl font-heading font-bold tracking-tight">
+            <h1 className="capitalize text-4xl font-heading font-bold leading-relaxed tracking-tight">
               {mergedFilm.tmdb.title}
             </h1>
             <div className="flex items-center gap-2 text-sm">
               <span className=" text-muted">
-                
                 {mergedFilm.tmdb.release_date?.substring(0, 4)}
               </span>
               <span className="text-faint">•</span>
@@ -155,11 +157,10 @@ const SearchDetails = () => {
           </div>
           {/* <div className=""> */}
           <div className="border-l border-border w-full h-full pl-4">
-            {mergedFilm.one_liner&&(
-
-                <p className="italic text-pretty text-muted leading-relaxed ">
-              {mergedFilm.one_liner}
-            </p>
+            {mergedFilm.one_liner && (
+              <p className="italic text-pretty text-muted leading-relaxed ">
+                {mergedFilm.one_liner}
+              </p>
             )}
             <p className="text-sm text-foreground/80 leading-relaxed max-w-3xl">
               {mergedFilm.tmdb.overview}
@@ -168,23 +169,21 @@ const SearchDetails = () => {
 
           {/* tags */}
           <div className=" max-w-2xs flex flex-col gap-6">
-          
-          {mergedFilm.moods && mergedFilm.moods.length>0&&(
-
+            {mergedFilm.moods && mergedFilm.moods.length > 0 && (
               <div className=" flex flex-col gap-4">
-              <span className="uppercase text-sm text-faint  ">Mood</span>
+                <span className="uppercase text-sm text-faint  ">Mood</span>
 
-              <div className="flex flex-wrap gap-2 items-center justify-start text-xs leading-relaxed tracking-widest">
-                {mergedFilm.moods.map((mood, idx) => (
+                <div className="flex flex-wrap gap-2 items-center justify-start text-xs leading-relaxed tracking-widest">
+                  {mergedFilm.moods.map((mood, idx) => (
                     <span
-                    key={idx}
-                    className="uppercase border border-foreground px-1 py-0.5"
+                      key={idx}
+                      className="uppercase border border-foreground px-1 py-0.5"
                     >
-                    {mood}
-                  </span>
-                ))}
+                      {mood}
+                    </span>
+                  ))}
+                </div>
               </div>
-            </div>
             )}
 
             <div className=" flex flex-col gap-4">
@@ -203,19 +202,21 @@ const SearchDetails = () => {
           </div>
           {/* </div> */}
           <div className="mt-4 mx-auto w-full ">
-            {mergedFilm.watchLink?(
-              <a href={mergedFilm.watchLink}
-              target="_blank"
-              rel="noopener noreferrer"
+            {mergedFilm.watchLink ? (
+              <a
+                href={mergedFilm.watchLink}
+                target="_blank"
+                rel="noopener noreferrer"
               >
-
-              <MainButton title={"Where to watch "} px={"px-8"} py={"py-4"} />
+                <MainButton title={"Where to watch "} px={"px-8"} py={"py-4"} />
               </a>
-              
-            ):(
-              
+            ) : (
               <div className="opacity-50 cursor-not-allowed">
-                <MainButton title={"Unavailable to stream"} px={"px-8"} py={"py-4"} />
+                <MainButton
+                  title={"Unavailable to stream"}
+                  px={"px-8"}
+                  py={"py-4"}
+                />
               </div>
             )}
           </div>
@@ -223,7 +224,7 @@ const SearchDetails = () => {
         </div>
       </div>
     </main>
-  )
-}
+  );
+};
 
-export default SearchDetails
+export default SearchDetails;

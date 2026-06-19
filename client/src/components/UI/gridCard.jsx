@@ -21,7 +21,7 @@ const GridCard = ({
         className={`relative break-inside-avoid group  overflow-hidden  bg-stone-900 mb-6 cursor-pointer`}
         key={id}
         style={{
-          aspectRatio: aspectRatio || "16/9",
+          aspectRatio: aspectRatio || "4:3",
         }}
       >
         <img
@@ -48,7 +48,7 @@ const GridCard = ({
             <h3 className=" text-base md:text-xl   font-Playfair capitalize text-white mb-2 lg:mb-4 ">
               {title}
             </h3>
-            <p className=" hidden lg:block text-xs uppercase font-poppins tracking-[0.3em] text-white/50 mb-1 ">
+            <p className=" hidden lg:block text-xs uppercase font-poppins tracking-widest leading-relaxed text-white/60 mb-1 ">
               {subtitle}
             </p>
             <Link className=" group/btn relative  border border-white/20 hover:border-white active:border-white w-fit py-1 px-3 md:px-4 md:py-2 text-[10px] md:text-xs uppercase tracking-widest text-white transition-colors duration-300 "

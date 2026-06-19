@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import Background from "../../assets/hero-bg.png";
+import Background from "../../assets/img/hero/hero-bg.png";
 import MainButton from "../UI/Button";
 import { Link } from "react-router-dom";
 import { useGSAP } from "@gsap/react";

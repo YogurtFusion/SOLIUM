@@ -72,14 +72,15 @@ const MoodCollection = () => {
   return (
     <main className="bg-neutral-950 text-foreground min-h-screen pb-32 font-body">
       <div className="max-w-7xl mx-auto px-6 pt-32 md:pt-24">
-        <header className="flex flex-col justify-center border-b border-white/10 pb-12 mb-12 text-center md:text-left ">
+        <header className="flex flex-col justify-center border-b border-white/10 pb-12 mb-12 text-left ">
           <h1 className="text-5xl md:text-7xl font-heading uppercase tracking-wider">
             {currentMood.title}
           </h1>
-          <p className="text-xs md:text-sm text-muted tracking-widest uppercase mt-6">
+          <span className="text-xs md:text-sm text-muted tracking-widest uppercase mt-6">
             {" "}
-            {currentMood.subtitle}{" "}
-          </p>
+            {currentMood.visualCore}{" "}
+          </span>
+          <p className="text-base md:text-lg font-medium text-foreground/80 tracking-wider mt-8 text-pretty ">{currentMood.Description} </p>
         </header>
         {isFetching ? (
           <div className="text-neutral-500 font-poppins tracking-widest uppercase animate-pulse">

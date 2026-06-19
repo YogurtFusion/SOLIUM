@@ -137,7 +137,7 @@ const FilmDetail = () => {
         {/* img body */}
         <div className="flex flex-col gap-8 p-6 md:p-12 max-w-7xl mx-auto">
           <div className="flex flex-col gap-1">
-            <h1 className="capitalize text-4xl font-heading font-bold tracking-tight">
+            <h1 className="capitalize text-4xl font-heading font-bold leading-relaxed tracking-tight">
               {mergedFilm.tmdb.title}
             </h1>
             <div className="flex items-center gap-2 text-sm">

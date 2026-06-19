@@ -1,461 +1,922 @@
 export const filmsData = [
   // NOIR
-  { id: "only-god-forgives", tmdb_id: 77987, moods: ["noir", "surreal"], one_liner: "Neon-soaked Bangkok hallways bleed red while a man stands still as a statue in his own guilt." },
-  { id: "a-most-violent-year", tmdb_id: 241239, moods: ["noir", "dusk"], one_liner: "The last amber light of an honest man's empire fades over a frozen Hudson River." },
-  { id: "i-saw-the-devil", tmdb_id: 49797, moods: ["noir", "chaos"], one_liner: "A man chases a monster through snow and black highways until he cannot find himself in the mirror." },
-  { id: "burning", tmdb_id: 491584, moods: ["noir", "melancholy", "echoes"], one_liner: "Greenhouses disappear in the Korean countryside while a young man watches smoke curl into a sky that offers no answers." },
-  { id: "the-salesman", tmdb_id: 375315, moods: ["noir", "echoes"], one_liner: "A cracked apartment wall becomes the fault line running through two lives that can never be exactly repaired." },
-  { id: "leviathan", tmdb_id: 265180, moods: ["noir", "grain"], one_liner: "A rusted house on a Russian cliff surrenders slowly to a state that has always been larger than the law." },
+  //Le Samouraï (1967)
+  // Blade Runner 2049 (2017)
+  //The Girl with the Dragon Tattoo (2011)
+  //Prisoners (2013)
+  //Nightmare Alley (2021)
+  //Blue Ruin (2013)
+  //Nightcrawler (2014)
+  //Gone Girl (2014)
+  //The Place Beyond the Pines (2012)
+  //No Sudden Move (2021)
+  //Nocturnal Animals (2016)]
+  //Mother (2009)
+  //I Care a Lot (2021)
+  {
+    id: "le-samourai",
+    tmdb_id: 5511,
+    moods: ["noir"],
+  },
+
+  {
+    id: "blade-runner-2049",
+    tmdb_id: 335984,
+    moods: ["noir"],
+  },
+
+  {
+    id: "the-girl-with-the-dragon-tattoo",
+    tmdb_id: 65754,
+    moods: ["noir"],
+  },
+
+  {
+    id: "prisoners",
+    tmdb_id: 146233,
+    moods: ["noir"],
+  },
+
+  {
+    id: "nightmare-alley",
+    tmdb_id: 597208,
+    moods: ["noir"],
+  },
+
+  {
+    id: "blue-ruin",
+    tmdb_id: 188166,
+    moods: ["noir"],
+  },
+
+  {
+    id: "nightcrawler",
+    tmdb_id: 242582,
+    moods: ["noir"],
+  },
+
+  {
+    id: "gone-girl",
+    tmdb_id: 210577,
+    moods: ["noir"],
+  },
+
+  {
+    id: "the-place-beyond-the-pines",
+    tmdb_id: 97367,
+    moods: ["noir"],
+  },
+
+  {
+    id: "no-sudden-move",
+    tmdb_id: 649409,
+    moods: ["noir"],
+  },
+
+  {
+    id: "nocturnal-animals",
+    tmdb_id: 340666,
+    moods: ["noir"],
+  },
+
+  {
+    id: "mother",
+    tmdb_id: 30018,
+    moods: ["noir"],
+  },
+
+  {
+    id: "drive",
+    tmdb_id: 64690,
+    moods: ["noir"],
+  },
+
+  {
+    id: "cold-in-july",
+    tmdb_id: 225565,
+    moods: ["noir"],
+  },
+
+  {
+    id: "i-care-a-lot",
+    tmdb_id: 601666,
+    moods: ["noir"],
+  },
 
   // DUSK
-  { id: "paterson", tmdb_id: 370755, moods: ["dusk", "silence"], one_liner: "A bus driver moves through the same Tuesday light, carrying poems the world will never ask to read." },
-  { id: "a-ghost-story", tmdb_id: 428449, moods: ["dusk", "echoes", "noir"], one_liner: "A white sheet stands motionless at a window watching decades pass in a house that forgets every name." },
-  { id: "columbus", tmdb_id: 417283, moods: ["dusk", "symmetry"], one_liner: "Two people stand before modernist buildings and talk about everything except what is actually keeping them there." },
-  { id: "shoplifters", tmdb_id: 505192, moods: ["dusk", "rhythm"], one_liner: "A makeshift family moves through Tokyo's margin in perfect low-tide rhythm before the tide finally turns." },
-  { id: "aftersun", tmdb_id: 815245, moods: ["dusk"], one_liner: "Grainy camcorder footage of a summer holiday holds a daughter's last clear images of a father she could not yet read." },
-  { id: "minari", tmdb_id: 635302, moods: ["dusk"], one_liner: "Korean immigrants plant seeds in Arkansas clay while an old woman brings the smell of home to red-dirt twilight." },
+  //Past Lives (2023)
+  //The Banshees of Inisherin (2022)
+  //A Ghost Story (2017)
+  //Aftersun (2022)
+  //The Souvenir (2019)
+  //Burning (2018)
+  //Call Me by Your Name (2017)
+  //La La Land (2016)
+  //45 Years (2015)
+  //Room(2015)
+  //Before Midnight (2013)
+  //Weekend (2011)
+  //20th Century Women (2016)
+  //Beginners (2010)
+  //Leave No Trace (2018)
+  //Paris Can Wait(2016)
 
-  // VIVID
-  { id: "tangerine", tmdb_id: 318399, moods: ["vivid", "chaos"], one_liner: "Los Angeles burns tangerine on an iPhone screen as two women sprint through Christmas Eve on fire." },
-  { id: "beasts-of-the-southern-wild", tmdb_id: 96721, moods: ["vivid", "humidity"], one_liner: "A small girl holds the flooding world together with the pure electric force of her unbroken imagination." },
-  { id: "the-grand-budapest-hotel", tmdb_id: 120467, moods: ["vivid", "symmetry"], one_liner: "Every frame is a jewel box of perfectly centered pink pastry and impeccably timed catastrophe." },
-  { id: "american-honey", tmdb_id: 371972, moods: ["vivid", "grain"], one_liner: "A teenage girl tumbles through the American interior in a van that smells like cheap perfume and open highway." },
-  { id: "rocks", tmdb_id: 593005, moods: ["vivid", "rhythm"], one_liner: "A teenage girl holds her brother's hand and the whole loud colour of East London against the silence of abandonment." },
-  { id: "capernaum", tmdb_id: 517814, moods: ["vivid", "humidity"], one_liner: "Beirut breathes hot and chaotic around a twelve-year-old who has decided to sue his parents for giving him life." },
-
-  // GRAIN
-  { id: "fish-tank", tmdb_id: 20694, moods: ["grain", "melancholy"], one_liner: "A girl dances alone in an empty flat on an Essex estate, reaching toward something that has no name yet." },
-  { id: "embrace-of-the-serpent", tmdb_id: 325133, moods: ["grain", "humidity"], one_liner: "Black-and-white Amazon river mist swallows two expeditions fifty years apart into the same green dream." },
-  { id: "mustang", tmdb_id: 332212, moods: ["grain", "silence"], one_liner: "Five sisters move through a Turkish summer in a house that grows smaller and quieter with every locked door." },
-  { id: "winters-bone", tmdb_id: 35125, moods: ["grain", "echoes"], one_liner: "Frozen Ozark trees hold their breath as a girl searches for a father who seems to have dissolved into the cold." },
-  { id: "take-shelter", tmdb_id: 73194, moods: ["grain"], one_liner: "Yellow storm clouds claw through a man's waking mind while Ohio fields sweat with the texture of impending collapse." },
-  { id: "blue-valentine", tmdb_id: 41733, moods: ["grain"], one_liner: "A marriage's collapse and its beginning intercut in grainy Super 8 and cold HD, splitting one love into two incompatible films." },
-
-  // SILENCE
-  { id: "uncle-boonmee", tmdb_id: 45269, moods: ["silence", "surreal"], one_liner: "A dying man sits at a jungle dinner table visited by ghost monkeys and the soft weight of every life he has lived." },
-  { id: "ida", tmdb_id: 205422, moods: ["silence", "melancholy"], one_liner: "A novice nun and a wreckage of a woman drive through Polish winter searching for a grave that changes everything." },
-  { id: "son-of-saul", tmdb_id: 326659, moods: ["silence", "chaos"], one_liner: "A man moves through the blurred roar of a death camp in furious tunnel vision, carrying a small impossible task." },
-  { id: "45-years", tmdb_id: 300671, moods: ["silence", "echoes"], one_liner: "A letter arrives in a Norfolk kitchen and slowly unmakes forty-five years of a marriage one quiet meal at a time." },
-  { id: "portrait-of-a-lady-on-fire", tmdb_id: 601666, moods: ["silence"], one_liner: "Two women on a Breton cliff exchange gaze for gaze, each brushstroke a word neither the 18th century nor decorum will allow." },
-  { id: "after-yang", tmdb_id: 741218, moods: ["silence"], one_liner: "A father pores through a broken android's memory archive for fragments of a life lived quietly beside his family." },
-
-  // CHAOS
-  { id: "the-wailing", tmdb_id: 293670, moods: ["chaos", "surreal"], one_liner: "A Korean village comes apart in rain and ritual and no one can tell anymore where the evil actually began." },
-  { id: "toni-erdmann", tmdb_id: 375382, moods: ["chaos", "melancholy"], one_liner: "A father in a fake moustache wanders into his daughter's Bucharest business life and refuses to leave quietly." },
-  { id: "climax", tmdb_id: 507076, moods: ["chaos", "rhythm"], one_liner: "A dance company's sangria is poisoned and the film spirals down with them into a strobe-lit collective dissolution." },
-  { id: "good-time", tmdb_id: 427388, moods: ["chaos"], one_liner: "One sleepless Queens night turns into a neon-drenched cascade of bad decisions, each worse than the scheme that preceded it." },
-  { id: "uncut-gems", tmdb_id: 473033, moods: ["chaos"], one_liner: "A jeweler's every waking moment is a seven-way simultaneous bet against a fate that tightens like a fist around his neck." },
-  { id: "titane", tmdb_id: 654148, moods: ["chaos"], one_liner: "A dancer with a titanium plate in her skull commits acts of violence and tenderness in equal measure before dissolving into chrome." },
-  
-  // SYMMETRY
-  { id: "the-favourite", tmdb_id: 375262, moods: ["symmetry", "echoes"], one_liner: "Fish-eye lenses warp a Queen's perfect court as two women orbit her like competing moons in period velvet." },
-  { id: "ex-machina", tmdb_id: 264660, moods: ["symmetry", "surreal"], one_liner: "A glass house in an empty forest holds perfectly composed rooms where a man cannot tell if he is the test." },
-  { id: "force-majeure", tmdb_id: 247543, moods: ["symmetry", "melancholy"], one_liner: "An avalanche passes in seconds and leaves a Swedish family staring at the geometry of their own cowardice." },
-  { id: "certified-copy", tmdb_id: 42806, moods: ["symmetry", "echoes"], one_liner: "A man and woman walk through a Tuscan village trying on an old marriage like a coat that almost fits." },
-  { id: "the-lobster", tmdb_id: 254128, moods: ["symmetry"], one_liner: "A dystopian hotel demands that singles pair off or become animals, rendered in flat compositions as dry as the rule book they live by." },
-  { id: "the-zone-of-interest", tmdb_id: 1166073, moods: ["symmetry"], one_liner: "A commandant's family tends a lush garden with ruthless domestic order while the sounds from next door never stop." },
-// ECHOES
-  { id: "inside-llewyn-davis", tmdb_id: 176981, moods: ["echoes"], one_liner: "A folk singer loops through a grey Greenwich Village winter, each couch-surf a verse of a song that refuses to resolve." },
-  { id: "past-lives", tmdb_id: 1016084, moods: ["echoes"], one_liner: "Childhood sweethearts separated by immigration reunite twice across twenty years, each goodbye rerouting a life already in motion." },
-  { id: "call-me-by-your-name", tmdb_id: 432413, moods: ["echoes"], one_liner: "A summer in Northern Italy of peaches and Satie leaves a boy marked by a love too large for the season that contained it." },
-  { id: "burning-echoes", tmdb_id: 497034, moods: ["echoes"], one_liner: "A South Korean delivery man watches greenhouses burn and disappear, following a mystery that may be grief wearing a stranger's face." },
-  { id: "all-of-us-strangers", tmdb_id: 972382, moods: ["echoes"], one_liner: "A screenwriter visits his dead parents as if they simply never aged, each childhood kitchen conversation a séance held in daylight." },
-  { id: "the-worst-person-in-the-world", tmdb_id: 670739, moods: ["echoes"], one_liner: "A Norwegian woman pivots through identities and men in twelve chapters that each end before they can promise anything permanent." },
-
-  // HUMIDITY
-  { id: "moonlight", tmdb_id: 376867, moods: ["humidity"], one_liner: "A Black boy from Liberty City moves through three phases of life under Florida light that holds heat long after the sun leaves." },
-  { id: "atlantics", tmdb_id: 582606, moods: ["humidity"], one_liner: "Dakar's Atlantic shore breathes ghost fire into the bodies of young men lost at sea, returning through women who loved them." },
-  { id: "bacurau", tmdb_id: 446159, moods: ["humidity"], one_liner: "A drought-stricken Brazilian village vanishes from satellite maps before strangers with guns arrive to play a different kind of game." },
-  { id: "zola", tmdb_id: 635930, moods: ["humidity"], one_liner: "A Tampa strip-club odyssey unspools over 48 sweaty hours in Twitter-post fragments, thong heels, and motel-room dread." },
-  { id: "saint-maud", tmdb_id: 575776, moods: ["humidity"], one_liner: "A devout nurse in a grey seaside town feels God in her skin until she can no longer tell ecstasy from psychosis." },
-  { id: "never-rarely-sometimes-always", tmdb_id: 581655, moods: ["humidity"], one_liner: "A Pennsylvania teenager rides a bus to New York in silence, the fluorescent lights of bus terminals replacing every door that closed on her." },
-
-  // MELANCHOLY
-  { id: "short-term-12", tmdb_id: 211672, moods: ["melancholy"], one_liner: "A young supervisor at a foster care facility carries other people's damage with the careful hands of someone who survived her own." },
-  { id: "manchester-by-the-sea", tmdb_id: 334533, moods: ["melancholy"], one_liner: "A janitor returns to a Massachusetts town where the cold harbor holds an unforgivable memory he has no plan to survive." },
-  { id: "james-white", tmdb_id: 315031, moods: ["melancholy"], one_liner: "A young New Yorker parties against a wall of grief as his mother's illness slowly removes the last floor beneath him." },
-  { id: "nomadland", tmdb_id: 591274, moods: ["melancholy"], one_liner: "A widow loads a van with everything she owns and drives the American West, living in parking lots that double as cathedrals." },
-  { id: "the-banshees-of-inisherin", tmdb_id: 674324, moods: ["melancholy"], one_liner: "A friendship ends without reason on a small Irish island, and the grief of that severing spreads like a weather pattern." },
-  { id: "weekend", tmdb_id: 89751, moods: ["melancholy"], one_liner: "Two men meet at a Nottingham bar and fill a single weekend with conversations so honest they make the Monday inevitable." },
-
-  // RHYTHM
-  { id: "moonrise-kingdom", tmdb_id: 83666, moods: ["rhythm"], one_liner: "Two twelve-year-olds flee to a cove on a New England island while every adult on the map follows a different percussion." },
-  { id: "hunt-for-the-wilderpeople", tmdb_id: 385118, moods: ["rhythm"], one_liner: "A delinquent boy and a gruff bushman tramp through New Zealand wilderness in a buddy comedy that moves like a perfect country song." },
-  { id: "lady-bird", tmdb_id: 404368, moods: ["rhythm"], one_liner: "A Sacramento teenager renames herself and hurtles through senior year in a tempo only she and her mother share and misread." },
-  { id: "eighth-grade", tmdb_id: 508965, moods: ["rhythm"], one_liner: "A thirteen-year-old's YouTube self-improvement videos play against the acoustic dread of a cafeteria she can barely cross." },
-  { id: "frances-ha", tmdb_id: 145481, moods: ["rhythm"], one_liner: "A broke dancer sprints through New York apartments in black-and-white to music that refuses to match her stalled momentum." },
-  { id: "obvious-child", tmdb_id: 239563, moods: ["rhythm"], one_liner: "A stand-up comedian turns an unexpected pregnancy into material while Brooklyn winter light holds her accountable in real time." },
-
-  // SURREAL
-  { id: "midsommar", tmdb_id: 530385, moods: ["surreal"], one_liner: "A grieving American follows her detached boyfriend to a Swedish midsummer cult where the midnight sun never lets anyone hide." },
-  { id: "coherence", tmdb_id: 220299, moods: ["surreal"], one_liner: "Eight friends at a dinner party discover the passing comet has fractured reality into parallel versions of the same awkward evening." },
-  { id: "border", tmdb_id: 508442, moods: ["surreal"], one_liner: "A Swedish border guard who can smell human shame meets a stranger who carries secrets that rewrite everything she thought she was." },
-  { id: "im-thinking-of-ending-things", tmdb_id: 748783, moods: ["surreal"], one_liner: "A woman rehearses a breakup on a snowy drive to her boyfriend's childhood farm while the house rearranges itself around her doubt." },
-  { id: "annette", tmdb_id: 698280, moods: ["surreal"], one_liner: "A stand-up comedian and an opera singer raise a puppet child in a Leos Carax fever-opera where applause curdles into cruelty." },
-  { id: "crimes-of-the-future", tmdb_id: 771373, moods: ["surreal"], one_liner: "In a near-future where surgery is performance art, a man grows new organs on stage while bureaucracy files the paperwork." }
-];
-
-
-
-export const oldfilmsData = [
+  //Dusk
   {
-    id: "pebbles",
-    title: "Pebbles",
-    director: "P.S. Vinothraj",
-    year: 2021,
-    runtime: 74,
-    genres: ["Drama"],
-    moods: ["humidity", "grain"],
-    poster: "/posters/pebbles.jpg",
-    still: "/stills/pebbles.jpg",
-    watchLink: "https://mubi.com/films/pebbles",
-    availability: "MUBI",
-    curatorNote:
-      "Vinothraj walked out of a DVD shop and into the Tiger Award at Rotterdam. He films the Tamil Nadu barrens like a man who owes the land a debt.",
+    id: "past-lives",
+    tmdb_id: 666277,
+    moods: ["dusk"],
   },
+
   {
-    id: "feathers",
-    title: "Feathers",
-    director: "Omar El Zohairy",
-    year: 2021,
-    runtime: 112,
-    genres: ["Drama", "Comedy"],
-    moods: ["surreal", "silence"],
-    poster: "/posters/feathers.jpg",
-    still: "/stills/feathers.jpg",
-    watchLink: "https://mubi.com/films/feathers",
-    availability: "MUBI",
-    curatorNote:
-      "El Zohairy turns patriarchy into a literal absurdity and keeps a straight face. The first Egyptian film to win at Cannes Critics' Week — and it earns every feather.",
+    id: "the-banshees-of-inisherin",
+    tmdb_id: 674324,
+    moods: ["dusk"],
   },
+
   {
-    id: "murina",
-    title: "Murina",
-    director: "Antoneta Alamat Kusijanović",
-    year: 2021,
-    runtime: 92,
-    genres: ["Drama", "Thriller"],
-    moods: ["chaos", "vivid"],
-    poster: "/posters/murina.jpg",
-    still: "/stills/murina.jpg",
-    watchLink: "https://www.justwatch.com/us/movie/murina",
-    availability: "Streaming",
-    curatorNote:
-      "Kusijanović films the Adriatic like it owes her something. Every underwater shot is an argument between freedom and the seabed.",
+    id: "a-ghost-story",
+    tmdb_id: 428449,
+    moods: ["dusk"],
   },
-  {
-    id: "flee",
-    title: "Flee",
-    director: "Jonas Poher Rasmussen",
-    year: 2021,
-    runtime: 89,
-    genres: ["Documentary", "Animation"],
-    moods: ["echoes", "melancholy"],
-    poster: "/posters/flee.jpg",
-    still: "/stills/flee.jpg",
-    watchLink: "https://tubitv.com/movies/100033332/flee",
-    availability: "Free Online",
-    curatorNote:
-      "Memory drawn with shaking hands. Rasmussen found the only honest language for a story too dangerous to show.",
-  },
-  {
-    id: "atlantics",
-    title: "Atlantics",
-    director: "Mati Diop",
-    year: 2019,
-    runtime: 106,
-    genres: ["Drama", "Mystery", "Romance"],
-    moods: ["rhythm", "surreal"],
-    poster: "/posters/atlantics.jpg",
-    still: "/stills/atlantics.jpg",
-    watchLink: "https://mubi.com/films/atlantics",
-    availability: "MUBI",
-    curatorNote:
-      "Diop inherited something ancient and made it entirely hers. Dakar at night as a haunting — the ocean as both promise and grave.",
-  },
-  {
-    id: "hedi",
-    title: "Hedi",
-    director: "Mohamed Ben Attia",
-    year: 2016,
-    runtime: 88,
-    genres: ["Drama", "Romance"],
-    moods: ["dusk", "silence"],
-    poster: "/posters/hedi.jpg",
-    still: "/stills/hedi.jpg",
-    watchLink: "https://mubi.com/films/hedi",
-    availability: "MUBI",
-    curatorNote:
-      "Ben Attia understands that the most suffocating prisons have no walls. A Berlinale Silver Bear that arrived like a whisper.",
-  },
-  {
-    id: "prayers-for-the-stolen",
-    title: "Prayers for the Stolen",
-    director: "Tatiana Huezo",
-    year: 2021,
-    runtime: 110,
-    genres: ["Drama", "Crime"],
-    moods: ["grain", "humidity"],
-    poster: "/posters/prayers-for-the-stolen.jpg",
-    still: "/stills/prayers-for-the-stolen.jpg",
-    watchLink: "https://mubi.com/films/prayers-for-the-stolen",
-    availability: "MUBI",
-    curatorNote:
-      "Huezo shoots girlhood as an act of radical resistance. The soil of rural Mexico holds bodies and secrets in equal measure.",
-  },
-  {
-    id: "the-blue-caftan",
-    title: "The Blue Caftan",
-    director: "Maryam Touzani",
-    year: 2022,
-    runtime: 118,
-    genres: ["Drama", "Romance"],
-    moods: ["dusk", "silence"],
-    poster: "/posters/the-blue-caftan.jpg",
-    still: "/stills/the-blue-caftan.jpg",
-    watchLink: "https://mubi.com/films/the-blue-caftan",
-    availability: "MUBI",
-    curatorNote:
-      "Every stitch is a confession. Touzani treats desire with the patience of a craftsman — slow, irreversible, exact.",
-  },
-  {
-    id: "what-do-we-see-when-we-look-at-the-sky",
-    title: "What Do We See When We Look at the Sky?",
-    director: "Alexandre Koberidze",
-    year: 2021,
-    runtime: 150,
-    genres: ["Drama", "Romance", "Comedy"],
-    moods: ["surreal", "rhythm"],
-    poster: "/posters/what-do-we-see-when-we-look-at-the-sky.jpg",
-    still: "/stills/what-do-we-see-when-we-look-at-the-sky.jpg",
-    watchLink: "https://mubi.com/films/what-do-we-see-when-we-look-at-the-sky",
-    availability: "MUBI",
-    curatorNote:
-      "Koberidze films Kutaisi like a man in love with the act of looking. Cinema as a game of pure attention — and pure joy.",
-  },
-  {
-    id: "faya-dayi",
-    title: "Faya Dayi",
-    director: "Jessica Beshir",
-    year: 2021,
-    runtime: 120,
-    genres: ["Documentary"],
-    moods: ["grain", "silence"],
-    poster: "/posters/faya-dayi.jpg",
-    still: "/stills/faya-dayi.jpg",
-    watchLink: "https://mubi.com/films/faya-dayi",
-    availability: "MUBI",
-    curatorNote:
-      "Shot in 16mm black-and-white over six years, Beshir turns Ethiopia's khat harvest into a slow fever dream. The most patient film of its decade.",
-  },
+
   {
     id: "aftersun",
-    title: "Aftersun",
-    director: "Charlotte Wells",
-    year: 2022,
-    runtime: 101,
-    genres: ["Drama"],
-    moods: ["melancholy", "grain"],
-    poster: "/posters/aftersun.jpg",
-    still: "/stills/aftersun.jpg",
-    watchLink: "https://mubi.com/films/aftersun",
-    availability: "MUBI",
-    curatorNote:
-      "Wells made grief out of camcorder light and a daughter's helpless love. The gap between what we see and what we missed is where this film lives.",
+    tmdb_id: 965150,
+    moods: ["dusk"],
+  },
+
+  {
+    id: "the-souvenir",
+    tmdb_id: 473019,
+    moods: ["dusk"],
+  },
+
+  {
+    id: "burning",
+    tmdb_id: 491584,
+    moods: ["dusk"],
+  },
+
+  {
+    id: "call-me-by-your-name",
+    tmdb_id: 398818,
+    moods: ["dusk"],
+  },
+
+  {
+    id: "la-la-land",
+    tmdb_id: 313369,
+    moods: ["dusk"],
+  },
+
+  {
+    id: "Room",
+    tmdb_id: 264644,
+    moods: ["dusk"],
+  },
+
+  {
+    id: "45 Years",
+    tmdb_id: 311291,
+    moods: ["dusk"],
+  },
+
+  {
+    id: "drive-my-car",
+    tmdb_id: 744275,
+    moods: ["dusk"],
+  },
+
+  {
+    id: "before-midnight",
+    tmdb_id: 132344,
+    moods: ["dusk"],
+  },
+
+  {
+    id: "Paris Can Wait",
+    tmdb_id: 375867,
+    moods: ["dusk"],
   },
   {
-    id: "leonor-will-never-die",
-    title: "Leonor Will Never Die",
-    director: "Martika Ramirez Escobar",
-    year: 2022,
-    runtime: 99,
-    genres: ["Comedy", "Drama", "Sci-Fi"],
-    moods: ["surreal", "vivid"],
-    poster: "/posters/leonor-will-never-die.jpg",
-    still: "/stills/leonor-will-never-die.jpg",
-    watchLink: "https://mubi.com/films/leonor-will-never-die",
-    availability: "MUBI",
-    curatorNote:
-      "Escobar tears a hole in genre film and climbs through it. A Filipino filmmaker who understands cinema is a place you can actually go.",
+    id: "20th Century Women",
+    tmdb_id: 342737,
+    moods: ["dusk"],
+  },
+
+  {
+    id: "beginners",
+    tmdb_id: 55347,
+    moods: ["dusk"],
+  },
+
+  {
+    id: "leave-no-trace",
+    tmdb_id: 443463,
+    moods: ["dusk"],
+  },
+
+  // VIVID
+
+  //Enter the Void (2010)
+  //Mad Max: Fury Road (2015)
+  //Climax (2018)
+  //Decision to Leave (2022)
+  //The Green Knight (2021)
+  //Everything Everywhere All at Once (2022)
+  //Upgrade (2018)
+  //The Substance (2024)
+  //Under the Skin (2013)
+  //Possessor (2020)
+  //Victoria(2015)
+  //Monos (2019)
+  //Last Night in Soho (2021)
+  //Waves (2019)
+  //Blade Runner 2049 (2017)
+  {
+    id: "enter-the-void",
+    tmdb_id: 34647,
+    moods: ["vivid"],
+  },
+
+  {
+    id: "mad-max-fury-road",
+    tmdb_id: 76341,
+    moods: ["vivid"],
+  },
+
+  {
+    id: "climax",
+    tmdb_id: 507076,
+    moods: ["vivid"],
+  },
+
+  {
+    id: "decision-to-leave",
+    tmdb_id: 705996,
+    moods: ["vivid"],
+  },
+
+  {
+    id: "the-green-knight",
+    tmdb_id: 559907,
+    moods: ["vivid"],
+  },
+
+  {
+    id: "everything-everywhere-all-at-once",
+    tmdb_id: 545611,
+    moods: ["vivid"],
+  },
+
+  {
+    id: "upgrade",
+    tmdb_id: 500664,
+    moods: ["vivid"],
+  },
+
+  {
+    id: "the-substance",
+    tmdb_id: 933260,
+    moods: ["vivid"],
+  },
+
+  {
+    id: "under-the-skin",
+    tmdb_id: 97370,
+    moods: ["vivid"],
+  },
+
+  {
+    id: "The Neon Demon",
+    tmdb_id: 301365,
+    moods: ["vivid"],
+  },
+
+  {
+    id: "victoria",
+    tmdb_id: 320007,
+    moods: ["vivid"],
+  },
+
+  {
+    id: "monos",
+    tmdb_id: 417466,
+    moods: ["vivid"],
+  },
+
+  {
+    id: "last-night-in-soho",
+    tmdb_id: 576845,
+    moods: ["vivid"],
+  },
+
+  {
+    id: "waves",
+    tmdb_id: 533444,
+    moods: ["vivid"],
+  },
+
+  {
+    id: "blade-runner-2049",
+    tmdb_id: 335984,
+    moods: ["vivid"],
+  },
+
+  // GRAIN
+
+  //Nomadland (2020)
+  //Victoria (2015)
+  //Leave No Trace (2018)
+  //Never Rarely Sometimes Always (2020)
+  //The Rider (2017)
+  //The Florida Project (2017)
+  //American Honey (2016)
+  //Blue Valentine (2010)
+  //Rocks (2019)
+  //Western (2017)
+  //Krisha (2015)
+  //Nomadland (2020)
+  //First Cow (2019)
+  //God's Own Country (2017)
+  //Songs My Brothers Taught Me (2015)
+  //The Salesman (2016)
+  //Leviathan (2014)
+
+  {
+    id: "nomadland",
+    tmdb_id: 581734,
+    moods: ["grain"],
   },
   {
-    id: "el-agua",
-    title: "El agua",
-    director: "Elena López Riera",
-    year: 2022,
-    runtime: 103,
-    genres: ["Drama", "Mystery"],
-    moods: ["humidity", "surreal"],
-    poster: "/posters/el-agua.jpg",
-    still: "/stills/el-agua.jpg",
-    watchLink: "https://mubi.com/films/el-agua",
-    availability: "MUBI",
-    curatorNote:
-      "López Riera builds a film out of superstition and summer heat. The river here isn't metaphor — it's a force that selects.",
+    id: "victoria",
+    tmdb_id: 320007,
+    moods: ["grain"],
   },
   {
-    id: "great-freedom",
-    title: "Great Freedom",
-    director: "Sebastian Meise",
-    year: 2021,
-    runtime: 116,
-    genres: ["Drama", "Romance", "Historical"],
-    moods: ["noir", "echoes"],
-    poster: "/posters/great-freedom.jpg",
-    still: "/stills/great-freedom.jpg",
-    watchLink: "https://mubi.com/films/great-freedom",
-    availability: "MUBI",
-    curatorNote:
-      "Meise built a love story inside a cell and it contains more freedom than most films set in open air. A reckoning with German law that cuts like a razor.",
+    id: "leave-no-trace",
+    tmdb_id: 443463,
+    moods: ["grain"],
   },
   {
-    id: "gentle",
-    title: "Gentle",
-    director: "Anna Nemes & László Csuja",
-    year: 2022,
-    runtime: 102,
-    genres: ["Drama"],
-    moods: ["grain", "chaos"],
-    poster: "/posters/gentle.jpg",
-    still: "/stills/gentle.jpg",
-    watchLink: "https://mubi.com/films/gentle",
-    availability: "MUBI",
-    curatorNote:
-      "The camera barely survives the body it follows. Nemes and Csuja made a film about female bodybuilding that is actually about self-erasure — and the cost of discipline.",
+    id: "never-rarely-sometimes-always",
+    tmdb_id: 595671,
+    moods: ["grain"],
   },
   {
-    id: "vera-dreams-of-the-sea",
-    title: "Vera Dreams of the Sea",
-    director: "Kaltrina Krasniqi",
-    year: 2021,
-    runtime: 100,
-    genres: ["Drama", "Mystery"],
-    moods: ["silence", "noir"],
-    poster: "/posters/vera-dreams-of-the-sea.jpg",
-    still: "/stills/vera-dreams-of-the-sea.jpg",
-    watchLink: null,
-    availability: "Limited",
-    curatorNote:
-      "Kosovo's submission to the Oscars arrived like a closed door slowly opening. Krasniqi traces the aftermath of violence with the precision of a forensic photographer.",
+    id: "the-rider",
+    tmdb_id: 453278,
+    moods: ["grain"],
   },
   {
-    id: "the-gravediggers-wife",
-    title: "The Gravedigger's Wife",
-    director: "Khadar Ayderus Ahmed",
-    year: 2021,
-    runtime: 83,
-    genres: ["Drama", "Romance"],
-    moods: ["dusk", "grain"],
-    poster: "/posters/the-gravediggers-wife.jpg",
-    still: "/stills/the-gravediggers-wife.jpg",
-    watchLink: "https://mubi.com/films/the-gravediggers-wife",
-    availability: "MUBI",
-    curatorNote:
-      "Ahmed shot Djibouti with a tenderness that feels earned. A Finnish-Somali director who found the universal inside an utterly specific love.",
+    id: "the-florida-project",
+    tmdb_id: 394117,
+    moods: ["grain"],
   },
   {
-    id: "20000-species-of-bees",
-    title: "20,000 Species of Bees",
-    director: "Estibaliz Urresola Solaguren",
-    year: 2023,
-    runtime: 126,
-    genres: ["Drama"],
-    moods: ["dusk", "silence"],
-    poster: "/posters/20000-species-of-bees.jpg",
-    still: "/stills/20000-species-of-bees.jpg",
-    watchLink: "https://mubi.com/films/20000-species-of-bees",
-    availability: "MUBI",
-    curatorNote:
-      "Solaguren frames childhood with the patience of someone who knows how much depends on getting it right. The Basque summer here is a crucible — warm and exact.",
+    id: "american-honey",
+    tmdb_id: 340485,
+    moods: ["grain"],
   },
   {
-    id: "nightsiren",
-    title: "Nightsiren",
-    director: "Tereza Nvotová",
-    year: 2022,
-    runtime: 103,
-    genres: ["Drama", "Horror", "Mystery"],
-    moods: ["surreal", "noir"],
-    poster: "/posters/nightsiren.jpg",
-    still: "/stills/nightsiren.jpg",
-    watchLink: "https://mubi.com/films/nightsiren",
-    availability: "MUBI",
-    curatorNote:
-      "Nvotová digs into the mountain villages of Slovakia and finds something old and feral still breathing. A folk horror built on wounds that refused to heal.",
+    id: "blue-valentine",
+    tmdb_id: 46705,
+    moods: ["grain"],
   },
   {
-    id: "la-civil",
-    title: "La Civil",
-    director: "Teodora Ana Mihai",
-    year: 2021,
-    runtime: 140,
-    genres: ["Drama", "Crime", "War"],
-    moods: ["chaos", "grain"],
-    poster: "/posters/la-civil.jpg",
-    still: "/stills/la-civil.jpg",
-    watchLink: "https://mubi.com/films/la-civil",
-    availability: "MUBI",
-    curatorNote:
-      "Mihai strips the cartel film down to its barest grief: a mother with no weapon but endurance. Every frame refuses to look away.",
+    id: "rocks",
+    tmdb_id: 575773,
+    moods: ["grain"],
   },
   {
-    id: "de-humani-corporis-fabrica",
-    title: "De Humani Corporis Fabrica",
-    director: "Lucien Castaing-Taylor & Véréna Paravel",
-    year: 2022,
-    runtime: 118,
-    genres: ["Documentary"],
-    moods: ["chaos", "vivid"],
-    poster: "/posters/de-humani-corporis-fabrica.jpg",
-    still: "/stills/de-humani-corporis-fabrica.jpg",
-    watchLink: "https://mubi.com/films/de-humani-corporis-fabrica",
-    availability: "MUBI",
-    curatorNote:
-      "The Sensory Ethnography Lab aimed a camera inside the human body and made the most viscerally honest film about medicine ever produced. Not for the faint — for the awake.",
+    id: "western",
+    tmdb_id: 452000,
+    moods: ["grain"],
   },
   {
-    id: "cu-li-never-cries",
-    title: "Cu Li Never Cries",
-    director: "Pham Ngoc Lan",
-    year: 2024,
-    runtime: 88,
-    genres: ["Drama"],
-    moods: ["melancholy", "echoes"],
-    poster: "/posters/cu-li-never-cries.jpg",
-    still: "/stills/cu-li-never-cries.jpg",
-    watchLink: "https://mubi.com/films/cu-li-never-cries",
-    availability: "MUBI",
-    curatorNote:
-      "Pham won the Berlinale's first feature prize with a film that moves like a slow exhale. Vietnam rendered in a frequency only the loneliest people can hear.",
+    id: "krisha",
+    tmdb_id: 323929,
+    moods: ["grain"],
   },
   {
-    id: "klezmer-project",
-    title: "The Klezmer Project",
-    director: "Leandro Koch & Paloma Schachmann",
-    year: 2023,
-    runtime: 76,
-    genres: ["Documentary", "Comedy"],
-    moods: ["rhythm", "echoes"],
-    poster: "/posters/klezmer-project.jpg",
-    still: "/stills/klezmer-project.jpg",
-    watchLink: null,
-    availability: "Limited",
-    curatorNote:
-      "Koch and Schachmann chased a dying music across Eastern Europe and made a road film out of collective memory. The Berlinale first feature prize went to the right film.",
+    id: "nomadland",
+    tmdb_id: 581734,
+    moods: ["grain"],
   },
   {
-    id: "stone-turtle",
-    title: "Stone Turtle",
-    director: "Woo Ming Jin",
-    year: 2023,
-    runtime: 80,
-    genres: ["Drama", "Mystery"],
-    moods: ["humidity", "silence"],
-    poster: "/posters/stone-turtle.jpg",
-    still: "/stills/stone-turtle.jpg",
-    watchLink: null,
-    availability: "Festival Circuit",
-    curatorNote:
-      "Woo Ming Jin made a Malaysian film that breathes like a living forest. Two women, one island, a myth that never explains itself — and doesn't need to.",
+    id: "first-cow",
+    tmdb_id: 558582,
+    moods: ["grain"],
   },
+  {
+    id: "gods-own-country",
+    tmdb_id: 428493,
+    moods: ["grain"],
+  },
+  {
+    id: "songs-my-brothers-taught-me",
+    tmdb_id: 308640,
+    moods: ["grain"],
+  },
+  {
+    id: "the-salesman",
+    tmdb_id: 375315,
+    moods: ["grain"],
+  },
+  {
+    id: "leviathan",
+    tmdb_id: 265180,
+    moods: ["grain"],
+  },
+
+  // SILENCE
+  //Paterson (2016)
+  //The Revenant (2015)
+  //A Hidden Life (2019)
+  //Silence (2016)
+  //First Reformed (2017)
+  //the last black man in san francisco (2019)
+  //A Ghost Story (2017)
+  //Memoria (2021)
+  //Under the Skin (2013)
+  //The Zone of Interest (2023)
+  //Certain Women (2016)
+  //Meek's Cutoff (2010)
+  //Nomadland (2020)
+  //Timbuktu (2014)
+
+  {
+    id: "columbus",
+    tmdb_id: 414453,
+    moods: ["silence"],
+  },
+  {
+    id: "paterson",
+    tmdb_id: 370755,
+    moods: ["silence"],
+  },
+  {
+    id: "the-revenant",
+    tmdb_id: 281957,
+    moods: ["silence"],
+  },
+  {
+    id: "a-hidden-life",
+    tmdb_id: 403300,
+    moods: ["silence"],
+  },
+  {
+    id: "silence",
+    tmdb_id: 68730,
+    moods: ["silence"],
+  },
+  {
+    id: "first-reformed",
+    tmdb_id: 458737,
+    moods: ["silence"],
+  },
+  {
+    id: "the-last-black-man-in-san-francisco",
+    tmdb_id: 522039,
+    moods: ["silence"],
+  },
+  {
+    id: "a-ghost-story",
+    tmdb_id: 428449,
+    moods: ["silence"],
+  },
+  {
+    id: "memoria",
+    tmdb_id: 511819,
+    moods: ["silence"],
+  },
+  {
+    id: "under the skin",
+    tmdb_id: 97370,
+    moods: ["silence"],
+  },
+  {
+    id: "the-zone-of-interest",
+    tmdb_id: 467244,
+    moods: ["silence"],
+  },
+  {
+    id: "certain-women",
+    tmdb_id: 340487,
+    moods: ["silence"],
+  },
+  {
+    id: "meeks-cutoff",
+    tmdb_id: 57120,
+    moods: ["silence"],
+  },
+  {
+    id: "nomadland",
+    tmdb_id: 581734,
+    moods: ["silence"],
+  },
+  {
+    id: "timbuktu",
+    tmdb_id: 265228,
+    moods: ["silence"],
+  },
+  {
+    id: "Hello, Goodbye, and Everything in Between",
+    tmdb_id: 745376,
+    moods: ["silence"],
+  },
+
+  {
+    id: "The Hate U Give",
+    tmdb_id: 470044,
+    moods: ["silence"],
+  },
+
+  // CHAOS
+
+  //Good Time (2017)
+  //San Andreas (2015)
+  //13 Hours: Benghazi (2016)
+  //I Saw the Devil (2010)
+  //Gravity (2013)
+  //Dunkirk (2017)
+  //Locke (2013)
+  //Captain Phillips (2013)
+  //Uncut Gems (2019)
+  //71 (2014)
+  //Son of Saul (2015)
+  //The Raid: Redemption (2011)
+  //Mad Max: Fury Road (2015)
+  //Whiplash (2014)
+  //Lone Survivor (2013)
+  //Victoria (2015)
+
+  { id: "parasite", tmdb_id: 496243, moods: ["chaos"] },
+  { id: "san-andreas", tmdb_id: 254128, moods: ["chaos"] },
+  { id: "13-hours-benghazi", tmdb_id: 300671, moods: ["chaos"] },
+  { id: "i-saw-the-devil", tmdb_id: 49797, moods: ["chaos"] },
+  { id: "gravity", tmdb_id: 49047, moods: ["chaos"] },
+  { id: "dunkirk", tmdb_id: 374720, moods: ["chaos"] },
+  { id: "locke", tmdb_id: 210479, moods: ["chaos"] },
+  { id: "captain-phillips", tmdb_id: 109424, moods: ["chaos"] },
+  { id: "uncut-gems", tmdb_id: 473033, moods: ["chaos"] },
+  { id: "son-of-saul", tmdb_id: 336050, moods: ["chaos"] },
+  { id: "the-raid-redemption", tmdb_id: 94329, moods: ["chaos"] },
+  { id: "mad-max-fury-road", tmdb_id: 76341, moods: ["chaos"] },
+  { id: "whiplash", tmdb_id: 244786, moods: ["chaos"] },
+  { id: "lone-survivor", tmdb_id: 193756, moods: ["chaos"] },
+  { id: "victoria", tmdb_id: 320007, moods: ["chaos"] },
+  { id: "nightcrawler", tmdb_id: 242582, moods: ["chaos"] },
+  { id: "good-time", tmdb_id: 429200, moods: ["chaos"] },
+
+  // SYMMETRY
+
+  //Asteroid City (2023)
+  //The French Dispatch (2021)
+  //Moonrise Kingdom (2012)
+  //The Grand Budapest Hotel (2014)
+  //Submarine (2010)
+  //Emma. (2020)
+  //I Am Not a Witch (2017)
+  //The Lobster (2015)
+  //A Fantastic Woman (2017)
+  //The Handmaiden (2016)
+  //Babylon Berlin (2017)
+  //The Shape of Water (2017)
+  //Arrival (2016)
+  //The Killing of a Sacred Deer (2017) tmdb
+  //Ad Astra (2019)
+  //Ex Machina (2015)
+
+  { id: "asteroid-city", tmdb_id: 747188, moods: ["symmetry"] },
+  { id: "the-french-dispatch", tmdb_id: 542178, moods: ["symmetry"] },
+  { id: "moonrise-kingdom", tmdb_id: 83666, moods: ["symmetry"] },
+  { id: "the-grand-budapest-hotel", tmdb_id: 120467, moods: ["symmetry"] },
+  { id: "submarine", tmdb_id: 49020, moods: ["symmetry"] },
+  { id: "emma", tmdb_id: 556678, moods: ["symmetry"] },
+  { id: "i-am-not-a-witch", tmdb_id: 449757, moods: ["symmetry"] },
+  { id: "the-lobster", tmdb_id: 254320, moods: ["symmetry"] },
+  { id: "a-fantastic-woman", tmdb_id: 429191, moods: ["symmetry"] },
+  { id: "the-handmaiden", tmdb_id: 290098, moods: ["symmetry"] },
+  { id: "babylon-berlin", tmdb_id: 66980, moods: ["symmetry"] },
+  { id: "the-shape-of-water", tmdb_id: 399055, moods: ["symmetry"] },
+  { id: "arrival", tmdb_id: 329865, moods: ["symmetry"] },
+  { id: "the-killing-of-a-sacred-deer", tmdb_id: 399057, moods: ["symmetry"] },
+  { id: "ad-astra", tmdb_id: 419704, moods: ["symmetry"] },
+  { id: "ex-machina", tmdb_id: 264660, moods: ["symmetry"] },
+
+  // ECHOES
+
+  //The Favourite (2018)
+  //The King's Speech (2010)
+  //Portrait of a Lady on Fire (2019)
+  //The Great (2020)
+  //The Handmaiden (2016)
+  //The Tragedy of Macbeth (2021)
+  //Bright Star (2009)
+  //Emma. (2020)
+  //Les Misérables (2012)
+  //Spencer (2021)
+  //Farewell, My Queen (2012)
+  //Lady Macbeth (2016)
+  //Love & Friendship (2016)
+  //Corsage (2022)
+  //Amadeus (1984)
+  //Barry Lyndon (1975)
+  { id: "the-favourite", tmdb_id: 375262, moods: ["echoes"] },
+  { id: "the-kings-speech", tmdb_id: 45269, moods: ["echoes"] },
+  { id: "portrait-of-a-lady on-fire", tmdb_id: 531428, moods: ["echoes"] },
+  { id: "the-handmaiden", tmdb_id: 290098, moods: ["echoes"] },
+  { id: "the-tragedy-of-macbeth", tmdb_id: 591538, moods: ["echoes"] },
+  { id: "bright-star", tmdb_id: 29963, moods: ["echoes"] },
+  { id: "emma", tmdb_id: 556678, moods: ["echoes"] },
+  { id: "les-miserables", tmdb_id: 82695, moods: ["echoes"] },
+  { id: "spencer", tmdb_id: 716612, moods: ["echoes"] },
+  { id: "farewell-my-queen", tmdb_id: 99579, moods: ["echoes"] },
+  { id: "lady-macbeth", tmdb_id: 410117, moods: ["echoes"] },
+  { id: "love-friendship", tmdb_id: 296360, moods: ["echoes"] },
+  { id: "corsage", tmdb_id: 888321, moods: ["echoes"] },
+  { id: "amadeus", tmdb_id: 279, moods: ["echoes"] },
+  { id: "barry-lyndon", tmdb_id: 3175, moods: ["echoes"] },
+
+  // HUMIDITY
+
+  //Annihilation (2018)
+  //Moonlight (2016)
+  //Monos (2019)
+  //Fire at Sea (2016)
+  //Mud (2012)
+  //Dune: Part One (2021)
+  //The Wild Goose Lake (2019) tmdb
+  // A Bigger Splash (2015)
+  //Embrace of the Serpent (2015)
+  //Kimi (2022)
+  //It Comes at Night (2017)
+  //Tanna (2015)
+  //Midsommar (2019)
+  //Paterson (2016)
+  //The Lost City of Z (2016)
+  //The Lobster (2015)
+  { id: "annihilation", tmdb_id: 300668, moods: ["humidity"] },
+  { id: "moonlight", tmdb_id: 376867, moods: ["humidity"] },
+  { id: "monos", tmdb_id: 417466, moods: ["humidity"] },
+  { id: "fire-at-sea", tmdb_id: 377151, moods: ["humidity"] },
+  { id: "mud", tmdb_id: 103731, moods: ["humidity"] },
+  { id: "dune-part-one", tmdb_id: 438631, moods: ["humidity"] },
+  { id: "the-wild-goose-lake", tmdb_id: 575428, moods: ["humidity"] },
+  { id: "a-bigger-splash", tmdb_id: 324807, moods: ["humidity"] },
+  { id: "embrace-of-the-serpent", tmdb_id: 336808, moods: ["humidity"] },
+  { id: "kimi", tmdb_id: 800510, moods: ["humidity"] },
+  { id: "it-comes-at-night", tmdb_id: 418078, moods: ["humidity"] },
+  { id: "tanna", tmdb_id: 359151, moods: ["humidity"] },
+  { id: "midsommar", tmdb_id: 530385, moods: ["humidity"] },
+  { id: "paterson", tmdb_id: 370755, moods: ["humidity"] },
+  { id: "the-lost-city-of-z", tmdb_id: 314095, moods: ["humidity"] },
+  { id: "the-lobster", tmdb_id: 254320, moods: ["humidity"] },
+
+  // MELANCHOLY
+
+  //Her (2013)
+  //Frances Ha (2012)
+  //Shame (2011)
+  //Anomalisa (2015)
+  //Perfect Days (2023)
+  //Oslo, August 31st (2011)
+  //nightcrawler (2014)
+  //Synecdoche, New York (2008)
+  //Return to Seoul (2022)
+  //Long Day's Journey Into Night (2018)
+  //The Assistant (2019)
+  //The Beast (2023)
+  //Past Lives (2023)
+  //Drive My Car (2021)
+  //All of Us Strangers (2023)
+  //Blade Runner 2049 (2017)
+
+  { id: "her", tmdb_id: 152601, moods: ["melancholy"] },
+  { id: "frances-ha", tmdb_id: 121986, moods: ["melancholy"] },
+  { id: "shame", tmdb_id: 76025, moods: ["melancholy"] },
+  { id: "anomalisa", tmdb_id: 291270, moods: ["melancholy"] },
+  { id: "perfect-days", tmdb_id: 976893, moods: ["melancholy"] },
+  { id: "oslo-august-31st", tmdb_id: 75233, moods: ["melancholy"] },
+  { id: "nightcrawler", tmdb_id: 242582, moods: ["melancholy"] },
+  { id: "synecdoche-new-york", tmdb_id: 4960, moods: ["melancholy"] },
+  { id: "return-to-seoul", tmdb_id: 952701, moods: ["melancholy"] },
+  {
+    id: "long-days-journey-into-night",
+    tmdb_id: 486898,
+    moods: ["melancholy"],
+  },
+  { id: "the-assistant", tmdb_id: 627463, moods: ["melancholy"] },
+  { id: "the-beast", tmdb_id: 914206, moods: ["melancholy"] },
+  { id: "past-lives", tmdb_id: 666277, moods: ["melancholy"] },
+  { id: "drive-my-car", tmdb_id: 758866, moods: ["melancholy"] },
+  { id: "all-of-us-strangers", tmdb_id: 994108, moods: ["melancholy"] },
+  { id: "blade-runner-2049", tmdb_id: 335984, moods: ["melancholy"] },
+
+
+
+  // RHYTHM
+
+  //La La Land (2016)
+  //C'mon C'mon (2021)
+  // Paterson (2016)
+  //Licorice Pizza (2021)
+  //Knight of Cups (2015)
+  //Roma (2018)
+  //The Great Beauty (2013)
+  //Shoplifters (2018)
+  //Long Day's Journey Into Night (2018)
+  //Phantom Thread (2017)
+  //If Beale Street Could Talk (2018)
+  //The Florida Project (2017)
+  //Cold War (2018)
+  //Mid90s (2018)
+  //The Worst Person in the World (2021)
+  //Once Upon a Time in Hollywood (2019)
+{
+id: "la-la-land",
+tmdb_id: 313369,
+moods: ["rhythm"]
+},
+{
+id: "c-mon-c-mon",
+tmdb_id: 632617,
+moods: ["rhythm"]
+},
+{
+id: "paterson",
+tmdb_id: 370755,
+moods: ["rhythm"]
+},
+{
+id: "licorice-pizza",
+tmdb_id: 718032,
+moods: ["rhythm"]
+},
+{
+id: "knight-of-cups",
+tmdb_id: 86835,
+moods: ["rhythm"]
+},
+
+{
+id: "the-worst-person-in-the-world",
+tmdb_id: 660120,
+moods: ["rhythm"]
+},
+
+{
+id: "the-great-beauty",
+tmdb_id: 179144,
+moods: ["rhythm"]
+},
+{
+id: "shoplifters",
+tmdb_id: 505192,
+moods: ["rhythm"]
+},
+{
+id: "long-day-s-journey-into-night",
+tmdb_id: 486898,
+moods: ["rhythm"]
+},
+{
+id: "phantom-thread",
+tmdb_id: 400617,
+moods: ["rhythm"]
+},
+{
+id: "if-beale-street-could-talk",
+tmdb_id: 465914,
+moods: ["rhythm"]
+},
+{
+id: "the-florida-project",
+tmdb_id: 394117,
+moods: ["rhythm"]
+},
+{
+id: "cold-war",
+tmdb_id: 440298,
+moods: ["rhythm"]
+},
+{
+id: "mid90s",
+tmdb_id: 437586,
+moods: ["rhythm"]
+},
+{
+id: "roma",
+tmdb_id: 426426,
+moods: ["rhythm"]
+},
+{
+id: "once-upon-a-time-in-hollywood",
+tmdb_id: 466272,
+moods: ["rhythm"]
+},
+
+
+  // SURREAL
+
+  //Poor Things(2023)
+  //[The Lobster] (2015)
+  //The Killing of a Sacred Deer (2017)
+  //Hundreds of Beavers (2024)
+  //Border (2018)
+  //Under the Silver Lake(2018 )
+  //Reality(2014)
+  // Swiss Army Man (2016)
+  //Everything Everywhere All at Once (2022)
+  //The Double(2013 )
+  //[Dave Made a Maze] (2017)
+  //Deerskin (2019)
+  //[I'm Thinking of Ending Things] (2020)
+  //The Lighthouse] (2019
+  //The Banshees of Inisherin(2022)
+  //The Green Knight (2021)
+  
+  {
+id: "poor-things",
+tmdb_id: 792307,
+moods: ["surreal"]
+},
+{
+id: "the-lobster",
+tmdb_id: 254320,
+moods: ["surreal"]
+},
+{
+id: "the-killing-of-a-sacred-deer",
+tmdb_id: 399057,
+moods: ["surreal"]
+},
+{
+id: "hundreds of beavers",
+tmdb_id: 1019939,
+moods: ["surreal"]
+},
+{
+id: "border",
+tmdb_id: 517839,
+moods: ["surreal"]
+},
+{
+id: "under the silver-lake",
+tmdb_id: 396461,
+moods: ["surreal"]
+},
+{
+id: "reality",
+tmdb_id: 367181,
+moods: ["surreal"]
+},
+{
+id: "swiss-army-man",
+tmdb_id: 347031,
+moods: ["surreal"]
+},
+{
+id: "everything-everywhere-all-at-once",
+tmdb_id: 545611,
+moods: ["surreal"]
+},
+{
+id: "the-double",
+tmdb_id: 146015,
+moods: ["surreal"]
+},
+{
+id: "dave-made-a-maze",
+tmdb_id: 433941,
+moods: ["surreal"]
+},
+{
+id: "deerskin",
+tmdb_id: 582883,
+moods: ["surreal"]
+},
+{
+id: "i-m-thinking-of-ending-things",
+tmdb_id: 500840,
+moods: ["surreal"]
+},
+{
+id: "the-lighthouse",
+tmdb_id: 503919,
+moods: ["surreal"]
+},
+{
+id: "the-banshees-of-inisherin",
+tmdb_id: 674324,
+moods: ["surreal"]
+},
+{
+id: "the-green-knight",
+tmdb_id: 559907,
+moods: ["surreal"]
+},
+  // { id: "crimes-of-the-future", tmdb_id: 771373, moods: ["surreal"], one_liner: "In a near-future where surgery is performance art, a man grows new organs on stage while bureaucracy files the paperwork." }
 ];
