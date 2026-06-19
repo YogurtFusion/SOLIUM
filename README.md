@@ -6,7 +6,7 @@
 
 A mood-based indie film discovery platform — where you don't search for a film, you wait for one to find you.
 
-[Live Demo](https://solium.vercel.app/) · [Report Bug](mailto:aniket.dev.me@gmail.com?subject=Bug%20Report%20—%20Solium) · [Request Feature](mailto:aniket.dev.me@gmail.com?subject=Feature%20Request%20—%20Solium)
+[Live Demo](https://solium.whiteyogurt.tech/) · [Report Bug](mailto:aniket.dev.me@gmail.com?subject=Bug%20Report%20—%20Solium) · [Request Feature](mailto:aniket.dev.me@gmail.com?subject=Feature%20Request%20—%20Solium)
 
 </div>
 
